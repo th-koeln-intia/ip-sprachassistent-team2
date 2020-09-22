@@ -1,5 +1,6 @@
 # Custom area
 venv
+.idea
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm,intellij
