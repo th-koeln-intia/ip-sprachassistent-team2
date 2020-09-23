@@ -3,9 +3,16 @@
 layout: default
 ---
 # Documentation
+
 ## Topics
-[MQTT](./pages/mqtt.md)
-[Node-Red](./pages/node-red.md)
+[MQTT](./pages/mqtt.md)     
+[Node-Red](./pages/node-red.md)     
+[MyCroft](./pages/mycroft.md)   
+[Kaldi](./pages/kaldi.md)   
+[Rasa NLU](./pages/rasenlu.md)  
+[MaryTTS](./pages/marytts.md)   
+[Hermes MQTT](./pages/hermesmqtt.md)
+
 ## Team 2 Tasks
 - Wake Word für Porcupine mit eigenem Word umsetzen
 - Speech to Text mit Kaldi
