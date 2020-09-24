@@ -13,13 +13,6 @@ layout: default
 
 ### Search for wake word engine
 
-There is a free lisence for porcupine, which coverse only x86_64 architecture. Since the Raspberry Pi is an ARM based device we need to find another solutions. Possible engines are:
-- mycroft
-- raven
-- Snips
-- pocketsphinx
-- Snowboy
-
 ## Epics
 
 ## Link
