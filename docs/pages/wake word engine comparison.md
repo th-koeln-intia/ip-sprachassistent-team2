@@ -6,7 +6,7 @@ layout: default
 # Wake Word Engine
 
 For our project we need a Wake-Word or Hot Word Engine, which is local and always listens 
-to for the user to start all the other processes.
+for the user to start all the other processes.
 
 ## Criteria
 
@@ -56,7 +56,7 @@ responsible for the Rhasspy Assistant. Its also used by the first team as wake w
 ### Snips
 
 Snipes is available on [github](https://github.com/snipsco/snips-record-personal-hotword) under the Apache 2.0 license. 
-The last push was 14 months ago. It seems like it dose not  get any support anymore. It is the base for Raven
+The last push was 14 months ago. It seems like it does not  get any support anymore. It is the base for Raven
 
 ### Snowboy by Kitt-AI
 
