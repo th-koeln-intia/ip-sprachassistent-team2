@@ -29,8 +29,6 @@ There is a free lisence for porcupine, which coverse only x86_64 architecture. S
 - pocketsphinx
 - Snowboy
 
-
-
 ## Epics
 
 ## Link
