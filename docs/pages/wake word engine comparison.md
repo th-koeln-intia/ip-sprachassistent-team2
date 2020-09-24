@@ -16,7 +16,7 @@ to consider certain the following criteria:
 -	Open source and free to use
 -	Supported by a bigger community or company
 
-Furthermore, it would be nice if its easy to use and we could monetize the product, because we can not limit the use to 
+Furthermore, it would be nice if its easy to use and we could monetize the product, because we cannot limit the use to 
 charity.
 
 
