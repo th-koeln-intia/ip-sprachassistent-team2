@@ -11,7 +11,7 @@ to for the user to start all the other processes.
 ## Criteria
 
 Since the finished product is supposed to be used by probably vulnerable individuals in charity organisations, we need 
-to consider certain the following criteria:
+to consider following criteria:
 -	Local and private
 -	Open source and free to use
 -	Supported by a bigger community or company
