@@ -13,32 +13,6 @@ layout: default
 [MaryTTS](./pages/marytts.md)   
 [Hermes MQTT](./pages/hermesmqtt.md)
 
-## Team 2 Tasks
-- Wake Word für Porcupine mit eigenem Word umsetzen
-- Speech to Text mit Kaldi
-- Intent Recognition mit Rasa NLU
-- Text to Speech mit MaryTTS
-- Dialogue Management mit Hermes MQTT
-
-### Search for wake word engine
-
-There is a free lisence for porcupine, which coverse only x86_64 architecture. Since the Raspberry Pi is an ARM based device we need to find another solutions. Possible engines are:
-- mycroft
-- raven
-- Snips
-- pocketsphinx
-- Snowboy
-
-
-
-## Epics
-
-## Link
-- Install ReSpeaker 4-Mic Array for Raspberry Pi -> [seedstudio.com](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
-
-## Markdown Intro
-- Find a short intro to Markdown-> [markdown refferance](./pages/markdown_refferance.md)
-
 ## Sources
 - You can find a list of our sources [here](./pages/source-links.md)
 
