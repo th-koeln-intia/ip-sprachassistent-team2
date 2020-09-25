@@ -1,6 +1,6 @@
 # Node-Red
 ## What is Node-Red?
-Node-Red is a simple tool, to visualize usecases. Functionblocks are linked by drawing connections.
+Node-Red is a simple tool, to visualize IoT-usecases. Functionblocks are linked by drawing connections.
 programming language is javascript. Node-Red based on node.js. 
 
 ## A Flow
