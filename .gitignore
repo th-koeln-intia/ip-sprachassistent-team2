@@ -1,6 +1,7 @@
 # Custom area
 venv
 .idea
+src/models
 
 <<<<<<< HEAD
 venv/*

@@ -9,7 +9,7 @@ layout: default
 [Node-Red](./pages/node-red.md)     
 [MyCroft](./pages/mycroft.md)   
 [Kaldi](./pages/kaldi.md)   
-[Rasa NLU](./pages/rasenlu.md)  
+[Rasa NLU](pages/rasanlu.md)  
 [MaryTTS](./pages/marytts.md)   
 [Hermes MQTT](./pages/hermesmqtt.md)
 

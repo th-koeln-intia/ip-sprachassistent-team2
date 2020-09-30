@@ -1,2 +1,0 @@
-pytest~=6.0.2
-pytest-bdd~=4.0.1
