@@ -18,7 +18,7 @@ title: informatics project speechassisstents SS2020 TH Köln
 description: >- # this means to ignore newlines until "baseurl:"
   Documentation about the informatics project speechassisstents in summerterm 2020 at the university of applied science cologne
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "ip-team2.intia.de/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
