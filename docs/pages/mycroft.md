@@ -27,18 +27,19 @@ After you installed Precise by following [this](https://github.com/MycroftAI/myc
 
 #### Recording and training
 
-We recorded some audio samples using the `precise-collect`-command and moved most of these `.wav`-files into the `mycroft-precise/<model-name>/wake-word/`-directory and a few into the `mycroft-precise/<model-name>/test/wake-word/`-directory.  
-After we sorted all recorded samples into these directories, we started the training using the `precise-train`-command.  
+We recorded some audio samples using the `precise-collect`-command and moved most of these `.wav`-files into the `mycroft-precise/heimdall/wake-word/`-directory and a few into the `mycroft-precise/heimdall/test/wake-word/`-directory.  
+We collected some files recorded by our friends and family, too.  
+After we sorted all recorded samples into the right directories, we started the training using the `precise-train`-command.  
 ```bash
     precise-collect
-    precise-train -e 60 <model-name>.net <model-directory>
+    precise-train -e 60 heimdall.net heimdall/
 ```
 
 #### Testing and improving
 
 After the first training we tested our model using the `precise-listen`-command and noticed, that there are many false detections.
 ```bash
-    precise-listen <model-name>.net
+    precise-listen heimdall.net
 ```
 To reduce these false reactions we downloaded the [Public Domain Sounds Backup](http://pdsounds.tuxfamily.org/) as recommended in the original Precise [documentation](https://github.com/MycroftAI/mycroft-precise/wiki/Training-your-own-wake-word#Method-2).
 To do this, we downloaded the package to the `data/random`-directory and unzipped it.
@@ -56,10 +57,10 @@ To convert all these downloaded `.mp3`-files to the needed `.wav`-format we used
     for i in $SOURCE_DIR/*.mp3; do echo "Converting $i..."; fn=${i##*/}; ffmpeg -i "$i" -acodec pcm_s16le -ar 16000 -ac 1 -f wav "$DEST_DIR/${fn%.*}.wav"; done
 ```
 Now we had the all files in the right format and were able to train the model again.
-To do so, we used the `precise-train-incremental`-command, which takes clips from the `data/random`-directory copied these to the `<model-name>/not-wake-word`-directory and retrained the model.
+To do so, we used the `precise-train-incremental`-command, which takes clips from the `data/random`-directory copied these to the `heimdall/not-wake-word`-directory and retrained the model.
 This process lasts a few hours on the raspberry pi 3B+.
 ```bash
-    precise-train-incremental <model-name>.net <model-name>/ -r data/random/
+    precise-train-incremental heimdall.net heimdall/ -r data/random/
 ```
 (directories can be different to your setup)
 
@@ -70,12 +71,12 @@ You can repeat this whole process until you are happy with the result of the wak
 Before you can use your model with Rhasspy you need to convert it from the Keras `.net`-format to the TensorFlow `.pb`-format.
 We have used the `precise-convert`-command to do so.
 ```bash
-    precise-convert <model-name>.net
+    precise-convert heimdall.net
 ```
 We have got three new files:
 
-- `<model-name>.pb`
-- `<model-name>.pb.params`
-- `<model-name>.pbtxt`
+- `heimdall.pb`
+- `heimdall.pb.params`
+- `heimdall.pbtxt`
 
 After we copied all these files to the `rhasspy/profiles/de/precise`-directory, we were able to select and use them in the Rhasspy-GUI on `http://<hostname>:12101`.
