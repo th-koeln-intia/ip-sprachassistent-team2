@@ -29,9 +29,6 @@ layout: default
 ## Link
 - Install ReSpeaker 4-Mic Array for Raspberry Pi -> [seedstudio.com](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
 
-## Markdown Intro
-- Find a short intro to Markdown-> [markdown refferance](./pages/markdown_refferance.md)
-
 ## Sources
 - You can find a list of our sources [here](./pages/source-links.md)
 
