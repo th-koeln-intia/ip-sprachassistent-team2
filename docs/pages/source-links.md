@@ -21,5 +21,10 @@
 [Kaldi](https://kaldi-asr.org/doc/)  
 
 ## Rasa-NLU
-[Rasa-NLU](https://legacy-docs.rasa.com/docs/nlu/)  
+[Rasa-NLU](https://legacy-docs.rasa.com/docs/nlu/) 
+
+
+## Respeaker
+- Install ReSpeaker 4-Mic Array for Raspberry Pi -> [seedstudio.com](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
+
 

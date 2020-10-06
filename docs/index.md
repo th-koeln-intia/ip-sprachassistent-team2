@@ -47,12 +47,9 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - As user, I want to ask for information on wikipedia
 - As user, I want to play music over Spotify
 
-## TODO find Title
+## Other
 
 [Wake word engine comparrison](pages/wake-word-engine-comparrison.md)
-
-## Link
-- Install ReSpeaker 4-Mic Array for Raspberry Pi -> [seedstudio.com](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
 
 ## Sources
 - You can find a list of our sources [here](./pages/source-links.md)
