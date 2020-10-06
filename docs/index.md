@@ -19,33 +19,37 @@ access e.g. playing music or getting a weather report, we want no personal infor
 For our voice assistant we want to use the Raspberry Pi and multiple open source software packages.
 
 
-##How to get started
-###used hardware
-###used software
-###used protocols 
+## How to get started
+### Used hardware
+- Raspberry Pi 3 B or better
+- Powersupply according to your Raspberry Pi
+- 32 GB SD card or bigger
+- Microphone (USB or compatable with the 40 Pin Header of the Pi)
+- 
 
+### Used software
+- Wake word engine: [MyCroft-Precise](./pages/mycroft.md)
+- Speech to Text: [Kaldi](./pages/kaldi.md)
+- Intent Recognition: [Rasa NLU](pages/rasanlu.md)
+- Text to Speech: [MaryTTS](./pages/marytts.md) 
+- Dialogue Management: [Hermes MQTT](./pages/hermesmqtt.md)
 
-## Topics
-[MQTT](./pages/mqtt.md)     
-[Node-Red](./pages/node-red.md)     
-[MyCroft](./pages/mycroft.md)   
-[Kaldi](./pages/kaldi.md)   
-[Rasa NLU](pages/rasanlu.md)  
-[MaryTTS](./pages/marytts.md)   
-[Hermes MQTT](./pages/hermesmqtt.md)
-
-## Team 2 Tasks
-- Wake Word für Porcupine mit eigenem Word umsetzen
-- Speech to Text mit Kaldi
-- Intent Recognition mit Rasa NLU
-- Text to Speech mit MaryTTS
-- Dialogue Management mit Hermes MQTT
-
-### Search for wake word engine
-
-[Wake word engine comparrison](./pages/wake word engine comparison.md)
+### Other important technologies 
+- Protocol for massage management: [MQTT](./pages/mqtt.md) 
+- Graphical development engine: [Node-Red](./pages/node-red.md)
 
 ## Epics
+- These are the use cases which we want to implement:
+- As user, I want to give the voice assistant commands in natural language (Sppech-To-Text)
+- As user, I want to control lighting bulbs with the command "Licht an"/"Licht aus" (Intent recognition)
+- As user, I want to set an alarm
+- As user, I want to set a timer
+- As user, I want to ask for information on wikipedia
+- As user, I want to play music over Spotify
+
+## TODO find Title
+
+[Wake word engine comparrison](pages/wake-word-engine-comparrison.md)
 
 ## Link
 - Install ReSpeaker 4-Mic Array for Raspberry Pi -> [seedstudio.com](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
