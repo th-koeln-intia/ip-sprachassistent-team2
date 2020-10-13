@@ -6,7 +6,9 @@ layout: default
 # Kaldi
 
 ## Introduction
-Kaldi is a C++ based speech recognition tool. It's licensed under Apache License v2.0.
+Kaldi is a C++ based speech recognition tool. It's licensed under Apache License v2.0 and used for Automatic Speech Recognition (ASR). After the assistant is activated by Precise detecting the wake
+word, Kaldi should transform the recorded sound waves to text, which is passed on to Rasa NLU to interpret the users
+intend. 
 
 ## Install Kaldi
 ### Download
@@ -67,4 +69,3 @@ Now say the line you added and wait a few seconds. Now scroll through your termi
 [DEBUG:2020-10-13 07:35:27,316] rhasspyasr_kaldi.transcribe: ['wie spät ist es ', 'wie spät ist es ']
 ````
 *We tried it with the sentence "wie spät ist es".*
-
