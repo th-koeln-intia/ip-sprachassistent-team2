@@ -17,37 +17,54 @@ Clone the Kaldi repository and move into the folder.
 ```
 ### Install
 To install Kaldi follow the instructions in the INSTALL file.  
-It will guide you to the INSTALL files in `kaldi/tools/` and `kaldi/src/`. 
+It will guide you to the INSTALL files in `kaldi/tools/` and `kaldi/src/`.  
 After you followed all these instructions, you can move on with this guide.
 
-## Train a model
-### Record samples or ...
-Kaldi uses `.wav` files to train a model.
-### ... download Tuda
-[Tuda](https://github.com/uhh-lt/kaldi-tuda-de)
-### Train the model
+![/kaldi/INSTALL](../assets/kaldi-INSTALL.png)
+*/kaldi/INSTALL*  
+
+![/kaldi/tools/INSTALL](../assets/kaldi-tools-INSTALL.png)
+*/kaldi/tools/INSTALL*  
+
+![/kaldi/src/INSTALL](../assets/kaldi-src-INSTALL.png)
+*/kaldi/src/INSTALL*  
 
 ## Use Kaldi in Rhasspy
-#### Update your Rhasspy profile
+### Update your Rhasspy profile
 You need to have Kaldi installed.
-To use it in Rhasspy add the following to your profile.
+Then go to the Webinterface of Rhasspy and chose settings.  
+Change "Speech to Text" to Kaldi and add the following lines to your profile.
+
 ```json
     {
       "speech_to_text": {
         "system": "kaldi",
         "kaldi": {
-            "base_dictionary": "base_dictionary.txt",
+            "base_dictionary": "kaldi/base_dictionary.txt",
             "compatible": true,
-            "custom_words": "custom_words.txt",
-            "dictionary": "dictionary.txt",
-            "graph": "graph",
-            "kaldi_dir": "/opt/kaldi",
-            "language_model": "language_model.txt",
-            "model_dir": "model",
-            "unknown_words": "unknown_words.txt",
+            "custom_words": "kaldi/custom_words.txt",
+            "dictionary": "kaldi/dictionary.txt",
+            "graph": "kaldi/graph",
+            "kaldi_dir": "~/kaldi",
+            "language_model": "kaldi/language_model.txt",
+            "model_dir": "kaldi/model",
+            "unknown_words": "kaldi/unknown_words.txt",
             "language_model_type": "arpa"
         }
       }
     }
 ```
-Set `kaldi_dir` to the directory, where you installed Kaldi in our case `~/kaldi`.
+Set `kaldi_dir` to the directory, where you installed Kaldi in our case it's `~/kaldi`.  
+Rhasspy will automatically delete all default-Lines e.g. ``"base_dictionary": "kaldi/base_dictionary.txt"``.
+After a restart of Rhasspy you should be able to use Kaldi as your STT-system.  
+
+### Test Kaldi
+Kaldi is trained to expect your intents in the ``sentences.ini`` file. To text it you can add a line to this file and save it.  
+Rhasspy will ask to restart. Except it and your ready to test.  
+Look in the terminal and start the recording by saying your wake-word or by using the "Wake Up"-button on the webinterface.  
+Now say the line you added and wait a few seconds. Now scroll through your terminal until you find the line:
+````
+[DEBUG:2020-10-13 07:35:27,316] rhasspyasr_kaldi.transcribe: ['wie spät ist es ', 'wie spät ist es ']
+````
+*We tried it with the sentence "wie spät ist es".*
+
