@@ -1,12 +1,12 @@
 ---
-# This top area is to give jekyll informations about the page.
+# This top area is to give jekyll information about the page.
 layout: default
 ---
 
 # Kaldi
 
 ## Introduction
-Kaldi is a C++ based speech recognition tool. It's licensed under Apache License v2.0 and used for Automatic Speech Recognition (ASR). After the assistant is activated by Precise detecting the wake
+Kaldi is a C++ based speech recognition tool. It's licensed under Apache License v2.0 and used for Automatic Speech Recognition (ASR). After Precise activates the assistant by  detecting the wake
 word, Kaldi should transform the recorded sound waves to text, which is passed on to Rasa NLU to interpret the users
 intend. 
 
@@ -57,11 +57,11 @@ Change "Speech to Text" to Kaldi and add the following lines to your profile.
     }
 ```
 Set `kaldi_dir` to the directory, where you installed Kaldi in our case it's `~/kaldi`.  
-Rhasspy will automatically delete all default-Lines e.g. ``"base_dictionary": "kaldi/base_dictionary.txt"``.
+Rhasspy will automatically delete all default-Lines e.g. ``"base_dictionary": "kaldi/base_dictionary.txt"``.  
 After a restart of Rhasspy you should be able to use Kaldi as your STT-system.  
 
 ### Test Kaldi
-Kaldi is trained to expect your intents in the ``sentences.ini`` file. To text it you can add a line to this file and save it.  
+Rhasspy automatically trains Kaldi, to expect your intents in the ``sentences.ini`` file. To text it you can add a line to this file and save it.  
 Rhasspy will ask to restart. Except it and your ready to test.  
 Look in the terminal and start the recording by saying your wake-word or by using the "Wake Up"-button on the webinterface.  
 Now say the line you added and wait a few seconds. Now scroll through your terminal until you find the line:
@@ -69,3 +69,8 @@ Now say the line you added and wait a few seconds. Now scroll through your termi
 [DEBUG:2020-10-13 07:35:27,316] rhasspyasr_kaldi.transcribe: ['wie spät ist es ', 'wie spät ist es ']
 ````
 *We tried it with the sentence "wie spät ist es".*
+
+Kaldi understands numbers and digits, too. So if there is a ``15`` or something like that in the ``sentences.ini`` file, Kaldi will understand the word ``fünfzehn`` (the german word for ``fifteen``).
+````
+[DEBUG:2020-10-14 13:20:10,706] rhasspyasr_kaldi.transcribe: ['fünfzehn ', 'fünfzehn ']
+````
