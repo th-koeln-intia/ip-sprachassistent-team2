@@ -1,5 +1,5 @@
 ---
-# This top area is to give jekyll informations about the page.
+# This top area is to give jekyll information about the page.
 layout: default
 ---
 
