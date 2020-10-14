@@ -34,6 +34,9 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - Text to Speech: [MaryTTS](./pages/marytts.md) 
 - Dialogue Management: [Hermes MQTT](./pages/hermesmqtt.md)
 
+### First use
+- To see what to do at the first use and what we decided to go with, please look [here](./pages/first-use.md).
+
 ### Other important technologies 
 - Protocol for massage management: [MQTT](./pages/mqtt.md) 
 - Graphical development engine: [Node-Red](./pages/node-red.md)
