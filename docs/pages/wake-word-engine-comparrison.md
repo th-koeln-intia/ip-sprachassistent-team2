@@ -1,5 +1,5 @@
 ---
-# This top area is to give jekyll informations about the page.
+# This top area is to give jekyll information about the page.
 layout: default
 ---
 
@@ -25,7 +25,7 @@ charity.
 There are several possible engines which are the following:
 - Precise by Mycroft
 - Pocketsphinx 
-- Porcuppine
+- Porcupine
 - Raven
 - Snips
 - Snowboy
@@ -38,7 +38,7 @@ Available on Github under the Apache 2.0 license. It is maintained by Mycroft AI
 
 ### pocketsphinx by Carnegie Mellon University
 
-Pocketsphinx is available on github and is ment for use on mobile and desktop devices. It is maintained by a team of 
+Pocketsphinx is available on github and is meant for use on mobile and desktop devices. It is maintained by a team of 
 Carnegie Mellon University and partially funded by the Defense Advanced Research Projects Agency and National Science 
 Foundation and the CMU Sphinx Speech Consortium. Team one already uses it for their speech recognition.
 
@@ -56,7 +56,7 @@ responsible for the Rhasspy Assistant. Its also used by the first team as wake w
 ### Snips
 
 Snipes is available on [github](https://github.com/snipsco/snips-record-personal-hotword) under the Apache 2.0 license. 
-The last push was 14 months ago. It seems like it does not  get any support anymore. It is the base for Raven
+The last push was 14 months ago. It seems like it does not  get any support anymore. It is the base for Raven.
 
 ### Snowboy by Kitt-AI
 
@@ -69,5 +69,5 @@ outdated and are becoming difficult to maintain."
 
 Since all the above are open-source wake word engines and seem to run locally which also ensures privacy, we should
 decide on the engine with the best support. Snowboy and Snips are EOL or don't get much support. Porcupine requires
-a paid license for our use case. Raven and Pocketsphinx already get used by our other team, which pretty much leaves us 
+a paid license for our use case. Raven and Pocketsphinx already get used by our other team, which only leaves us 
 Precise.

@@ -1,5 +1,5 @@
 ---
-# This top area is to give jekyll informations about the page.
+# This top area is to give jekyll information about the page.
 layout: default
 ---
 # Documentation
@@ -22,10 +22,9 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 ## How to get started
 ### Used hardware
 - Raspberry Pi 3 B or better
-- Powersupply according to your Raspberry Pi
+- Power supply according to your Raspberry Pi
 - 32 GB SD card or bigger
-- Microphone (USB or compatable with the 40 Pin Header of the Pi)
-- 
+- Microphone (USB or compatible with the 40 Pin Header of the Pi)
 
 ### Used software
 - Wake word engine: [MyCroft-Precise](./pages/mycroft.md)
@@ -34,16 +33,16 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - Text to Speech: [MaryTTS](./pages/marytts.md) 
 - Dialogue Management: [Hermes MQTT](./pages/hermesmqtt.md)
 
-### First use
-- To see what to do at the first use and what we decided to go with, please look [here](./pages/first-use.md).
-
 ### Other important technologies 
 - Protocol for massage management: [MQTT](./pages/mqtt.md) 
 - Graphical development engine: [Node-Red](./pages/node-red.md)
 
+### First use
+- To see what to do at the first use and what we decided to go with, please look [here](./pages/first-use.md).
+
 ## Epics
 - These are the use cases which we want to implement:
-- As user, I want to give the voice assistant commands in natural language (Sppech-To-Text)
+- As user, I want to give the voice assistant commands in natural language (Speech-To-Text)
 - As user, I want to control lighting bulbs with the command "Licht an"/"Licht aus" (Intent recognition)
 - As user, I want to set an alarm
 - As user, I want to set a timer
@@ -52,7 +51,7 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 
 ## Other
 
-[Wake word engine comparrison](pages/wake-word-engine-comparrison.md)
+[Wake word engine comparison](pages/wake-word-engine-comparrison.md)
 
 ## Sources
 - You can find a list of our sources [here](./pages/source-links.md)

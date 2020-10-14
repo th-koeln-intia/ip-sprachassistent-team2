@@ -1,6 +1,6 @@
-## Troubleshooting Setup
+# Troubleshooting Setup
 
-When using an image to setup a raspberry pi it can happen, that not all the space on the sd card is allocated. This can
+When using an image to set up a raspberry pi it can happen, that not all the space on the sd card is allocated. This can
 result in to little hard drive space for all technologies to be installed.
 
 We used rufus to put an image of a 16 GB SD card on a 32 GB one which resulted in 14,98 GB unformatted space. Now we are 

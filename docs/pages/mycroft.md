@@ -1,18 +1,18 @@
 ---
-# This top area is to give jekyll informations about the page.
+# This top area is to give jekyll information about the page.
 layout: default
 ---
 
 # MyCroft-Precise
 
-We decided to go with MyCroft-Precise for the given [reasons](wake%20word%20engine%20comparrison.md) and started to train our
+We decided to go with MyCroft-Precise for the given [reasons](wake-word-engine-comparrison.md) and started to train our
 Wake-Word: ["WakeWord"](./wake-word.md). Hereinafter we explain, how we made it and what the difficulties were.
 
 ## Basics
 
 MyCroft-Precise uses `.wav` files to train a model, which then can be used by Rhasspy to activate the recording mode.
 From the recorded sound waves we can then use "text to speech" (TTS) and "Intend Recognition to control other devices
-or look up something in wikipedia. 
+or look up something on wikipedia. 
 
 
 ## How to find a wake-word

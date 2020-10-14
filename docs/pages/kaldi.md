@@ -22,13 +22,13 @@ To install Kaldi follow the instructions in the INSTALL file.
 It will guide you to the INSTALL files in `kaldi/tools/` and `kaldi/src/`.  
 After you followed all these instructions, you can move on with this guide.
 
-![/kaldi/INSTALL](../assets/kaldi-INSTALL.png)
+![/kaldi/INSTALL](../assets/kaldi-INSTALL.png)  
 */kaldi/INSTALL*  
 
-![/kaldi/tools/INSTALL](../assets/kaldi-tools-INSTALL.png)
+![/kaldi/tools/INSTALL](../assets/kaldi-tools-INSTALL.png)  
 */kaldi/tools/INSTALL*  
 
-![/kaldi/src/INSTALL](../assets/kaldi-src-INSTALL.png)
+![/kaldi/src/INSTALL](../assets/kaldi-src-INSTALL.png)  
 */kaldi/src/INSTALL*  
 
 ## Use Kaldi in Rhasspy
