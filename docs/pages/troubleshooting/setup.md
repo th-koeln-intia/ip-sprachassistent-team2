@@ -3,6 +3,28 @@
 When using an image to set up a raspberry pi it can happen, that not all the space on the sd card is allocated. This can
 result in to little hard drive space for all technologies to be installed.
 
+## Using the command Line to expand the filesystem
+
+With the command `df -h` we can list the filesystem (fs).
+
+![Filesystem after using an image for setup](PI-df-h-after-using-image-for-setup.png)
+
+In the first row we can see that the `/dev/root` only takes up 15 GB of space. with `sudo raspi-config --expand-rootfs`
+
+![Expanding fs](Pi-expand-rootfs.png)
+
+
+
+![Expanded fs](Pi-expanded-file-system.png)
+
+Here we can see that `/dev/root` uses almost all of the 32 GB of the SD-Card.
+
+
+
+## Using pishrink
+
+## Solutions that did not work
+
 We used rufus to put an image of a 16 GB SD card on a 32 GB one which resulted in 14,98 GB unformatted space. Now we are 
 trying the same with the Raspberry Pi Imager v1.4. 
 
