@@ -6,8 +6,9 @@
 
 ### Download raspberry image and install on SD card
 
-You will probably need a 32 GB SD card if you want to train your own [wake word model](./pages/mycroft.md) in precise.
-
+You will probably need a 32 GB SD card if you want to train your own [wake word model](../docs/pages/mycroft.md) in precise.
+We recommend to download and install the full verion with Graphical User Interface. Using the lightversion leeds to 
+many compatibility issues and you might need to install a lot of software, which is already included in the full version.
 https://www.raspberrypi.org/downloads/
 
 ### Enable SSH and WIFI
@@ -33,26 +34,7 @@ network={
 After inserting the SD card and booting the Pi you can ssh after a little while. You will need your Pi's IP-Address to
 connect with via a SSH tool like Putty. You can find it in your routers web-interface. 
 
-Default user is `pi` and the password is `raspberry`.  
-
-### Uninstall Python 2.7
-
-We want to uninstall the preinstalled Python to prevent future version interference. You can copy text from your clip
-board into Putty by right clicking in the Putty window.
-
-Check your Python version: 
-
-```
-Python --version
-```
-
-Now you can remove your Python. If 2.7 is not your version you need to type your version in the command line.
-
-```
-sudo apt-get remove python2.7
-```
-
-### Install Pip and Git 
+Default user is `pi` and the password is `raspberry`.
 
 First we want to run these commands and reboot:
 
@@ -61,6 +43,8 @@ sudo apt update
 sudo apt full-upgrade
 sudo reboot
 ```
+
+### Install Pip and Git if you have used the light version
 
 After rebooting you can install pip and git:
 
@@ -73,3 +57,115 @@ sudo apt install git
 
 To install the Microphone array you can follow the guide on [seeedstudio.com](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
 Installing the LED drivers is optional.
+
+```
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh --compat-kernel
+reboot
+```
+
+This can take more than 10 minutes.
+
+`sudo nano /etc/asound.conf`
+
+Comment out all of the "pcm.!default" and below ad :
+
+
+```
+pcm.!default {
+type pulse
+# If defaults.namehint.showall is set to off in alsa.conf, then this is
+# necessary to make this pcm show up in the list returned by
+# snd_device_name_hint or aplay -L
+hint.description "Default Audio Device"
+}
+ctl.!default {
+type pulse
+}
+```
+
+Now change the audio output and activate the SPI.
+
+```
+sudo raspi-config
+# Select 7 Advanced Options
+# Select A4 Audio
+# Select 1 Force 3.5mm ('headphone') jack
+# Select 5 Interfacing Options
+# Select P4 SPI
+# <Yes>
+# Select Finish
+```
+
+### Install Mosquitto and Node-Red
+
+[Node-Red installaton](https://nodered.org/docs/getting-started/raspberrypi)
+
+```
+sudo apt-get install mosquitto mosquitto-clients -y
+sudo apt install build-essential git  # This fixed a Problem running the script in the next line.
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-andnodered)
+sudo systemctl enable nodered.service # This starts Node-Red when the pi is booting.
+```
+
+You can enter Node-Red under http://<hostname>:1880
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
