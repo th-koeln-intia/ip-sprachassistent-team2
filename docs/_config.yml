@@ -44,3 +44,23 @@ exclude: [vendor]
 #   - vendor/ruby/
 github: [metadata]
 
+# minimal-mistakes settings
+minimal_mistakes_skin: "dark"
+
+breadcrumbs: true
+name: "Finn Wehn, Joost Groot Bramel"
+repository: "th-koeln-intia/ip-sprachassistent-team2"
+search: true
+search_provider: algolia
+
+algolia:
+  application_id: 86SOZ7ZM65
+  index_name: documentation
+  search_only_api_key: be2af57a7e1b67e57236b127482475aa
+  powered_by: true # true is requiered for the free plan of algolia
+
+#include:
+#  - *.md
+
+# Add teaser image
+# teaser: /assets/images/500x300.png
