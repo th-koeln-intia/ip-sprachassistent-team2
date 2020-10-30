@@ -42,13 +42,13 @@ In Node-Red we need the intent and the slots from Rhasspy. To receive these info
 
 In Node-Red we have to add a "websocket-in" node and set the path to `ws://127.0.0.1:12101/api/events/intent`:
 
-![websocket-in](./../assets/nodered-websocket.png) ![websocket settings](./../assets/nodered-websocket-settings.png)
+![websocket-in](../../assets/nodered-websocket.png) ![websocket settings](../../assets/nodered-websocket-settings.png)
 
 
 
 You can now see, whether it is connected to Rhasspy or not:  
   
-![flow1-intent-handling](./../assets/nodered-flow1-intent-handling.png)
+![flow1-intent-handling](../../assets/nodered-flow1-intent-handling.png)
 
 The function-node sets the `msg.payload` to `msg.intent` and defines a mqtt-topic to the `slot.name`:  
 ```js
@@ -62,11 +62,11 @@ This helps to work with the right intent and automatically publishes the data to
 
 The switch-node directs the `msg` to the following nodes based on the intent:  
   
-![intent-switch](./../assets/nodered-intent-switch.PNG)
+![intent-switch](../../assets/nodered-intent-switch.PNG)
 
 ### ChangeLightState in Node-Red
 
-![ChangeLightState](./../assets/nodered-changelightstate.png)
+![ChangeLightState](../../assets/nodered-changelightstate.png)
 
 The nodes are used for:
 - function-node: sets `msg.payload` to `msg.slots`
