@@ -4,8 +4,7 @@ We have some problems using Rasa-NLU for the intent-recognition.
 As we are looking at the documentation of Rhasspy, it says we should run a single docker command, add a few lines to our ``profile.json`` and we would be ready to go.  
 That was not the case. When we start Rhasspy with our profile (after we started our Rasa-server), it shows the log-message that Rhasspy cannot find the command: ``rhasspy-rasa-nlu-hermes``, which should be located at: ``/usr/lib/rhasspy/bin/``.
 For reasons, we do not know Rhasspy does not install this command, even though it is in the repository.
-We installed Rhasspy via the [rhasspy_2.5.6_armhf.deb](https://github.com/rhasspy/rhasspy/releases) and the previous version: [rhasspy_2.5_armhf.deb
-](https://github.com/rhasspy/rhasspy/releases).
+We installed Rhasspy via the [rhasspy_2.5.6_armhf.deb](https://github.com/rhasspy/rhasspy/releases) and the previous version: [rhasspy_2.5_armhf.deb](https://github.com/rhasspy/rhasspy/releases).
 
 
 ````bash
