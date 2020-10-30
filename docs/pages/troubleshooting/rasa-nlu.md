@@ -6,9 +6,10 @@ That was not the case. When we start Rhasspy with our profile (after we started 
 For reasons, we do not know Rhasspy does not install this command, even though it is in the repository.
 We installed Rhasspy via the [rhasspy_2.5.6_armhf.deb](https://github.com/rhasspy/rhasspy/releases) and the previous version: [rhasspy_2.5_armhf.deb](https://github.com/rhasspy/rhasspy/releases).
 
-
 ````bash
 2020-10-14 16:44:54,856 INFO spawnerr: can't find command 'rhasspy-rasa-nlu-hermes'
 2020-10-14 16:44:57,861 INFO spawnerr: can't find command 'rhasspy-rasa-nlu-hermes'
 2020-10-14 16:44:57,861 INFO gave up: intent_recognition entered FATAL state, too many start retries too quickly
 ````
+
+We decided to change the intent recognition to "FuzzyWuzzy". The instructions to install Rasa and to train a model will stay [here](./../rasanlu.md).
