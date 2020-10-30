@@ -24,14 +24,16 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
+remote_theme: "mmistakes/minimal-mistakes@4.20.2"
 plugins:
   - jekyll-feed
   - jekyll-relative-links
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
+exclude: [vendor]
 # exclude:
 #   - Gemfile
 #   - Gemfile.lock
@@ -41,3 +43,4 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 github: [metadata]
+
