@@ -27,18 +27,18 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - Microphone (USB or compatible with the 40 Pin Header of the Pi)
 
 ### Used software
-- Wake word engine: [MyCroft-Precise](./pages/mycroft.md)
-- Speech to Text: [Kaldi](./pages/kaldi.md)
-- Intent Recognition: [Rasa NLU](pages/rasanlu.md)
-- Text to Speech: [MaryTTS](./pages/marytts.md) 
-- Dialogue Management: [Hermes MQTT](./pages/hermesmqtt.md)
+- Wake word engine: [MyCroft-Precise](pages/tech-stack/mycroft.md)
+- Speech to Text: [Kaldi](pages/tech-stack/kaldi.md)
+- Intent Recognition: [Rasa NLU](pages/unused/rasanlu.md)
+- Text to Speech: [MaryTTS](pages/tech-stack/marytts.md) 
+- Dialogue Management: [Hermes MQTT](pages/unused/hermesmqtt.md)
 
 ### Other important technologies 
-- Protocol for massage management: [MQTT](./pages/mqtt.md) 
-- Graphical development engine: [Node-Red](./pages/node-red.md)
+- Protocol for massage management: [MQTT](pages/information/mqtt.md) 
+- Graphical development engine: [Node-Red](pages/information/node-red.md)
 
 ### First use
-- To see what to do at the first use and what we decided to go with, please look [here](./pages/first-use.md).
+- To see what to do at the first use and what we decided to go with, please look [here](pages/information/first-use.md).
 
 ## Epics
 - These are the use cases which we want to implement:
@@ -51,8 +51,8 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 
 ## Other
 
-[Wake word engine comparison](pages/wake-word-engine-comparrison.md)
+[Wake word engine comparison](pages/information/wake-word-engine-comparrison.md)
 
 ## Sources
-- You can find a list of our sources [here](./pages/source-links.md)
+- You can find a list of our sources [here](pages/information/source-links.md)
 

@@ -5,8 +5,8 @@ layout: default
 
 # MyCroft-Precise
 
-We decided to go with MyCroft-Precise for the given [reasons](wake-word-engine-comparrison.md) and started to train our
-Wake-Word: ["WakeWord"](./wake-word.md). Hereinafter we explain, how we made it and what the difficulties were.
+We decided to go with MyCroft-Precise for the given [reasons](../information/wake-word-engine-comparrison.md) and started to train our
+Wake-Word: ["WakeWord"](../information/wake-word.md). Hereinafter we explain, how we made it and what the difficulties were.
 
 ## Basics
 

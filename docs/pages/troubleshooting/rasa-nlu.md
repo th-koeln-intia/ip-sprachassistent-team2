@@ -12,4 +12,4 @@ We installed Rhasspy via the [rhasspy_2.5.6_armhf.deb](https://github.com/rhassp
 2020-10-14 16:44:57,861 INFO gave up: intent_recognition entered FATAL state, too many start retries too quickly
 ````
 
-We decided to change the intent recognition to "FuzzyWuzzy". The instructions to install Rasa and to train a model will stay [here](./../rasanlu.md).
+We decided to change the intent recognition to "FuzzyWuzzy". The instructions to install Rasa and to train a model will stay [here](../unused/rasanlu.md).

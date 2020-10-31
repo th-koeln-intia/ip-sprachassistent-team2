@@ -12,7 +12,7 @@ A MQTT-Client doesn't need many resources, it even could be a micro-controller i
 
 ## How does it work?
 
-![MQTT](../assets/MQTT-Diagram.svg)
+![MQTT](../../assets/MQTT-Diagram.svg)
 
        
    
