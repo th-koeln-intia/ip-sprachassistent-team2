@@ -72,7 +72,7 @@ Rhasspy.
 
 8. Enter your Wi-Fi Credentials
 
-    - For Android
+    ### For Android
 
     In this case we used a Galaxy Note 10+ and Google chrome as test device and assume, that other Android devices work
     similarly, but we won't test with other devices.

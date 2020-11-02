@@ -24,7 +24,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.20.2"
+theme: hacker
+# remote_theme: "mmistakes/minimal-mistakes@4.20.2"
 plugins:
   - jekyll-feed
   - jekyll-relative-links
@@ -45,7 +46,7 @@ exclude: [vendor]
 github: [metadata]
 
 # minimal-mistakes settings
-minimal_mistakes_skin: "dark"
+# minimal_mistakes_skin: "dark"
 
 breadcrumbs: true
 name: "Finn Wehn, Joost Groot Bramel"
@@ -64,3 +65,14 @@ algolia:
 
 # Add teaser image
 # teaser: /assets/images/500x300.png
+
+
+# Sidebar
+# defaults:
+  # _docs
+#  - scope:
+#      path: ""
+#      type: docs
+#    values:
+#      sidebar:
+#        nav: "docs"
