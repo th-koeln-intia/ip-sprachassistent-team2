@@ -4,8 +4,9 @@
 
 ## What is Comitup
 
-"Comitup is a software package, which provides a service to establish Wi-Fi networking on a headless computer." If the 
-Raspberry Pi is not able to establish a Wi-Fi connection, it will broadcast its own Wi-Fi network. We can then use this 
+>Comitup is a software package, which provides a service to establish Wi-Fi networking on a headless computer.
+
+If the Raspberry Pi is not able to establish a Wi-Fi connection, it will broadcast its own Wi-Fi network. We can then use this 
 network to connect to the pi via a Wi-Fi capable device to enter the credentials of the Wi-Fi network we want the pi to 
 operate in.
 
@@ -47,8 +48,12 @@ sudo systemctl stop systemd-resolved
 sudo systemctl disable systemd-resolved
 ```
 
-5. Comitup uses a local configuration of the DHCP setup utility dnsmasq to handle the network configuration of devices
- onnecting to the Comitup hotspot. We want to mask the dnsmasq.service to prevent some known issues with conflicting ports.
+5. Masking dnsmasq.service
+
+> Comitup uses a local configuration of the DHCP setup utility dnsmasq to handle the network configuration of devices
+ onnecting to the Comitup hotspot. 
+
+We want to mask the dnsmasq.service to prevent some known issues with conflicting ports.
 
 ```
 sudo systemctl mask dnsmasq.service
