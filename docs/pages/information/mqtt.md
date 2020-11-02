@@ -49,6 +49,7 @@ In our case (we're using a "[Phillips Hue](https://www.philips-hue.com/de-de?ori
     }
 }
 ```
+
 *The above code will turn on the lamp with a bright turquoise color*
 
 
