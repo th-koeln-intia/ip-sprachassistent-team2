@@ -1,3 +1,8 @@
+---
+# This top area is to give jekyll information about the page.
+layout: single
+---
+
 # Troubleshooting Hermes
 
 We are unable to use Hermes-Mqtt as Dialogue-Management in Rhasspy v2.5.5.  

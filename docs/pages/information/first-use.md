@@ -1,6 +1,6 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: default
+layout: single
 ---
 # First Use
 In this section we want to discuss different possibilities for the user to setup the rhasspy. However, it is important

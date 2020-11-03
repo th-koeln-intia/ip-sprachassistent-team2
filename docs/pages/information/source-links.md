@@ -1,3 +1,7 @@
+---
+# This top area is to give jekyll information about the page.
+layout: single
+---
 # Sources
 ## MQTT
 [MQTT](https://mqtt.org/)   

@@ -1,3 +1,8 @@
+---
+# This top area is to give jekyll information about the page.
+layout: single
+---
+
 # Troubleshooting Rasa-NLU
 
 We have some problems using Rasa-NLU for the intent-recognition.  

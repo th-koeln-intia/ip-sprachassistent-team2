@@ -278,10 +278,12 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll (~> 3.9.0)
   jekyll-algolia
   jekyll-feed (~> 0.6)
   jekyll-include-cache
   jekyll-relative-links
+  jekyll-theme-hacker
   kramdown-parser-gfm
   minima (~> 2.0)
   tzinfo (~> 1.2)

@@ -1,0 +1,31 @@
+
+main:
+  - title: "Dev"
+    url: /pages/dev/
+    children:
+    - title: "Setup"
+      url: /pages/dev/setup
+    - title: "Comitup"
+      url: /pages/dev/comitup
+#  - title: "Setup"
+#    url: /pages/dev/setup
+#  - title: "Comitup"
+#    url: /pages/dev/comitup
+  - title: "Information"
+    url: /pages/information
+  - title: "Tech-stack"
+    url: /pages/tech-stack/
+  - title: "Troubleshooting"
+    url: /pages/troubleshooting/
+  - title: "Users"
+    url: /pages/users/
+
+
+
+docs:
+  - title: "Developer"
+    children:
+      - title: "Setup Guide"
+        url: /docs/pages/dev/setup.md/
+      - title: "Comitup"
+        url: /docs/pages/dev/comitup.md/

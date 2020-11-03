@@ -1,3 +1,8 @@
+---
+# This top area is to give jekyll information about the page.
+layout: single
+---
+
 # Troubleshooting OPENSSL_1_1_1
 
 We had some issues using Mary TTS:

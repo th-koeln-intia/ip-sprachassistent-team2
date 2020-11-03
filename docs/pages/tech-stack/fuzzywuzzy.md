@@ -1,3 +1,8 @@
+---
+# This top area is to give jekyll information about the page.
+layout: single
+---
+
 # FuzzyWuzzy
 
 FuzzyWuzzy is an intent recognition system, that uses the levenshtein distance to compare a given input to preset intent sentences.   

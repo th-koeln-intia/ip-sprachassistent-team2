@@ -24,8 +24,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-theme: hacker
-# remote_theme: "mmistakes/minimal-mistakes@4.20.2"
+# theme: jekyll-theme-hacker
+remote_theme: "mmistakes/minimal-mistakes@4.20.2"
+
+minimal_mistakes_skin: "dark"
+
 plugins:
   - jekyll-feed
   - jekyll-relative-links
@@ -48,6 +51,15 @@ github: [metadata]
 # minimal-mistakes settings
 # minimal_mistakes_skin: "dark"
 
+defaults:
+  # _docs
+  - scope:
+      path: "/"
+      type: docs
+    values:
+      sidebar:
+        nav: "docs"
+
 breadcrumbs: true
 name: "Finn Wehn, Joost Groot Bramel"
 repository: "th-koeln-intia/ip-sprachassistent-team2"
@@ -63,16 +75,5 @@ algolia:
 #include:
 #  - *.md
 
-# Add teaser image
-# teaser: /assets/images/500x300.png
-
-
 # Sidebar
-# defaults:
-  # _docs
-#  - scope:
-#      path: ""
-#      type: docs
-#    values:
-#      sidebar:
-#        nav: "docs"
+

@@ -1,3 +1,8 @@
+---
+# This top area is to give jekyll information about the page.
+layout: single
+---
+
 # Troubleshooting Setup
 
 When using an image to set up a raspberry pi it can happen, that not all the space on the sd card is allocated. This can
@@ -7,15 +12,15 @@ result in to little hard drive space for all technologies to be installed.
 
 With the command `df -h` we can list the filesystem (fs).
 
-![Filesystem after using an image for setup](PI-df-h-after-using-image-for-setup.png)
+![Filesystem after using an image for setup](../../assets/PI-df-h-after-using-image-for-setup.png)
 
 In the first row we can see that the `/dev/root` only takes up 15 GB of space. with `sudo raspi-config --expand-rootfs`
 
-![Expanding fs](Pi-expand-rootfs.png)
+![Expanding fs](../../assets/Pi-expand-rootfs.png)
 
 
 
-![Expanded fs](Pi-expanded-file-system.png)
+![Expanded fs](../../assets/Pi-expanded-file-system.png)
 
 Here we can see that `/dev/root` uses almost all of the 32 GB of the SD-Card.
 

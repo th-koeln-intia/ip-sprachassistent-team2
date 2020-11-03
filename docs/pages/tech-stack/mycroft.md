@@ -1,12 +1,12 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: default
+layout: single
 ---
 
 # MyCroft-Precise
 
 We decided to go with MyCroft-Precise for the given [reasons](../information/wake-word-engine-comparrison.md) and started to train our
-Wake-Word: ["WakeWord"](../information/wake-word.md). Hereinafter we explain, how we made it and what the difficulties were.
+Wake-Word. Hereinafter we explain, how we made it and what the difficulties were.
 
 ## Basics
 
