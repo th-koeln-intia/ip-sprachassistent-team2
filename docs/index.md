@@ -49,6 +49,9 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - As user, I want to ask for information on wikipedia
 - As user, I want to play music over Spotify
 
+#### Not required
+- ([As user, I want to ask for the current time](./pages/epics/not-required/current-time.md))
+
 ## Other
 
 [Wake word engine comparison](pages/information/wake-word-engine-comparrison.md)
