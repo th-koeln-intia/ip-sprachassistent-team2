@@ -89,3 +89,10 @@ Now you should be able to test MaryTTS by typing any word or sentence in the inp
 By pressing the "Speak"-button you should be able to hear the spoken text through your selected "Audio Playing"-service, in our case `aplay` (3.5mm-headphonejack).  
   
 ![MaryTTS-Test](../../assets/MaryTTS-Test.png)
+
+### Call TTS from Node-Red
+
+We created an "HTTP-Request"-node, which uses the `POST`-methode to communicate with Rhasspy's API.  
+The node posts any string, that is stored in the passed message's payload (msg.payload).  
+The endpoint we use for this is:  
+`http://<localhost>:12101/api/text-to-speech`

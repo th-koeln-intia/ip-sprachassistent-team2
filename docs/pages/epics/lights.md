@@ -49,7 +49,7 @@ In Node-Red we have to add a "websocket-in" node and set the path to `ws://127.0
 You can now see, whether it is connected to Rhasspy or not:  
   
 ![flow1-intent-handling](../../assets/nodered-flow1-intent-handling.png)
-
+~~~~
 The function-node sets the `msg.payload` to `msg.intent` and defines a mqtt-topic to the `slot.name`:  
 ```js
     msg.payload = msg.intent;
