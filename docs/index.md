@@ -6,7 +6,7 @@ layout: default
 
 ## Introduction
 
-This projekt is part of [INTIA](https://dites.web.th-koeln.de/forschung/projekte/research-projects-intia/).
+This project is part of [INTIA](https://dites.web.th-koeln.de/forschung/projekte/research-projects-intia/).
 
 The aim of project is to improve possibilities of digital participation for clients of social work organisations and other
 institutions.   
@@ -38,7 +38,7 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - Graphical development engine: [Node-Red](pages/information/node-red.md)
 
 ### First use
-- To see what to do at the first use and what we decided to go with, please look [here](pages/information/first-use.md).
+- To see what to do at the first use and what we decided to go with, please take a look [here](pages/information/first-use.md).
 
 ## Epics
 - These are the use cases which we want to implement:
@@ -49,8 +49,14 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - As user, I want to ask for information on wikipedia
 - As user, I want to play music over Spotify
 
+
 #### Not required
 - ([As user, I want to ask for the current time](./pages/epics/not-required/current-time.md))
+
+## User Guide
+
+To learn how to set up you Heimdal in your home click [here](pages/users/index.md)
+
 
 ## Other
 
