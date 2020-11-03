@@ -24,7 +24,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-theme: hacker
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: dark
 # remote_theme: "mmistakes/minimal-mistakes@4.20.2"
 plugins:
   - jekyll-feed
