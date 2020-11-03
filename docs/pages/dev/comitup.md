@@ -1,3 +1,8 @@
+---
+# This top area is to give jekyll information about the page.
+layout: default
+---
+
 # Installing Comitup
 
 [Commit up on github.com](https://github.com/davesteele/comitup)
