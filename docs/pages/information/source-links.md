@@ -1,7 +1,9 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: single
+layout: default
+permalink: /information/sources/
 ---
+
 # Sources
 ## MQTT
 [MQTT](https://mqtt.org/)   

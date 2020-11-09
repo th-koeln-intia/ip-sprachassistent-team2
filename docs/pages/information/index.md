@@ -1,7 +1,9 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: single
+layout: default
+permalink: /information/index/
 ---
+
 # Information
 1. A comparison of [wake word engines](wake-word-engine-comparrison.md)
 2. A discussion about the [first-use](first-use.md) of our Assistant

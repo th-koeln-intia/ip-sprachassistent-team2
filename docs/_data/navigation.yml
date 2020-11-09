@@ -1,31 +1,51 @@
+- name: Dev
+  link: /dev/index/
+  dropdown:
+    - name: Setup
+      link: /dev/setup/
+    - name: Comitup
+      link: /dev/comitup/
 
-main:
-  - title: "Dev"
-    url: /pages/dev/
-    children:
-    - title: "Setup"
-      url: /pages/dev/setup
-    - title: "Comitup"
-      url: /pages/dev/comitup
-#  - title: "Setup"
-#    url: /pages/dev/setup
-#  - title: "Comitup"
-#    url: /pages/dev/comitup
-  - title: "Information"
-    url: /pages/information
-  - title: "Tech-stack"
-    url: /pages/tech-stack/
-  - title: "Troubleshooting"
-    url: /pages/troubleshooting/
-  - title: "Users"
-    url: /pages/users/
+- name: information
+  link: /information/index/
+  dropdown:
+    - name: mqtt
+      link: /information/mqtt/
+    - name: node-red
+      link: /information/node-red/
+    - name: first-use
+      link: /information/first-use/
+    - name: Wake-word-engines
+      link: /information/wake-word-engines/
+    - name: Sources
+      link: /information/sources/
 
+- name: tech-stack
+  link: /tech-stack/index/
+  dropdown:
+    - name: Mycroft
+      link: /tech-stack/mycroft/
+    - name: Kaldi
+      link: /tech-stack/kaldi/
+    - name: Fuzzywuzzy
+      link: /tech-stack/fuzzywuzzy/
+    - name: Marytts
+      link: /tech-stack/marytts/
 
+- name: troubleshooting
+  link: /troubleshooting/index/
+  dropdown:
+    - name: Setup
+      link: /troubleshooting/setup/
+    - name: Hermes
+      link: /troubleshooting/hermes/
+    - name: Rasa-NLU
+      link: /troubleshooting/rasa-nlu/
+    - name: openssl
+      link: /troubleshooting/openssl/
 
-docs:
-  - title: "Developer"
-    children:
-      - title: "Setup Guide"
-        url: /docs/pages/dev/setup.md/
-      - title: "Comitup"
-        url: /docs/pages/dev/comitup.md/
+- name: users
+  link: /users/index/
+  dropdown:
+    - name: WI-FI
+      link: /users/wi-fi/

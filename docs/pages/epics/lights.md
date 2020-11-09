@@ -1,3 +1,9 @@
+---
+# This top area is to give jekyll information about the page.
+layout: default
+permalink: /epics/lights/
+---
+
 # Lights
 ## Goals
 The goal was that we wanted to control multiple lamps and groups via Rhasspy and Node-Red.  

@@ -1,7 +1,9 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: single
+layout: default
+permalink: /information/node-red/
 ---
+
 # Node-Red
 ## What is Node-Red?
 Node-Red is a simple tool, to visualize IoT-usecases. Functionblocks are linked by drawing connections.

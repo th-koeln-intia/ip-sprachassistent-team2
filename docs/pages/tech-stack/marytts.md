@@ -1,6 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: single
+layout: default
+permalink: /tech-stack/marytts/
 ---
 
 # MaryTTS

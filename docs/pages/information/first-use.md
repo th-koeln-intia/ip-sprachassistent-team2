@@ -1,7 +1,10 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: single
+layout: default
+permalink: /information/first-use/
 ---
+
+
 # First Use
 In this section we want to discuss different possibilities for the user to setup the rhasspy. However, it is important
  to keep in mind, that the range of our users skills and abilities might vastly differ.
