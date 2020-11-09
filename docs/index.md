@@ -45,8 +45,8 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - These are the use cases which we want to implement:
 - As user, I want to give the voice assistant commands in natural language (Speech-To-Text)
 - [As user, I want to control lighting bulbs with the command "Licht an"/"Licht aus" (Intent recognition)](pages/epics/lights.md)
-- As user, I want to set an alarm
-- As user, I want to set a timer
+- [As user, I want to set an alarm](pages/epics/alarms.md)
+- [As user, I want to set a timer](pages/epics/timers.md)
 - As user, I want to ask for information on wikipedia
 - As user, I want to play music over Spotify
 
@@ -56,7 +56,7 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 
 ## User Guide
 
-To learn how to set up you Heimdal in your home click [here](pages/users/index.md)
+To learn how to set up you Heimdall in your home click [here](pages/users/index.md)
 
 
 ## Other
