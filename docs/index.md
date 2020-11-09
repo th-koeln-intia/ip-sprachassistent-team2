@@ -30,7 +30,7 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 ### Used software
 - Wake word engine: [MyCroft-Precise](pages/tech-stack/mycroft.md)
 - Speech to Text: [Kaldi](pages/tech-stack/kaldi.md)
-- Intent Recognition: [Rasa NLU](pages/unused/rasanlu.md)
+- Intent Recognition: [FuzzyWuzzy](./pages/tech-stack/fuzzywuzzy.md)
 - Text to Speech: [MaryTTS](pages/tech-stack/marytts.md) 
 - Dialogue Management: [Hermes MQTT](pages/unused/hermesmqtt.md)
 
