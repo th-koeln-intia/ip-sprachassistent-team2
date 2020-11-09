@@ -32,6 +32,19 @@
     - name: Marytts
       link: /tech-stack/marytts/
 
+- name: Epics
+  link: /epics/index/
+  dropdown:
+    - name: Alarms
+      link: /epics/alarms/
+    - name: Lights
+      link: /epics/lights/
+    - name: Timer
+      link: /epics/timers/
+    - name: Weather
+      link: /epics/weather/
+
+
 - name: troubleshooting
   link: /troubleshooting/index/
   dropdown:
