@@ -28,7 +28,7 @@ For this command we do not need any variables like MQTT-groupnames or anything e
 
 ### GetTime in Node-Red
 
-![GetTime-Node](./../../../assets/GetTime.PNG)
+![GetTime-Node](../../../assets/Node-Red/Epics/Get-Time/GetTime.PNG)
 
 We only need one function-node, which gets started by our "[Intent-Switch](./../lights.md#how-to-use-the-rhasspy-websocket)".  
 This function-node contains a script, which:

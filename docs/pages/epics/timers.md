@@ -37,7 +37,7 @@ Some example sentences are:
 The `link-in`-node is coming from the "[Intent-Switch](./lights.md#how-to-use-the-rhasspy-websocket)",  
 the `link-out`-node is connected to our main [TTS-node](./../tech-stack/marytts.md#call-tts-from-node-red).
 
-![timer-logic](./../../assets/Timer-logic.png)  
+![timer-logic](../../assets/Node-Red/Epics/Timer/Timer-logic.png)  
   
 The nodes are used for:
 - function-node(top): creates TTS-message as command-feedback  
