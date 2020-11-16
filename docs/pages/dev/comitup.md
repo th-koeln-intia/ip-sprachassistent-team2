@@ -78,7 +78,7 @@ Rhasspy.
 
 8. Enter your Wi-Fi Credentials
 
-    ### For Android
+    **For Android**  
 
     In this case we used a Galaxy Note 10+ and Google chrome as test device and assume, that other Android devices work
     similarly, but we won't test with other devices.
@@ -99,13 +99,13 @@ Rhasspy.
 
     ![](../../assets/comitup-connect-android-4.png)
 
-    ### For Windows
+    **For Windows**
 
     After connecting to the comitup hotspot you can enter the following adress in your browser end connect to the comitup dialog.
     "http://comitup-nn.local" remember to replace nn with th networks ID.
 
     If this is not working you might be able to use "http://10.41.0.1.".
 
-    ### For IOs
+    **For IOs**
 
     Unfortunately we don't have an IOs device to test on.

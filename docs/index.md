@@ -32,7 +32,7 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - Speech to Text: [Kaldi](pages/tech-stack/kaldi.md)
 - Intent Recognition: [FuzzyWuzzy](./pages/tech-stack/fuzzywuzzy.md)
 - Text to Speech: [MaryTTS](pages/tech-stack/marytts.md) 
-- Dialogue Management: [Hermes MQTT](pages/unused/hermesmqtt.md)
+- Dialogue Management: [Hermes MQTT](pages/tech-stack/hermesmqtt.md)
 
 ### Other important technologies 
 - Protocol for massage management: [MQTT](pages/information/mqtt.md) 

@@ -39,17 +39,24 @@ Some example sentences are:
 ```
 ## Node-Red
 
-The `link-in`-nodes are coming from the "[Intent-Switch](./lights.md#how-to-use-the-rhasspy-websocket)",  
-the `link-out`-nodes are connected to our main [TTS-node](./../tech-stack/marytts.md#call-tts-from-node-red).
+The left `link-in`-nodes are coming from the "[Intent-Switch](./lights.md#how-to-use-the-rhasspy-websocket)".
 
-![setAlarm](./../../assets/setAlarm.png)  
+#### setAlarm
+![setAlarm](../../assets/Node-Red/Epics/Alarm/setAlarm.png)  
   
 The nodes are used for:
 - function-node(top): creates TTS-message as command-feedback  
 
-- function-node(mid-left): sets `msg.payload` to `msg.slots` and sets undefined minutes to zero  
-- function-node(mid-right): calculates the difference between the system-time and the alarm-time, sets `msg.delay` as milliseconds and creates TTS-message as alarm-sound  
+- function-node(center-left): sets `msg.payload` to `msg.slots` and sets undefined minutes to zero  
+- function-node(center): calculates the difference between the system-time and the alarm-time, sets `msg.delay` as milliseconds
+- delay-node(center): delays the `msg`-object by the `msg.delay`-time
+- file_in-node: loads the alarm-sound
+- wav_headers-node: reads some information from the alarm-sound
+- function-node(right-top): sets `msg.delay` relative to `msg.duration` from the wav_headers-node
 - delay-node(right): delays the `msg`-object by the `msg.delay`-time
+
+- switch-node: switches by incoming intent to either loop the alarm or stop the alarm
+- function-node(right-bottom):  creates TTS-message as command-feedback
 
 - persist-node(left): reads the alarm-time at boot
 - delay-node(left): prevents errors by delaying
@@ -58,19 +65,24 @@ The nodes are used for:
 - function-node(bottom): creates empty `msg`-object to realise deletion
 - persist-node(right): stores and deletes alarm-times
 
-
-![deleteAlarm](./../../assets/deleteAlarm.png)  
+#### deletAlarm
+![deleteAlarm](../../assets/Node-Red/Epics/Alarm/deleteAlarm.png)  
   
 The nodes are used for:  
 - function-node: creates TTS-message as command-feedback  
   
-  
-![getAlarm](./../../assets/getAlarm.png)  
+#### getAlarm  
+![getAlarm](../../assets/Node-Red/Epics/Alarm/getAlarm.png)  
   
 The nodes are used for:  
 - persist-node: reads the alarm-time
 - function-node: creates TTS-message with alarm-time as variable  
   
+
+#### The complete "Alarm-logic"  
+![fullAlarmLogic](../../assets/Node-Red/Epics/Alarm/alarm.png)  
   
-![fullAlarmLogic](./../../assets/Alarm-Logic.PNG)  
-*Thats the complete "Alarm-Logic"*
+*The `link`-nodes are connected to:*  
+- *green: [command-request]()*  
+- *blue: [audio-output(TTS)]()*  
+- *orange [audio-output(.wav)]()*  
