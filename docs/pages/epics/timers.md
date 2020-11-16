@@ -34,8 +34,8 @@ Some example sentences are:
 
 ## Node-Red
 
-The `link-in`-node is coming from the "[Intent-Switch](./lights.md#how-to-use-the-rhasspy-websocket)",  
-the `link-out`-node is connected to our main [TTS-node](./../tech-stack/marytts.md#call-tts-from-node-red).
+The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)". 
+the `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts).
 
 ![timer-logic](../../assets/Node-Red/Epics/Timer/Timer-logic.png)  
   

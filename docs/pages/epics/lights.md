@@ -42,35 +42,9 @@ As you can see Rhasspy do not check the grammar, but since we only use the slots
 
 ## Node-Red
 
-In Node-Red we need the intent and the slots from Rhasspy. To receive these information we use a [websocket](https://rhasspy.readthedocs.io/en/latest/usage/#node-red).  
-
-### How to use the Rhasspy-websocket?
-
-In Node-Red we have to add a "websocket-in" node and set the path to `ws://127.0.0.1:12101/api/events/intent`:
-
-![websocket-in](../../assets/Node-Red/nodered-websocket.png) ![websocket settings](../../assets/Node-Red/nodered-websocket-settings.png)
-
-
-
-You can now see, whether it is connected to Rhasspy or not:  
+#### ChangeLightState
   
-![flow1-intent-handling](../../assets/Node-Red/nodered-flow1-intent-handling.png)
-
-The function-node sets the `msg.payload` to `msg.intent` and defines a mqtt-topic to the `slot.name`:  
-```js
-    msg.payload = msg.intent;
-    group = msg.slots.name;
-    msg.topic = "zigbee2mqtt/"+group+"/set";
-    return msg;
-```
-This helps to work with the right intent and automatically publishes the data to the right mqtt-topic.  
-(e.g. `zigbee2mqtt/wohnzimmerlampe/set`)  
-
-The switch-node directs the `msg` to the following nodes based on the intent:  
-  
-![intent-switch](../../assets/Node-Red/nodered-intent-switch.PNG)
-
-### ChangeLightState in Node-Red
+The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)".  
 
 ![ChangeLightState](../../assets/Node-Red/Epics/Lights/nodered-changelightstate.png)
 

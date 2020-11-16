@@ -31,6 +31,8 @@
       link: /tech-stack/fuzzywuzzy/
     - name: Marytts
       link: /tech-stack/marytts/
+    - name: HermesMQTT
+      link: /tech-stack/hermesmqtt/
 
 - name: Epics
   link: /epics/index/

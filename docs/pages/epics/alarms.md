@@ -39,9 +39,9 @@ Some example sentences are:
 ```
 ## Node-Red
 
-The left `link-in`-nodes are coming from the "[Intent-Switch](./lights.md#how-to-use-the-rhasspy-websocket)".
+The left `link-in`-nodes are coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)".
 
-#### setAlarm
+#### SetAlarm
 ![setAlarm](../../assets/Node-Red/Epics/Alarm/setAlarm.png)  
   
 The nodes are used for:
@@ -65,13 +65,13 @@ The nodes are used for:
 - function-node(bottom): creates empty `msg`-object to realise deletion
 - persist-node(right): stores and deletes alarm-times
 
-#### deletAlarm
+#### DeleteAlarm
 ![deleteAlarm](../../assets/Node-Red/Epics/Alarm/deleteAlarm.png)  
   
 The nodes are used for:  
 - function-node: creates TTS-message as command-feedback  
   
-#### getAlarm  
+#### GetAlarm  
 ![getAlarm](../../assets/Node-Red/Epics/Alarm/getAlarm.png)  
   
 The nodes are used for:  
@@ -83,6 +83,6 @@ The nodes are used for:
 ![fullAlarmLogic](../../assets/Node-Red/Epics/Alarm/alarm.png)  
   
 *The `link`-nodes are connected to:*  
-- *green: [command-request]()*  
-- *blue: [audio-output(TTS)]()*  
-- *orange [audio-output(.wav)]()*  
+- *green: [command-request](./../tech-stack/hermesmqtt.md#command-request)*  
+- *blue: [audio-output(TTS)](./../tech-stack/hermesmqtt.md#audio-output)*  
+- *orange [audio-output(.wav)](./../tech-stack/hermesmqtt.md#wav-files)*  
