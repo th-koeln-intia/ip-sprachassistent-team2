@@ -30,7 +30,7 @@ For this command we do not need any variables like MQTT-groupnames or anything e
 
 ![GetTime-Node](../../../assets/Node-Red/Epics/Get-Time/GetTime.PNG)
 
-We only need one function-node, which gets started by our "[Intent-Switch](./../lights.md#how-to-use-the-rhasspy-websocket)".  
+We only need one function-node, which gets started by our "[Intent-Switch](./../../tech-stack/hermesmqtt.md#intent-switch)".  
 This function-node contains a script, which:
   - gets the current time as [ISO8601-String](https://www.iso.org/iso-8601-date-and-time-format.html) 
   - splits the string to separate hours, minutes and seconds
@@ -61,4 +61,4 @@ This function-node contains a script, which:
 ```
 *Code of the function-node.*
 
-The function-node passes the created message to our main [TTS-node](./../../tech-stack/marytts.md#call-tts-from-node-red).
+The function-node passes the created message to our main [TTS-node](./../../tech-stack/hermesmqtt.md#tts).

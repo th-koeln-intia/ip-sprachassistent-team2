@@ -93,7 +93,4 @@ By pressing the "Speak"-button you should be able to hear the spoken text throug
 
 ### Call TTS from Node-Red
 
-We created an "HTTP-Request"-node, which uses the `POST`-methode to communicate with Rhasspy's API.  
-The node posts any string, that is stored in the passed message's payload (msg.payload).  
-The endpoint we use for this is:  
-`http://<localhost>:12101/api/text-to-speech`
+To see how we use Node-Red to interact with MaryTTS, click [here](./hermesmqtt.md#tts).
