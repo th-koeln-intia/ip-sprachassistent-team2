@@ -9,3 +9,4 @@ title:  Tech-Stack
 2. Speach to text with [kaldi](./kaldi.md)
 3. Intent recognition with [fuzzywuzzy](fuzzywuzzy.md)
 4. Text to Speach with [marytts](marytts.md)
+5. Dialogue-Managment with [HermesMQTT](./hermesmqtt.md)
