@@ -7,29 +7,28 @@ permalink: /tech-stack/marytts/
 # MaryTTS
 
 ## Introduction
-MaryTTS is a java-based open-source Text-to-Speech platform.  
+MaryTTS is a java-based open-source text to speech system.  
 It was developed by the [German Research Center for Artificial Intelligence](https://www.dfki.de/web/) and the [University of Saarland](https://www.uni-saarland.de/start.html).  
-In our case we use the [MaryTTS-Installer](https://github.com/marytts/marytts-installer) to both install new languages and run the server,  
+In our case we use the [MaryTTS-Installer](https://github.com/marytts/marytts-installer) to both install new languages **and** run the server,  
 because we were unable to install new languages with the [Installer-GUI](https://github.com/marytts/marytts#downloading-and-installing-voices) due to our missing video output.  
-
 
 ## Install MaryTTS
 ### Download
 Download the [MaryTTS-Installer](https://github.com/marytts/marytts-installer/releases) and unzip it.  
-Go to the Directory where you downloaded it and install a language:  
+Go to the directory, where you downloaded it and install a language:  
 
 ```bash
     cd marytts-installer-5.2/
     ./marytts install voice-bits3-hsmm
 ```
 
-*`bits3-hsmm` is a german male voice, you can try any voices [here](http://mary.dfki.de:59125/)*  
+*`bits3-hsmm` is a german male voice, you can try any voices [here](http://mary.dfki.de:59125/).*  
 
-To run you server just need to type `./marytts` in the same directory.  
-The server will be available at `http://localhost:59125/`.
+To run your server you just need to type `./marytts` in the same directory.  
+The server will be available at `http://localhost:59125/`.  
 
-### Run MaryTTS as a Service
-We created a Service to start the MaryTTS server at boot up.  
+### Run MaryTTS as a service
+We created a service to start the MaryTTS server at boot up.  
 To do so, type `sudo nano /etc/systemd/system/marytts.service` in the console and copy the following lines:  
 
 ```
@@ -82,7 +81,7 @@ Go to your Rhasspy-profile or the webinterface and add the following lines:
 }
 ```
 
-*Make sure to change `"locale"` and `"voice"` to whatever you installed*
+*Make sure to change `"locale"` and `"voice"` to any voice you installed.*
 
 ### Test MaryTTS
 

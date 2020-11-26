@@ -6,14 +6,14 @@ permalink: /tech-stack/fuzzywuzzy/
 
 # FuzzyWuzzy
 
-FuzzyWuzzy is an intent recognition system, that uses the levenshtein distance to compare a given input to preset intent sentences.   
+FuzzyWuzzy is an intent recognition system, that uses the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to compare a given input to preset intent sentences.   
 It works best with a small amount of sentences.  
 
 ## Levenshtein distance
 
-The levenshtein distance describes the minimal count of characters you have to change, to transform a word into another.  
+The Levenshtein distance describes the minimal count of characters you have to change, to transform a word into another.  
 In the following example the levenshtein distance is 3.  
-You have to change 3 characters from "Apples" to "Maple":
+You have to change 3 characters from "Apples" to "Maple":  
 
 1. Ap**p**les -> Aples (erased **p**)  
 2. Aples -> **M**aples (added **M**)  
