@@ -7,9 +7,8 @@ permalink: /tech-stack/kaldi/
 # Kaldi
 
 ## Introduction
-Kaldi is a C++ based speech recognition tool. It's licensed under Apache License v2.0 and used for Automatic Speech Recognition (ASR). After Precise activates the assistant by  detecting the wake
-word, Kaldi should transform the recorded sound waves to text, which is passed on to Rasa NLU to interpret the users
-intend. 
+Kaldi is a C++ based speech recognition tool. It is licensed under [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0) and used for **A**utomatic **S**peech **R**ecognition (**ASR**).  
+After Precise activates the assistant by detecting the [wake-word](./mycroft.md#how-to-find-a-wake-word), Kaldi should transform the recorded sounds to text, which is passed on to [FuzzyWuzzy](./fuzzywuzzy.md) to interpret the users intent.  
 
 ## Install Kaldi
 ### Download
@@ -18,10 +17,11 @@ Clone the Kaldi repository and move into the folder.
     git clone https://github.com/kaldi-asr/kaldi.git kaldi --origin upstream
     cd kaldi
 ```
+
 ### Install
 To install Kaldi follow the instructions in the INSTALL file.  
 It will guide you to the INSTALL files in `kaldi/tools/` and `kaldi/src/`.  
-After you followed all these instructions, you can move on with this guide.
+After you followed all these instructions, you can move on with this guide.  
 
 ![/kaldi/INSTALL](../../assets/kaldi-INSTALL.png)  
 */kaldi/INSTALL*  
@@ -35,7 +35,7 @@ After you followed all these instructions, you can move on with this guide.
 ## Use Kaldi in Rhasspy
 ### Update your Rhasspy profile
 You need to have Kaldi installed.
-Then go to the Webinterface of Rhasspy and chose settings.  
+Then go to the Webinterface of Rhasspy and open the settings.  
 Change "Speech to Text" to Kaldi and add the following lines to your profile.
 
 ```json
@@ -58,14 +58,14 @@ Change "Speech to Text" to Kaldi and add the following lines to your profile.
     }
 ```
 Set `kaldi_dir` to the directory, where you installed Kaldi in our case it's `~/kaldi`.  
-Rhasspy will automatically delete all default-Lines e.g. ``"base_dictionary": "kaldi/base_dictionary.txt"``.  
+Rhasspy will automatically delete all default lines e.g. ``"base_dictionary": "kaldi/base_dictionary.txt"``.  
 After a restart of Rhasspy you should be able to use Kaldi as your STT-system.  
 
 ### Test Kaldi
-Rhasspy automatically trains Kaldi, to expect your intents in the ``sentences.ini`` file. To text it you can add a line to this file and save it.  
-Rhasspy will ask to restart. Except it and your ready to test.  
+Rhasspy automatically trains Kaldi, to expect your intents in the ``sentences.ini`` file. To test it, you can add a line to this file and save it.  
+Rhasspy will ask to restart. Accept it and you are ready to test.  
 Look in the terminal and start the recording by saying your wake-word or by using the "Wake Up"-button on the webinterface.  
-Now say the line you added and wait a few seconds. Now scroll through your terminal until you find the line:
+Now say the line you added and wait a few seconds. Then scroll through your terminal until you find the line:  
 ````
 [DEBUG:2020-10-13 07:35:27,316] rhasspyasr_kaldi.transcribe: ['wie spät ist es ', 'wie spät ist es ']
 ````
