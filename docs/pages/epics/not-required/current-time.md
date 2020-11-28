@@ -1,13 +1,12 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: default
+layout: page
 permalink: /epics/current-time/
 title: Get the current time
 ---
 
-## Current Time
-
 ## Goals
+
 Our main goal was, to ask Rhasspy for the current time  and made MaryTTS to read it aloud.  
 To increase the user experience, we wanted to get a polished and understandable text from Rhasspy.  
 

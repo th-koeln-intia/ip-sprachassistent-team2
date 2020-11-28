@@ -34,11 +34,13 @@
     - name: HermesMQTT
       link: /tech-stack/hermesmqtt/
 
-- name: Epics
+- name: features
   link: /epics/index/
   dropdown:
     - name: Alarms
       link: /epics/alarms/
+    - name: Current time
+      link: /epics/current-time/
     - name: Lights
       link: /epics/lights/
     - name: Timer
