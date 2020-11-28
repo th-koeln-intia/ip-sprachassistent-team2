@@ -49,8 +49,8 @@ The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqt
 ![ChangeLightState](../../assets/Node-Red/Epics/Lights/nodered-changelightstate.png)
 
 The nodes are used for:
-- function-node: sets `msg.payload` to `msg.slots`
-- switch-node: switches based on the keys of `msg.payload` (e.g. `msg.payload.light_state`)
-- function-node(top): sets `msg.payload` to "ON" and "OFF" based on input
-- function-node(bottom): sets `msg.payload` to a color (e.g. `{"color":{"r":223,"g":223,"b":223},"transition":2}` => white with transition-time of 2 seconds)
-- link-node(mqtt): just links to a default "mqtt-out" node (topic and payload are set by previous function-nodes)
+- `function`-node: sets `msg.payload` to `msg.slots`
+- `switch`-node: switches based on the keys of `msg.payload` (e.g. `msg.payload.light_state`)
+- `function`-node(top): sets `msg.payload` to "ON" and "OFF" based on input
+- `function`-node(bottom): sets `msg.payload` to a color (e.g. `{"color":{"r":223,"g":223,"b":223},"transition":2}` => white with transition-time of 2 seconds)
+- `link`-node(mqtt): just links to a default `mqtt-out`-node (topic and payload are set by previous `function`-nodes)

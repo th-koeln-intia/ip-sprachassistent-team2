@@ -2,6 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: default
 permalink: /epics/current-time/
+title: Get the current time
 ---
 
 ## Current Time
@@ -23,7 +24,7 @@ In this case we do not allow that much variation, since we mainly ask:
 *"Wie spät ist es?"*
 
 ## Node-Red
-For this command we do not need any variables like MQTT-groupnames or anything else, so we do not need slots.  
+For this command we do not need any variables like MQTT-groups or anything else, so we do not need slots.  
 
 
 ### GetTime in Node-Red

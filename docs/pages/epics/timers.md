@@ -6,11 +6,8 @@ title: Timers
 ---
 
 ## Goals
-The goal was to set and control alarms.
-We want to be able to:
-- Set/Delete an alarm
-- Stop the alarm
-- (Change the sound of the alarm)
+The goal was to set a timer via a voice command.
+
 ## Rhasspy
 In Rhasspy we have to add new lines to the `sentences.ini`:
 ```textmate
@@ -34,12 +31,12 @@ Some example sentences are:
 
 ## Node-Red
 
-The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)". 
-the `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts).
+The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)".  
+The `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts).
 
 ![timer-logic](../../assets/Node-Red/Epics/Timer/Timer-logic.png)  
   
 The nodes are used for:
-- function-node(top): creates TTS-message as command-feedback  
-- function-node(bottom): calculates the time, sets `msg.delay` as milliseconds and creates TTS-message as alarm-sound  
-- delay-node: delays the `msg`-object by the `msg.delay`-time
+- `function`-node(top): creates TTS-message as command-feedback  
+- `function`-node(bottom): calculates the time, sets `msg.delay` as milliseconds and creates TTS-message as timer-sound  
+- `delay`-node: delays the `msg`-object by the `msg.delay`-time

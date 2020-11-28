@@ -2,6 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/mycroft/
+title: MyCroft
 ---
 
 # MyCroft-Precise
@@ -95,10 +96,12 @@ The command creates the following three files:
 After we copied all these files to the `rhasspy/profiles/de/precise`-directory, we were able to select and use them in the Rhasspy-GUI on `http://<hostname>:12101`.  
 Alternatively you can add the following lines to your `profile.json`.  
 ```json
-    "wake": {
-        "precise": {
-            "model": "heimdall.pb"
-        },
-        "system": "precise"
+    {
+      "wake":{
+          "precise": {
+              "model": "heimdall.pb"
+          },
+          "system": "precise"
+      }
     }
 ```
