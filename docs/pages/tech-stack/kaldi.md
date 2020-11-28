@@ -2,9 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/kaldi/
+title: Kaldi
 ---
-
-# Kaldi
 
 ## Introduction
 Kaldi is a C++ based speech recognition tool. It is licensed under [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0) and used for **A**utomatic **S**peech **R**ecognition (**ASR**).  

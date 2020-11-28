@@ -2,9 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/hermesmqtt/
+title: HermesMQTT
 ---
-
-# HermesMQTT
 
 Hermes is a mqtt-based protocol to control a voice assistant.  
 You publish to specific topics to activate or start a function and subscribe to other topics to receive the results of these functions.  
