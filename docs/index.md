@@ -52,7 +52,7 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 
 
 #### Not required
-- ([As user, I want to ask for the current time](./pages/epics/not-required/current-time.md))
+- ([As user, I want to ask for the current time](pages/epics/not-required/current-time.md))
 
 ## User Guide
 
