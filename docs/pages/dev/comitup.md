@@ -13,7 +13,7 @@ permalink: /dev/comitup/
 >Comitup is a software package, which provides a service to establish Wi-Fi networking on a headless computer.
 
 If the Raspberry Pi is not able to establish a Wi-Fi connection, it will broadcast its own Wi-Fi network. We can then use this 
-network to connect to the pi via a Wi-Fi capable device to enter the credentials of the Wi-Fi network we want the pi to 
+network to connect to the pi via a Wi-Fi capable device and enter the credentials of the Wi-Fi network we want the pi to 
 operate in.
 
 ## Two ways to Rome
@@ -72,7 +72,7 @@ Rhasspy.
 
 7. Connect to comitup hotspot
 
-    Now we use a Wi-Fi capable device like a laptop or smarrtphone to connect to the hotspot. Open the Wi-Fi network dialog.
+    Now we use a Wi-Fi capable device like a laptop or smartphone to connect to the hotspot. Open the Wi-Fi network dialog.
     Connect to the network named "Comitup-nn", where nn is a randomized two digit ID. This ID might be important in the next
     step.
 
@@ -95,17 +95,24 @@ Rhasspy.
 
     ![](../../assets/comitup-connect-android-3.png)
 
-    The browser will open and we can select the ssid of our network or search a hitdden or missing one.
+    The browser will open and we can select the ssid of our network or search a hidden or missing one.
 
     ![](../../assets/comitup-connect-android-4.png)
 
     **For Windows**
 
-    After connecting to the comitup hotspot you can enter the following adress in your browser end connect to the comitup dialog.
+    After connecting to the comitup hotspot you can enter the following address in your browser end connect to the comitup dialog.
     "http://comitup-nn.local" remember to replace nn with th networks ID.
 
-    If this is not working you might be able to use "http://10.41.0.1.".
+    If this is not working you might be able to use "http://10.41.0.1.", the dot at the end of the IP-address is supposed
+    to be part of the hack. But this has not worked for us.
 
     **For IOs**
 
     Unfortunately we don't have an IOs device to test on.
+    
+## Using the Comitup Image
+
+Since we added Comitup to our tech-stack afterwards we have not tried to use a comitup image as base for our setup. You 
+can find up to date images at[davesteele.github.io/comitup/](https://davesteele.github.io/comitup/) and install them
+according to our [Getting Started Page](./setup.md).
