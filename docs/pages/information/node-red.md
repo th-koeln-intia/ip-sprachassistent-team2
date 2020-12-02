@@ -129,4 +129,6 @@ Flows can be imported and exported as JSON-files, to share them with others.
     }
 ]
 ```
-*This is the flow from the [image](./node-red.md#flows) above.*
+*This is the flow from the [image](./node-red.md#flows) above.*  
+
+If you want to use our flows, you just have to import them to your Node-Red webinterface.

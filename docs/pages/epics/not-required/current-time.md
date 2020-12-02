@@ -22,9 +22,12 @@ In Rhasspy we have to add new lines to the `sentences.ini`:
 In this case we do not allow that much variation, since we mainly ask:  
 *"Wie spät ist es?"*
 
-## Node-Red
 For this command we do not need any variables like MQTT-groups or anything else, so we do not need slots.  
 
+## Node-Red
+  
+You can find the flow for this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/time_alarm_timer.json).  
+*(It is the same flow, we used for the [alarm](./../alarms.md) and the [timer](./../timers.md))*
 
 ### GetTime in Node-Red
 
