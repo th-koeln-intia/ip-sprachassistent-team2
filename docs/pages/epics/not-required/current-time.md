@@ -28,10 +28,10 @@ For this command we do not need any variables like MQTT-groups or anything else,
 
 ### GetTime in Node-Red
 
-![GetTime-Node](../../../assets/Node-Red/Epics/Get-Time/GetTime.PNG)
+![GetTime-Node](../../../assets/Node-Red/Epics/Get-Time/GetTime.png)
 
-We only need one function-node, which gets started by our "[Intent-Switch](./../../tech-stack/hermesmqtt.md#intent-switch)".  
-This function-node contains a script, which:
+We only need one `function`-node, which gets started by our "[Intent-Switch](./../../tech-stack/hermesmqtt.md#intent-switch)".  
+This `function`-node contains a script, which:
   - gets the current time as [ISO8601-String](https://www.iso.org/iso-8601-date-and-time-format.html) 
   - splits the string to separate hours, minutes and seconds
   - adjust the time (+1 hour) to fit our timezone and makes sure, that it won't exceed 24 hours
@@ -59,6 +59,6 @@ This function-node contains a script, which:
     message.payload = "Es ist " + time[0] + " Uhr " + time[1];
     return message;
 ```
-*Code of the function-node.*
+*Code of the `function`-node.*
 
-The function-node passes the created message to our main [TTS-node](./../../tech-stack/hermesmqtt.md#tts).
+The `function`-node passes the created message to our main [TTS-node](./../../tech-stack/hermesmqtt.md#tts).
