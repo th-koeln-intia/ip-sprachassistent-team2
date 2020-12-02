@@ -12,6 +12,9 @@ For example to start [Kaldi](./kaldi.md), you have to publish to `hermes/asr/sta
 ## Node-Red
 
 We use [Node-Red](./../information/node-red.md) to create a dialogue manager, which then controls our voice assistant.  
+Here you can find the flows for all [Hermes-based](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/hermes_rhasspy.json) features and the [Intent-Switch](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/intent-switch.json).
+
+
 
 #### Dialogue manager
 

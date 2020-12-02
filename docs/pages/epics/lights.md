@@ -42,6 +42,8 @@ As you can see Rhasspy do not check the grammar, but since we only use the slots
 
 ## Node-Red
 
+You can find the flow for this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/smarthome_lights.json).
+
 #### ChangeLightState
   
 The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)".  
