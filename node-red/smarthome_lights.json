@@ -1,0 +1,426 @@
+[
+    {
+        "id": "d08b55b9.e368e8",
+        "type": "tab",
+        "label": "Smarthome/Lights",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "250ab910.0b82b6",
+        "type": "mqtt out",
+        "z": "d08b55b9.e368e8",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bbb5b67c.b2a038",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "An/Aus",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "b5c18468.65aa58"
+            ]
+        ]
+    },
+    {
+        "id": "9a56da0a.38dd38",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "Grün",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"color\":{\"r\":0,\"g\":223,\"b\":0},\"transition\":2}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "b5c18468.65aa58"
+            ]
+        ]
+    },
+    {
+        "id": "f9b9ffb0.bb4c2",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "Blau",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"color\":{\"r\":0,\"g\":0,\"b\":223},\"transition\": 2}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "b5c18468.65aa58"
+            ]
+        ]
+    },
+    {
+        "id": "3c1a6ec0.aedb22",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "Rot",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"color\":{\"r\":223,\"g\":0,\"b\":0},\"transition\": 2}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "b5c18468.65aa58"
+            ]
+        ]
+    },
+    {
+        "id": "1c38b3b4.1a480c",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "Weiß",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"brightness\": 255}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 560,
+        "wires": [
+            [
+                "b5c18468.65aa58"
+            ]
+        ]
+    },
+    {
+        "id": "962e276c.83a6b8",
+        "type": "link in",
+        "z": "d08b55b9.e368e8",
+        "name": "MQTT-Main-In",
+        "links": [
+            "8ca48db6.97d1d",
+            "25a54373.03a80c"
+        ],
+        "x": 135,
+        "y": 660,
+        "wires": [
+            [
+                "250ab910.0b82b6"
+            ]
+        ]
+    },
+    {
+        "id": "37a8437c.457ccc",
+        "type": "mqtt out",
+        "z": "d08b55b9.e368e8",
+        "name": "",
+        "topic": "zigbee2mqtt/bridge/config/touchlink/factory_reset",
+        "qos": "0",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 870,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b6643230.0da9b",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "37a8437c.457ccc"
+            ]
+        ]
+    },
+    {
+        "id": "b5c18468.65aa58",
+        "type": "function",
+        "z": "d08b55b9.e368e8",
+        "name": "",
+        "func": "msg.topic = \"zigbee2mqtt/zimmerlampen/set\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "250ab910.0b82b6"
+            ]
+        ]
+    },
+    {
+        "id": "173c9a2a.1b1e86",
+        "type": "inject",
+        "z": "d08b55b9.e368e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"brightness\":150}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "b5c18468.65aa58"
+            ]
+        ]
+    },
+    {
+        "id": "25a54373.03a80c",
+        "type": "link out",
+        "z": "d08b55b9.e368e8",
+        "name": "Lights-MQTT-Out",
+        "links": [
+            "71e9137d.86512c",
+            "962e276c.83a6b8"
+        ],
+        "x": 1135,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "55b03a16.7dbf64",
+        "type": "function",
+        "z": "d08b55b9.e368e8",
+        "name": "payload",
+        "func": "if (msg.payload.light_state == \"ein\"){\n    msg.payload = \"ON\";\n}else{\n    msg.payload = \"OFF\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 920,
+        "wires": [
+            [
+                "25a54373.03a80c",
+                "a9086430.891428"
+            ]
+        ]
+    },
+    {
+        "id": "d4298948.a566d8",
+        "type": "link in",
+        "z": "d08b55b9.e368e8",
+        "name": "Lamps-In",
+        "links": [
+            "1a7b7fa1.719ef"
+        ],
+        "x": 135,
+        "y": 940,
+        "wires": [
+            [
+                "6c46ac76.c10684"
+            ]
+        ]
+    },
+    {
+        "id": "be9b147e.473498",
+        "type": "comment",
+        "z": "d08b55b9.e368e8",
+        "name": "Lamps-Logic (ChangeLightState)",
+        "info": "",
+        "x": 190,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "e9cb3507.096f48",
+        "type": "switch",
+        "z": "d08b55b9.e368e8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "light_state",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "light_color",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 940,
+        "wires": [
+            [
+                "55b03a16.7dbf64"
+            ],
+            [
+                "dd579eb1.d7329"
+            ]
+        ]
+    },
+    {
+        "id": "6c46ac76.c10684",
+        "type": "function",
+        "z": "d08b55b9.e368e8",
+        "name": "mapping",
+        "func": "msg.payload = msg.slots;\ngroup = msg.slots.name;\nmsg.topic = \"zigbee2mqtt/\"+group+\"/set\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "e9cb3507.096f48"
+            ]
+        ]
+    },
+    {
+        "id": "dd579eb1.d7329",
+        "type": "function",
+        "z": "d08b55b9.e368e8",
+        "name": "payload",
+        "func": "switch(msg.payload.light_color){\n    case \"grün\":\n        msg.payload = {\"color\":{\"r\":0,\"g\":223,\"b\":0},\"transition\":2}\n        break;\n    case \"blau\":\n        msg.payload = {\"color\":{\"r\":0,\"g\":0,\"b\":223},\"transition\":2}\n        break;\n    case \"rot\":\n        msg.payload = {\"color\":{\"r\":223,\"g\":0,\"b\":0},\"transition\":2}\n        break;\n    case \"weiß\":\n        msg.payload = {\"color\":{\"r\":223,\"g\":223,\"b\":223},\"transition\":2}\n        break;\n    case \"warmweiß\":\n        msg.payload = {\"brightness\":223 ,\"color_temp\": 303, \"transition\":2};\n        break;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 1020,
+        "wires": [
+            [
+                "25a54373.03a80c",
+                "a9086430.891428"
+            ]
+        ]
+    },
+    {
+        "id": "a9086430.891428",
+        "type": "function",
+        "z": "d08b55b9.e368e8",
+        "name": "feedback",
+        "func": "message = {};\nmessage.payload = \"Verstanden\";\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 980,
+        "y": 860,
+        "wires": [
+            [
+                "5bb9e660.7093c8"
+            ]
+        ]
+    },
+    {
+        "id": "5bb9e660.7093c8",
+        "type": "link out",
+        "z": "d08b55b9.e368e8",
+        "name": "Lights-TTS-Out",
+        "links": [
+            "24c67ec.ea70882",
+            "d8f147bb.ccdd68"
+        ],
+        "x": 1135,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "f757fb70.3635f8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "mqtt",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]

@@ -1,0 +1,199 @@
+[
+    {
+        "id": "8a23b221.36856",
+        "type": "tab",
+        "label": "Restart/Poweroff",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6dd857ee.3b2978",
+        "type": "link in",
+        "z": "8a23b221.36856",
+        "name": "Restart-In",
+        "links": [
+            "a0110e7b.33a8b"
+        ],
+        "x": 195,
+        "y": 200,
+        "wires": [
+            [
+                "df112d73.90738"
+            ]
+        ]
+    },
+    {
+        "id": "c672c243.4c361",
+        "type": "comment",
+        "z": "8a23b221.36856",
+        "name": "Restart/Poweroff",
+        "info": "",
+        "x": 200,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a0d41e17.5ce89",
+        "type": "link in",
+        "z": "8a23b221.36856",
+        "name": "Poweroff-In",
+        "links": [
+            "7653ded6.a933b"
+        ],
+        "x": 195,
+        "y": 280,
+        "wires": [
+            [
+                "ea22d92b.e58858"
+            ]
+        ]
+    },
+    {
+        "id": "df112d73.90738",
+        "type": "function",
+        "z": "8a23b221.36856",
+        "name": "id and feedback",
+        "func": "message = {};\nmessage.payload = \"Alles Klar,   Wir sehen uns auf der anderen Seite\";\nmessage.ttsId = \"Restart\";\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "f087bb4c.00cee8"
+            ]
+        ]
+    },
+    {
+        "id": "ea22d92b.e58858",
+        "type": "function",
+        "z": "8a23b221.36856",
+        "name": "id and feedback",
+        "func": "message = {};\nvar strings = [\"Weck mich wenn du mich Brauchst\", \"Hau Rheinland\", \"Bundesgartentschau\", \"Tschüss mit Ö\"]\nmessage.payload = \"Alles klar, \" + strings[Math.floor(Math.random() * strings.length)];\nmessage.ttsId = \"Poweroff\";\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "f087bb4c.00cee8"
+            ]
+        ]
+    },
+    {
+        "id": "42f29cf0.3ff184",
+        "type": "shutdown",
+        "z": "8a23b221.36856",
+        "name": "Poweroff",
+        "x": 980,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e0d30a90.256348",
+        "type": "restart",
+        "z": "8a23b221.36856",
+        "name": "Restart",
+        "x": 980,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d6ae1ae9.490d58",
+        "type": "inject",
+        "z": "8a23b221.36856",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 340,
+        "wires": [
+            [
+                "42f29cf0.3ff184"
+            ]
+        ]
+    },
+    {
+        "id": "2e58d231.1d59ae",
+        "type": "function",
+        "z": "8a23b221.36856",
+        "name": "filter by id",
+        "func": "var source = msg.payload.id.split(\"I\")[0];\nif (source === \"Restart\"){\n    return {};\n}else{\n    return;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 200,
+        "wires": [
+            [
+                "e0d30a90.256348"
+            ]
+        ]
+    },
+    {
+        "id": "c22b0075.f93eb",
+        "type": "function",
+        "z": "8a23b221.36856",
+        "name": "filter by id",
+        "func": "var source = msg.payload.id.split(\"I\")[0];\nif (source === \"Poweroff\"){\n    return {};\n}else{\n    return;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "42f29cf0.3ff184"
+            ]
+        ]
+    },
+    {
+        "id": "97543af6.b7e938",
+        "type": "link in",
+        "z": "8a23b221.36856",
+        "name": "Restart/Poweroff-TTS-In",
+        "links": [
+            "745640e0.69d7c"
+        ],
+        "x": 615,
+        "y": 240,
+        "wires": [
+            [
+                "2e58d231.1d59ae",
+                "c22b0075.f93eb"
+            ]
+        ]
+    },
+    {
+        "id": "f087bb4c.00cee8",
+        "type": "link out",
+        "z": "8a23b221.36856",
+        "name": "Restart/Poweroff-TTS-Out",
+        "links": [
+            "d8f147bb.ccdd68"
+        ],
+        "x": 495,
+        "y": 240,
+        "wires": []
+    }
+]
