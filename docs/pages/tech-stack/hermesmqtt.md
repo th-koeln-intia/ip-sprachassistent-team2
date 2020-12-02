@@ -15,7 +15,7 @@ We use [Node-Red](./../information/node-red.md) to create a dialogue manager, wh
 
 #### Dialogue manager
 
-![Dialogue-Manager](./../../assets/Node-Red/Hermes/hermes-ohne-command-request.PNG)  
+![Dialogue-Manager](./../../assets/Node-Red/Hermes/dialogue-manager-without-cr.png)  
   
 We started our dialogue manager with a `mqtt`-node, which subscribed to `hermes/hotword/heimdall/detected`.  
 It will be triggered everytime our [wake-word](./mycroft.md#how-to-find-a-wake-word) "Heimdall" is detected.  
@@ -46,16 +46,7 @@ To see the full documentation of Hermes, click [here](https://docs.snips.ai/refe
 
 ![intent-handling](./../../assets/Node-Red/intent-handling.png)  
 
-The `function`-node sets the `msg.payload` to `msg.intent` and defines a mqtt-topic to the `slot.name`:  
-```js
-    msg.payload = msg.intent;
-    group = msg.slots.name;
-    msg.topic = "zigbee2mqtt/"+group+"/set";
-    return msg;
-```
-This helps to work with the right intent and automatically publishes the data to the right mqtt-topic (e.g. `zigbee2mqtt/wohnzimmerlampe/set`).  
-
-The `switch`-node directs the `msg` to the following nodes based on the intent:  
+Our intent-handling is just a `switch`-node, that directs the `msg` to the following nodes based on the intent:  
     
 ![intent-switch](./../../assets/Node-Red/intent-switch.png)   
 
@@ -77,10 +68,10 @@ After speaking the text, hermes publishes a message to `hermes/tts/sayFinished`,
 ##### .wav-files
 
 To play `.wav`-files, you simply have to publish a message to `hermes/audioServer/<siteId>/playBytes/<RequestId>`, where `siteId` is used to identify the source of the message and `RequestId` could be any string (in our case, we generate one with a `function`-node).  
-It will play any `.wav`-file, which is stored in `message.payload` (binary-payload).
+It will play any `.wav`-file, which is stored in `message.payload` (binary-payload).  
 
-We decided to switch off the wake-word-detection and to delay our message to prevent detections by rhasspy itself.
-After playing the sound, hermes publishes a message to `hermes/audioServer/<siteId>/playFinished`, which we used to switch on the wake-word-detection.
+We decided to switch off the wake-word-detection and to delay our message to prevent detections by rhasspy itself.  
+After playing the sound, hermes publishes a message to `hermes/audioServer/<siteId>/playFinished`, which we used to switch on the wake-word-detection.  
 
 #### Command-Request
 
@@ -91,14 +82,14 @@ To reach this goal we added some nodes:
 
 The blue `link`-nodes are the in- and output-nodes of this function.  
 The `link-in`-node will trigger the process and the `link-out`-node will return the intent.  
-To see the function of the first `function`-node and the two `mqtt-out`-nodes, you should check our [dialogue manager](#dialogue-manager).
+To see the function of the first `function`-node and the two `mqtt-out`-nodes, you should check our [dialogue manager](#dialogue-manager).  
 The second `function`-node creates a new message and a `payload` with the value `false`, which later is used to toggle switches.  
   
 We had to extend our [dialogue manager](#dialogue-manager) by the following nodes:  
   
-![full-dialogue-manager](./../../assets/Node-Red/Hermes/hermes-complete.png)  
+![full-dialogue-manager](./../../assets/Node-Red/Hermes/dialogue-manager.png)  
   
 The two `traffic`-nodes decides where to pass the intents.  
 If a wake-word is detected, the intent will be passed to our "[Intent-Switch](#intent-switch)".   
-If no wake-word is detected, the intent will be passed to the "Command-Request-Output".
-All new `function`-nodes were created to control the `traffic`-nodes.
+If no wake-word is detected, the intent will be passed to the "Command-Request-Output".  
+All new `function`-nodes were created to control the `traffic`-nodes.  
