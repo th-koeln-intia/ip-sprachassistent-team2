@@ -81,7 +81,7 @@ but not jet implemented.
 Saving Weatherdata as Globals since openweathermap
 
 
-### Intends
+### Intents
 
 First we want to implement the intends GetWeather and an Intent GetWeatherWithLocation or GetWaetherLocation. We add the
 following sentences to sentences.ini in the Rhasspy web application. Later we want to implement a weather forecast as well
@@ -108,6 +108,7 @@ wie ist das wetter in (Stadt){city}
 
     Different Intends?
 3. How do we handel expressions like "this afternoon | evening"
+
 ## Sources
 
 [cstain.io](https://cstan.io/?p=12097&lang=en)

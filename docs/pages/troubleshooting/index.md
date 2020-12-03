@@ -7,6 +7,5 @@ permalink: /troubleshooting/index/
 # Troubleshooting
 
 1. [Setup](setup.md)
-2. [hermes](hermes.md)
-3. [openssl](openssl.md)
-4. [rasa-nlu](rasa-nlu.md)
+2. [openssl](openssl.md)
+3. [rasa-nlu](rasa-nlu.md)

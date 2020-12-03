@@ -15,8 +15,8 @@ These lines represent the handing over of a JSON-object from one javascript func
 A flow is a cluster of nodes, which are connected to each other.  
 It is comparable to a main-function, where multiple functions get executed one after another.  
 
-![NODE-RED](../../assets/Node-Red/node-red-flow.png)
-*This is an example flow.*
+![NODE-RED](../../assets/Node-Red/node-red-flow.png)  
+*This is an example flow.*  
 
 At the flow above you can see three different nodes.  
 An `inject`-node, that starts the flow and passes an empty `msg`-object:  
@@ -131,4 +131,4 @@ Flows can be imported and exported as JSON-files, to share them with others.
 ```
 *This is the flow from the [image](./node-red.md#flows) above.*  
 
-If you want to use our flows, you just have to import them to your Node-Red webinterface.
+If you want to use our flows, you just have to import them to your Node-Red webinterface.  

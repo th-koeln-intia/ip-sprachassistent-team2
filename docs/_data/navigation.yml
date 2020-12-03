@@ -6,7 +6,7 @@
     - name: Comitup
       link: /dev/comitup/
     - name: Conclusion
-      link: /dev/conclusion/
+      link: /dev/conclusion.md/
 
 - name: information
   link: /information/index/
@@ -56,8 +56,6 @@
   dropdown:
     - name: Setup
       link: /troubleshooting/setup/
-    - name: Hermes
-      link: /troubleshooting/hermes/
     - name: Rasa-NLU
       link: /troubleshooting/rasa-nlu/
     - name: openssl

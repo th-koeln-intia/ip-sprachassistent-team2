@@ -2,13 +2,15 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /troubleshooting/openssl/
+title: Troubleshooting OPENSSL_1_1_1
 ---
 
-# Troubleshooting OPENSSL_1_1_1
+# What was our problem with OPENSSL?
 
-We had some issues using Mary TTS:
+We tried to use MaryTTS as our "text-to-speech"-system, but it did not work.  
+Rhasspy shows the following log-message:
 
-```bash
+```textmate
 [DEBUG:2020-10-31 08:09:28,178] rhasspyserver_hermes: Subscribed to hermes/tts/sayFinished
 [DEBUG:2020-10-31 08:09:28,179] rhasspyserver_hermes: Subscribed to hermes/error/tts
 [DEBUG:2020-10-31 08:09:28,180] rhasspyserver_hermes: Subscribed to hermes/audioServer/default/playBytes/#
@@ -39,8 +41,13 @@ Traceback (most recent call last):
 rhasspyserver_hermes.TtsException: Non-zero exit code: 1
 ```
 
-It seems that we do not have `'OPENSSL_1_1_1'` installed.  
-So we tried to install v1.1.1:  
+It seems that Rhasspy could not find `'OPENSSL_1_1_1'`.
+
+
+# What were our next steps?
+
+We tried to install it by typing the following commands:  
+
 ```
     wget https://www.openssl.org/source/openssl-1.1.1.tar.gz
     tar -zxf openssl-1.1.1.tar.gz && cd openssl-1.1.1
@@ -49,19 +56,17 @@ So we tried to install v1.1.1:
     make test
     make install
 ```
-
 *We followed the official install [instructions](https://github.com/openssl/openssl/blob/OpenSSL_1_1_1/INSTALL).*  
-Does not work.  
 
-We tried to add the library-path: ``export LD_LIBRARY_PATH=/opt/openssl/lib:$LD_LIBRARY_PATH``  
-Does not work.  
-Not with alias not with other paths.  
+That does not work.  
+We tried to add the library-path:  
+``export LD_LIBRARY_PATH=/opt/openssl/lib:$LD_LIBRARY_PATH``  
+But that also did not work.  
+(Not with alias not with other paths.)
 
-We changed `/usr/lib/rhasspy/rhasspy/libssl.so.1.1` with `~/openssl-1.1.1/libssl.so.1.1`  
-Does not work.  
 
-`OPENSSL_1_1_1` is required by `/usr/lib/arm-linux-gnueabihf/libcurl.so.4` so we tried to reinstall this package.  
-Does not work.  
+# What was the solution?
 
-We copied all files from `~/openssl-1.1.1` to `/usr/lib/rhasspy/rhasspy` and reinstalled it as root-user.  
-That finally worked.
+We finally copied all files from `~/openssl-1.1.1` to `/usr/lib/rhasspy/rhasspy` and reinstalled it as root-user.  
+That finally worked.  
+Maybe one of the attempts above may work for you.  
