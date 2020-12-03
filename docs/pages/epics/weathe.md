@@ -7,24 +7,56 @@ title: Weather-service on Rhasspy
 
 ## Goals
 
-We want to ask Heimdal for the current or future weather, maybe tomorrow or the during the next week for our current
-location. In addition it would be nice to ask for weather in other places
+We want to ask Heimdal for the current or future weather, maybe also for a forcast for tomorrow or during the next week 
+at our current location. In addition it would be nice to ask for the current weather and forecast in other places.
 
 ## Weather-API
 For our weather API the same basic criteria apply as for our other technologies, it should be DSGVO conform, free of charge,
-or even open-source. Of course the service should give us reliable data. In the following we looked at Accuweather, Dark Skies,
-Deutscher Wetterdienst and openweathermap.
+or even open-source. Of course the service should give us reliable data. In the following we looked at Accuweather (Accu], Dark Sky (DS),
+Deutscher Wetterdienst (DWD) and openweathermap(OWM).
 
 ### Comparrison
 
+| Criteria      |Weight | Accu  | DS    | DWD   | OWM   |
+|---------------|:-----:|:-----:|:-----:|:-----:|:-----:|       
+| Privacie      | 4     | X     | X     | 10    | 8     |
+| Opensource    | 1     | 0     | 0     | 0     | 3     |
+| free of charge| 2     | 0     | X     | 10    | 8     |
+| Usability     | 3     | X     | X     | 4     | 7     |
+| Total         |       | 0     | 0     | 24    | 26    |
+
+We gave each criteria a weight witch we use to multiple our "educated guesses" for points with. The sum of each providers
+points times the weight factor is the Basis of our Criteria. We used X if we did not find information about a given criteria
+or the Provider did not match a critical one like, basic privacy or being available free of charge.
+
+#### About open-source
+
+There are open standardised weather algorithms and most weather stations publish there data in one way or another. Most 
+providers use these algorithms to prepare and redistribute and redistribute the data. But there codebase itself is usually not 
+public. But we want to give points for good business practices and  
+
 #### [accuweather](https://www.accuweather.com/)
 
-Is not free. We would need to request prices from there sales department.
+Accuweather is not free and the pricing structure is not transparent. We would need to request prices from there sales 
+department. 
+
+#### [Dark Skies](darksky.net)
+
+Dark Sky got aquiered by Apple in March 2020.
+
+> Dark Sky said its API service, which allows other apps to use its weather data, will no longer accept new signups and 
+> will continue to function through the end of 2021. Several other weather apps rely on Dark Sky’s data, which means 
+> they’ll have to find another source.
+
+[CNBC](https://www.cnbc.com/2020/03/31/apple-buys-popular-weather-app-dark-sky.html)
+
+Because their data will no longer be publicly available outside the Apple eco system the missed the critical criteria of
+being publicly available and free of charge.
 
 #### [Deutscher Wetterdienst (dwd)](https://www.dwd.de/DE/derdwd/derdwd_node.html)
 
 > The Deutscher Wetterdienst is a public institution with partial legal capacity under the Federal Ministry of Transport
-and Digital Infrastructure.
+> and Digital Infrastructure.
 
 DWD provides meteorological data and research to the economy and society.
 DWD only offers their data as ziped files and there is no API to access it. But there is a
@@ -40,8 +72,6 @@ Has an node Red pallet, that offers current weather and a 5 day forecast, curren
 On [openweathermap.org](https://openweathermap.org/find?q=) we can search for our location or city and enter the name and
 two character country code into the node, to get the local weather data. This is also dynamicly possible via a function node
 but not jet implemented.
-
-
 
 ## Implementation
 
