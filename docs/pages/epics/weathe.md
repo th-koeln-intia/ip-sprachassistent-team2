@@ -20,10 +20,10 @@ Deutscher Wetterdienst (DWD) and openweathermap(OWM).
 | Criteria      |Weight | Accu  | DS    | DWD   | OWM   |
 |---------------|:-----:|:-----:|:-----:|:-----:|:-----:|       
 | Privacie      | 4     | X     | X     | 10    | 8     |
-| Opensource    | 1     | 0     | 0     | 0     | 3     |
+| Opensource    | 1     | 0     | 0     | 3     | 3     |
 | free of charge| 2     | 0     | X     | 10    | 8     |
 | Usability     | 3     | X     | X     | 4     | 7     |
-| Total         |       | 0     | 0     | 24    | 26    |
+| Total         |       | 0     | 0     | 67    | 72    |
 
 We gave each criteria a weight witch we use to multiple our "educated guesses" for points with. The sum of each providers
 points times the weight factor is the Basis of our Criteria. We used X if we did not find information about a given criteria
@@ -37,8 +37,11 @@ public. But we want to give points for good business practices and
 
 #### [accuweather](https://www.accuweather.com/)
 
-Accuweather is not free and the pricing structure is not transparent. We would need to request prices from there sales 
-department. 
+Accuweather is not free, the following table shows there pricing, structure.
+
+![](./../../assets/accuweather-pricing.png)
+
+[developer.accuweather.com/packages](https://developer.accuweather.com/packages)
 
 #### [Dark Skies](darksky.net)
 
@@ -61,7 +64,11 @@ being publicly available and free of charge.
 DWD provides meteorological data and research to the economy and society.
 DWD only offers their data as ziped files and there is no API to access it. But there is a
 [pallet](https://flows.nodered.org/node/node-red-contrib-dwd-local-weather) in node-red, that provides
-data from DWD. [List of weather stations](https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication&nn=16102)
+data from DWD. To request the current weather or a forecast, we need to extract the id of the closest weather station from
+the [List of weather stations](https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication&nn=16102)
+and give it to the dwd-node this might be possible with a function-node. But there is a restriction with [Kaldi]()
+, we would need to
+enter every location, which we want to support, into Kaldis dictionary.
 
 #### [openweathermap.org](https://openweathermap.org/)
 
@@ -81,9 +88,9 @@ but not jet implemented.
 Saving Weatherdata as Globals since openweathermap
 
 
-### Intends
+### Intents
 
-First we want to implement the intends GetWeather and an Intent GetWeatherWithLocation or GetWaetherLocation. We add the
+First we want to implement the intents GetWeather and an intent GetWeatherWithLocation or GetWaetherLocation. We add the
 following sentences to sentences.ini in the Rhasspy web application. Later we want to implement a weather forecast as well
 
 ```
