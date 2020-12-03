@@ -1,0 +1,992 @@
+[
+    {
+        "id": "53d212bf.beb22c",
+        "type": "tab",
+        "label": "Hermes/Rhasspy",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f4287c41.d6bd5",
+        "type": "mqtt in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/heimdall/detected",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f757fb70.3635f8",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "30da99cd.174346",
+                "7cd079f7.6a3fa8"
+            ]
+        ]
+    },
+    {
+        "id": "30da99cd.174346",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "sessionId",
+        "func": "//creates and sets sessionId; sets siteId; \nid = new Date().toISOString();\nmsg.payload = {\n    \"sessionId\": id,\n    \"siteId\": \"default\"\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "633bdc8b.81df24",
+                "5198edd6.686a44"
+            ]
+        ]
+    },
+    {
+        "id": "633bdc8b.81df24",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/toggleOff",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5198edd6.686a44",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/asr/startListening",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 830,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3bc2a562.02958a",
+        "type": "mqtt in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/asr/textCaptured",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "f757fb70.3635f8",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "ffea9fa4.709aa"
+            ]
+        ]
+    },
+    {
+        "id": "e5a2d055.15ce",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/asr/stopListening",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 830,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "73bbb1fa.3184e",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/toggleOn",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 830,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e7c7eaca.7018b8",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/nlu/query",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 810,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "bf5d44bb.96e8d8",
+        "type": "mqtt in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/nlu/intentParsed",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "f757fb70.3635f8",
+        "x": 210,
+        "y": 620,
+        "wires": [
+            [
+                "e410a74.d62d858"
+            ]
+        ]
+    },
+    {
+        "id": "ffea9fa4.709aa",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "mapping",
+        "func": "//filters keys and maps them to a new message object\nmessage = {};\nmessage.payload = {};\nmessage.payload.sessionId = msg.payload.sessionId;\nmessage.payload.input = msg.payload.text;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "e7c7eaca.7018b8",
+                "e5a2d055.15ce"
+            ]
+        ]
+    },
+    {
+        "id": "e410a74.d62d858",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "mapping",
+        "func": "//filters keys and maps them to a new message object\nmessage = {};\nmessage.payload = {};\nmessage.payload.sessionId = msg.payload.sessionId;\nmessage.payload.intent = msg.payload.intent.intentName;\nmessage.payload.slots = msg.payload.slots;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "73bbb1fa.3184e",
+                "f6691466.e6e328"
+            ]
+        ]
+    },
+    {
+        "id": "409156b3.e99978",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "9dbbfc24.8b7c1"
+        ],
+        "x": 1135,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f6691466.e6e328",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "mapping",
+        "func": "//filters keys and maps them to a new message object\nmessage = {};\nmessage.slots = {};\nmessage.sessionId = msg.payload.sessionId;\nmessage.intent = msg.payload.intent;\n\nfor (var i in msg.payload.slots){\n    message.slots[msg.payload.slots[i].slotName] = msg.payload.slots[i].value.value;\n}\n\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 760,
+        "wires": [
+            [
+                "fd7bdccd.1a19b",
+                "4aeb50b4.aeb1f"
+            ]
+        ]
+    },
+    {
+        "id": "42de478e.120158",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "debug",
+        "func": "message = {};\nmessage.payload = {\n    \"text\": \"Hallo Welt\",\n    \"siteId\": \"default\"\n};\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 1020,
+        "wires": [
+            [
+                "bcc89750.233068"
+            ]
+        ]
+    },
+    {
+        "id": "59f921c3.bb11f",
+        "type": "inject",
+        "z": "53d212bf.beb22c",
+        "name": "debug",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1020,
+        "wires": [
+            [
+                "42de478e.120158"
+            ]
+        ]
+    },
+    {
+        "id": "bcc89750.233068",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/tts/say",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 600,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "ba2dc004.0055c",
+        "type": "mqtt in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/nlu/intentNotRecognized",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "f757fb70.3635f8",
+        "x": 230,
+        "y": 720,
+        "wires": [
+            [
+                "7194f056.3dfc4",
+                "b8fdd9f4.704f28"
+            ]
+        ]
+    },
+    {
+        "id": "7194f056.3dfc4",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "mapping",
+        "func": "//filters keys and maps them to a new message object\nmessage = {};\nmessage.payload = {};\nmessage.payload.sessionId = msg.payload.sessionId;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 720,
+        "wires": [
+            [
+                "73bbb1fa.3184e"
+            ]
+        ]
+    },
+    {
+        "id": "628f7e80.2f7a8",
+        "type": "inject",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 1780,
+        "wires": [
+            [
+                "3c663c36.672494"
+            ]
+        ]
+    },
+    {
+        "id": "89c31b09.4b2208",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "traffic-control",
+        "func": "//creates message to controll the traffic-node\nmessage = {};\nmessage.payload = true;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1190,
+        "y": 760,
+        "wires": [
+            [
+                "fe21755.5973e88"
+            ]
+        ]
+    },
+    {
+        "id": "fe21755.5973e88",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "f9cfd312.f1cc6",
+            "4ed40ddf.04ae74"
+        ],
+        "x": 1335,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "d11b0b58.d840f8",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "66051592.285e3c"
+        ],
+        "x": 1135,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "fd7bdccd.1a19b",
+        "type": "traffic",
+        "z": "53d212bf.beb22c",
+        "name": "Command-Request",
+        "property_allow": "payload",
+        "filter_allow": "true",
+        "ignore_case_allow": false,
+        "negate_allow": false,
+        "send_allow": false,
+        "property_stop": "payload",
+        "filter_stop": "false",
+        "ignore_case_stop": false,
+        "negate_stop": false,
+        "send_stop": false,
+        "default_start": true,
+        "differ": false,
+        "x": 990,
+        "y": 820,
+        "wires": [
+            [
+                "d11b0b58.d840f8",
+                "89c31b09.4b2208"
+            ]
+        ]
+    },
+    {
+        "id": "4ed40ddf.04ae74",
+        "type": "link in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "5b6ba600.0f488c",
+            "fe21755.5973e88",
+            "5d1c6458.1a4cdc"
+        ],
+        "x": 755,
+        "y": 820,
+        "wires": [
+            [
+                "fd7bdccd.1a19b"
+            ]
+        ]
+    },
+    {
+        "id": "4aeb50b4.aeb1f",
+        "type": "traffic",
+        "z": "53d212bf.beb22c",
+        "name": "Intent-Switch",
+        "property_allow": "payload",
+        "filter_allow": "true",
+        "ignore_case_allow": false,
+        "negate_allow": false,
+        "send_allow": false,
+        "property_stop": "payload",
+        "filter_stop": "false",
+        "ignore_case_stop": false,
+        "negate_stop": false,
+        "send_stop": false,
+        "default_start": true,
+        "differ": false,
+        "x": 970,
+        "y": 700,
+        "wires": [
+            [
+                "409156b3.e99978",
+                "89c31b09.4b2208"
+            ]
+        ]
+    },
+    {
+        "id": "f9cfd312.f1cc6",
+        "type": "link in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "5d1c6458.1a4cdc",
+            "ac08734.03eae9",
+            "fe21755.5973e88"
+        ],
+        "x": 755,
+        "y": 700,
+        "wires": [
+            [
+                "4aeb50b4.aeb1f"
+            ]
+        ]
+    },
+    {
+        "id": "b8fdd9f4.704f28",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "traffic-control",
+        "func": "//creates message to controll the traffic-node\nmessage = {};\nmessage.payload = true;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 800,
+        "wires": [
+            [
+                "5d1c6458.1a4cdc"
+            ]
+        ]
+    },
+    {
+        "id": "5d1c6458.1a4cdc",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "4ed40ddf.04ae74",
+            "f9cfd312.f1cc6"
+        ],
+        "x": 635,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "7cd079f7.6a3fa8",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "traffic-control",
+        "func": "//creates message to controll the traffic-node\nmessage = {};\nmessage.payload = false;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "5b6ba600.0f488c"
+            ]
+        ]
+    },
+    {
+        "id": "5b6ba600.0f488c",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "links": [
+            "4ed40ddf.04ae74"
+        ],
+        "x": 695,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d8f147bb.ccdd68",
+        "type": "link in",
+        "z": "53d212bf.beb22c",
+        "name": "TTS-In",
+        "links": [
+            "32e9cb29.571ac4",
+            "4af62209.5958cc",
+            "52a695dd.8ea82c",
+            "553aeeae.de0d4",
+            "65da2b14.30f0d4",
+            "8f11d750.119658",
+            "f087bb4c.00cee8",
+            "feb5ff87.12655",
+            "5bb9e660.7093c8",
+            "5591af6b.21acc",
+            "cb4b699c.fdf6f8",
+            "6a15c7e3.97ae48"
+        ],
+        "x": 155,
+        "y": 1180,
+        "wires": [
+            [
+                "819ac5cd.171358"
+            ]
+        ]
+    },
+    {
+        "id": "aa20c5aa.8dc918",
+        "type": "comment",
+        "z": "53d212bf.beb22c",
+        "name": "Audio-Output",
+        "info": "",
+        "x": 170,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "2e1864ba.65a76c",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "sessionId and mapping",
+        "func": "//creates an id, filters keys and maps all to a new message object\nmessage = {};\nrequestId = new Date().toISOString();\nmessage.topic = \"hermes/audioServer/default/playBytes/\" + requestId;\nmessage.payload = msg.payload;\nreturn message;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 1460,
+        "wires": [
+            [
+                "17a15a23.dc1b56"
+            ]
+        ]
+    },
+    {
+        "id": "49cec59c.a27e6c",
+        "type": "link in",
+        "z": "53d212bf.beb22c",
+        "name": "WAV-In",
+        "links": [
+            "fbd97cfc.806e6",
+            "cc65f5f3.bbb488"
+        ],
+        "x": 155,
+        "y": 1460,
+        "wires": [
+            [
+                "2e1864ba.65a76c",
+                "5283dcf8.030e64"
+            ]
+        ]
+    },
+    {
+        "id": "819ac5cd.171358",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "IDs and mapping",
+        "func": "//creates an id, filters keys and maps all to a new message object\nmessage = {};\nmessage.payload = {};\nmessage.payload.text = msg.payload;\nmessage.payload.siteId = \"default\";\nmessage.payload.id =  \"I\" + new Date().toISOString();\n\nif (msg !== undefined && msg.hasOwnProperty(\"ttsId\")){\n    message.payload.id = msg.ttsId + message.payload.id\n}\n\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 1180,
+        "wires": [
+            [
+                "b9d32a1.5d641d8",
+                "fa779d91.bebe1"
+            ]
+        ]
+    },
+    {
+        "id": "da335a24.f44998",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/tts/say",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 820,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "b9d32a1.5d641d8",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/toggleOff",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 590,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "92c98c87.3c501",
+        "type": "mqtt in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/tts/sayFinished",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "f757fb70.3635f8",
+        "x": 320,
+        "y": 1280,
+        "wires": [
+            [
+                "4f2fb41.c08eb4c",
+                "745640e0.69d7c"
+            ]
+        ]
+    },
+    {
+        "id": "3659e55e.e3d5fa",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/toggleOn",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 850,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "4f2fb41.c08eb4c",
+        "type": "delay",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 580,
+        "y": 1320,
+        "wires": [
+            [
+                "3659e55e.e3d5fa"
+            ]
+        ]
+    },
+    {
+        "id": "fa779d91.bebe1",
+        "type": "delay",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 580,
+        "y": 1180,
+        "wires": [
+            [
+                "da335a24.f44998"
+            ]
+        ]
+    },
+    {
+        "id": "5fb99b43.194c34",
+        "type": "mqtt in",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/audioServer/default/playFinished",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "f757fb70.3635f8",
+        "x": 260,
+        "y": 1360,
+        "wires": [
+            [
+                "4f2fb41.c08eb4c"
+            ]
+        ]
+    },
+    {
+        "id": "7a85b7bf.1d4178",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 790,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "53acb6ed.cd6468",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/toggleOff",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 590,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "5283dcf8.030e64",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "clear",
+        "func": "//creates a new clean message-object and passes it to hermes\nmessage = {};\nmessage.payload = {};\nmessage.payload.siteId = \"default\";\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 1520,
+        "wires": [
+            [
+                "53acb6ed.cd6468"
+            ]
+        ]
+    },
+    {
+        "id": "743436ea.c284a8",
+        "type": "comment",
+        "z": "53d212bf.beb22c",
+        "name": "Command-Request",
+        "info": "",
+        "x": 170,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "3c663c36.672494",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "sessionId and mapping",
+        "func": "//creates a new message-object to start asr\nid = \"I\" + new Date().toISOString();\n\nmessage = {};\nmessage.payload = {\n    \"sessionId\": id,\n    \"siteId\": \"default\",\n    \"text\": \"Ja?\"\n    \n};\n\nif (msg !== undefined && msg.hasOwnProperty(\"commandRequestId\")){\n    message.payload.sessionId = msg.commandRequestId + message.payload.sessionId\n}\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 1860,
+        "wires": [
+            [
+                "4a0e8e05.6f336",
+                "2ff878b3.f1eac8",
+                "14011deb.71fb52"
+            ]
+        ]
+    },
+    {
+        "id": "4a0e8e05.6f336",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/hotword/toggleOff",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 890,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "2ff878b3.f1eac8",
+        "type": "mqtt out",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "topic": "hermes/asr/startListening",
+        "qos": "",
+        "retain": "",
+        "broker": "f757fb70.3635f8",
+        "x": 890,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "813a0bca.186508",
+        "type": "link in",
+        "z": "53d212bf.beb22c",
+        "name": "Command-Request-In",
+        "links": [
+            "5d089a8.67da064",
+            "7001c09c.0b1d1",
+            "f7f731c8.b4bb4"
+        ],
+        "x": 155,
+        "y": 1860,
+        "wires": [
+            [
+                "3c663c36.672494"
+            ]
+        ]
+    },
+    {
+        "id": "66051592.285e3c",
+        "type": "link in",
+        "z": "53d212bf.beb22c",
+        "name": "Command-Request-Intent-In",
+        "links": [
+            "d11b0b58.d840f8",
+            "3472b71e.f6bc98"
+        ],
+        "x": 155,
+        "y": 1940,
+        "wires": [
+            [
+                "874686c1.6c8fa8"
+            ]
+        ]
+    },
+    {
+        "id": "874686c1.6c8fa8",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "Command-Request-Out",
+        "links": [
+            "1c0d752f.3134db",
+            "c6652de5.9483d",
+            "dfc494e7.432f98"
+        ],
+        "x": 255,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "14011deb.71fb52",
+        "type": "function",
+        "z": "53d212bf.beb22c",
+        "name": "traffic-control",
+        "func": "//creates message to controll the traffic-node\nmessage = {};\nmessage.payload = false;\nreturn message;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 850,
+        "y": 1940,
+        "wires": [
+            [
+                "ac08734.03eae9"
+            ]
+        ]
+    },
+    {
+        "id": "ac08734.03eae9",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "Command-Request-Intent-Out",
+        "links": [
+            "f9cfd312.f1cc6",
+            "b2e93a8d.183f28"
+        ],
+        "x": 1005,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "17a15a23.dc1b56",
+        "type": "delay",
+        "z": "53d212bf.beb22c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 580,
+        "y": 1460,
+        "wires": [
+            [
+                "7a85b7bf.1d4178"
+            ]
+        ]
+    },
+    {
+        "id": "745640e0.69d7c",
+        "type": "link out",
+        "z": "53d212bf.beb22c",
+        "name": "TTS-Out-sayFinished",
+        "links": [
+            "561f8f11.4f9da",
+            "16fa189d.72d857",
+            "97543af6.b7e938"
+        ],
+        "x": 495,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "bfd6998.8c06068",
+        "type": "comment",
+        "z": "53d212bf.beb22c",
+        "name": "Dialogue-Manager",
+        "info": "",
+        "x": 190,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f757fb70.3635f8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "mqtt",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]

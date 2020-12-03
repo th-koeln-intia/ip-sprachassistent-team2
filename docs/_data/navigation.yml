@@ -5,6 +5,8 @@
       link: /dev/setup/
     - name: Comitup
       link: /dev/comitup/
+    - name: Conclusion
+      link: /dev/conclusion/
 
 - name: information
   link: /information/index/

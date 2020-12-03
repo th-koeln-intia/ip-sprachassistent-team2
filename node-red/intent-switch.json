@@ -1,0 +1,206 @@
+[
+    {
+        "id": "a12228e2.6295f8",
+        "type": "tab",
+        "label": "Intent-Switch",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6bb245f6.ed344c",
+        "type": "switch",
+        "z": "a12228e2.6295f8",
+        "name": "",
+        "property": "intent",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Restart",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Poweroff",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ChangeLightState",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "GetTemperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "GetTime",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SetAlarm",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "GetAlarm",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "DeleteAlarm",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SetTimer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "News",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 10,
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "a0110e7b.33a8b"
+            ],
+            [
+                "7653ded6.a933b"
+            ],
+            [
+                "1a7b7fa1.719ef"
+            ],
+            [
+                "cd1b2ca5.e3532"
+            ],
+            [
+                "220da574.cd680a"
+            ],
+            [
+                "220da574.cd680a"
+            ],
+            [
+                "220da574.cd680a"
+            ],
+            [
+                "220da574.cd680a"
+            ],
+            [
+                "220da574.cd680a"
+            ],
+            [
+                "652b599d.8452a8"
+            ]
+        ]
+    },
+    {
+        "id": "1a7b7fa1.719ef",
+        "type": "link out",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-ChangeLightState-Out",
+        "links": [
+            "45187d61.d4ac14",
+            "d4298948.a566d8"
+        ],
+        "x": 515,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4f95ca43.a155a4",
+        "type": "comment",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-Handling",
+        "info": "",
+        "x": 200,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cd1b2ca5.e3532",
+        "type": "link out",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-GetWeather-Out",
+        "links": [
+            "f74f7051.a13b9"
+        ],
+        "x": 555,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "220da574.cd680a",
+        "type": "link out",
+        "z": "a12228e2.6295f8",
+        "name": "Time/Alarm/Timer-Out",
+        "links": [
+            "29c82ed0.ee8442"
+        ],
+        "x": 515,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a0110e7b.33a8b",
+        "type": "link out",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-Restart-Out",
+        "links": [
+            "6dd857ee.3b2978"
+        ],
+        "x": 515,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7653ded6.a933b",
+        "type": "link out",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-Poweroff-Out",
+        "links": [
+            "a0d41e17.5ce89"
+        ],
+        "x": 555,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9dbbfc24.8b7c1",
+        "type": "link in",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-Switch-In",
+        "links": [
+            "409156b3.e99978",
+            "115009.dd9e8ff7"
+        ],
+        "x": 175,
+        "y": 180,
+        "wires": [
+            [
+                "6bb245f6.ed344c"
+            ]
+        ]
+    },
+    {
+        "id": "652b599d.8452a8",
+        "type": "link out",
+        "z": "a12228e2.6295f8",
+        "name": "Intent-News-Out",
+        "links": [
+            "8f357733.b285a8"
+        ],
+        "x": 535,
+        "y": 240,
+        "wires": []
+    }
+]
