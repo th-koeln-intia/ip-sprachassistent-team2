@@ -19,7 +19,7 @@
     - name: Node-Red
       link: /tech-stack/node-red/
     - name: Comitup
-      link: /dev/comitup/
+      link: /tech-stack//comitup/
     - name: Mycroft-Precise
       link: /tech-stack/mycroft/
     - name: Kaldi
@@ -64,4 +64,3 @@
       link: /troubleshooting/rasa-nlu/
     - name: OPENSSL
       link: /troubleshooting/openssl/
-

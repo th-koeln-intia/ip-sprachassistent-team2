@@ -16,7 +16,7 @@ operate in.
 
 ## Two ways to Rome
 
-We are currently testing the two different ways to set up Commitup. The developer offers an image on which we would need
+We are currently testing the two different ways to set up Comitup. The developer offers an image on which we would need
 to install our software stack. The other possibility is installing the package after we installed the software for running
 Rhasspy.
 

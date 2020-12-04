@@ -4,5 +4,16 @@ layout: page
 permalink: /users/wi-fi/
 ---
 
-# How to connect Heimdal to your Wi-Fi
+## Connect by comitup
 
+### Connect to Raspberry Pi
+
+### Enter your wi-fi-credentials
+
+### Check if your pi is available
+
+## Connect by wpa_supplicant.conf
+
+## Whats next?
+
+[How to add your devices](./adding-devices.md)
