@@ -2,9 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /troubleshooting/index/
+title: FAQ
 ---
-
-# Troubleshooting
 
 1. [Setup](setup.md)
 2. [openssl](openssl.md)

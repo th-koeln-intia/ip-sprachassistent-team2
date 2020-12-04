@@ -2,7 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /troubleshooting/setup/
-title: Troubleshooting Setup
+title: Setup
 ---
 
 # What was the main problem at the setup?

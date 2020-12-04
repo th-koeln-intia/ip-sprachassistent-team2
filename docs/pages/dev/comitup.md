@@ -2,11 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /dev/comitup/
+title: Installing Comitup
 ---
-
-# Installing Comitup
-
-[Commit up on github.com](https://github.com/davesteele/comitup)
 
 ## What is Comitup
 
@@ -15,6 +12,7 @@ permalink: /dev/comitup/
 If the Raspberry Pi is not able to establish a Wi-Fi connection, it will broadcast its own Wi-Fi network. We can then use this 
 network to connect to the pi via a Wi-Fi capable device and enter the credentials of the Wi-Fi network we want the pi to 
 operate in.
+[Commit up on github.com](https://github.com/davesteele/comitup)
 
 ## Two ways to Rome
 

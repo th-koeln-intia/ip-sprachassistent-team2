@@ -2,7 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /dev/setup/
-title: Setup for developers
+title: Setup
 ---
 
 ## Setup with iso image
