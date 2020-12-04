@@ -5,13 +5,39 @@ permalink: /setup/
 title: Setup
 ---
 
-## Hardware What you need
-
-- Raspberry Pi
-
 ## Setup with iso image
 
-Please reference the [setup guide for users](/docs/pages/users/setup.md)
+### Hardware Requirements
+
+- Raspberry 3b or better
+- 32 GB microSD Card
+- MicroSD Card reader
+- Power supply 
+    
+    We would recommend to use an official power supply for Raspberry Pi, but if you are on a budget you could also try to 
+    use an charger for a mobile phone.
+
+- Microphone
+    
+    In our setup we use the [ReSpeaker 4-Mic Array for Raspberry Pi](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
+    but most USB-microphnes should work as well.
+    
+- Speakers
+    
+    We used different kinds of analog speakers.
+    
+
+### Download Image
+
+[image]
+
+### Write the Image on a SD-Card
+
+To write an image to your SD-Card you can use one of the following Programs:
+
+- [Raspberry Pi Imager](https://www.raspberrypi.org/software/) (Win, Ubuntu, Mac)
+- [Belenaetcher](https://www.electronjs.org/apps/etcher) (Win, Ubuntu, Mac)
+- [Rufus](https://rufus.ie/) (Windows only)
 
 ## Setup fresh
 
