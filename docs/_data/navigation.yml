@@ -1,3 +1,11 @@
+- name: Users
+  link: /users/index/
+  dropdown:
+    - name: Setup
+      link: /users/setup/
+    - name: WI-FI
+      link: /users/wi-fi/
+
 - name: Dev
   link: /dev/index/
   dropdown:
@@ -8,7 +16,7 @@
     - name: Conclusion
       link: /dev/conclusion.md/
 
-- name: information
+- name: Information
   link: /information/index/
   dropdown:
     - name: mqtt
@@ -22,7 +30,7 @@
     - name: Sources
       link: /information/sources/
 
-- name: tech-stack
+- name: Tech-stack
   link: /tech-stack/index/
   dropdown:
     - name: Mycroft
@@ -36,7 +44,7 @@
     - name: HermesMQTT
       link: /tech-stack/hermesmqtt/
 
-- name: features
+- name: Features
   link: /epics/index/
   dropdown:
     - name: Alarms
@@ -51,7 +59,7 @@
       link: /epics/weather/
 
 
-- name: troubleshooting
+- name: FAQ
   link: /troubleshooting/index/
   dropdown:
     - name: Setup
@@ -61,8 +69,3 @@
     - name: openssl
       link: /troubleshooting/openssl/
 
-- name: users
-  link: /users/index/
-  dropdown:
-    - name: WI-FI
-      link: /users/wi-fi/
