@@ -20,10 +20,10 @@ Deutscher Wetterdienst (DWD) and openweathermap(OWM).
 | Criteria      |Weight | Accu  | DS    | DWD   | OWM   |
 |---------------|:-----:|:-----:|:-----:|:-----:|:-----:|       
 | Privacie      | 4     | X     | X     | 10    | 8     |
-| Opensource    | 1     | 0     | 0     | 3     | 3     |
+| Opensource    | 1     | 0     | 0     | 5     | 5     |
 | free of charge| 2     | 0     | X     | 10    | 8     |
-| Usability     | 3     | X     | X     | 4     | 7     |
-| Total         |       | 0     | 0     | 67    | 72    |
+| Usability     | 3     | X     | X     | 5     | 7     |
+| Total         |       | 0     | 0     | 72    | 74    |
 
 We gave each criteria a weight witch we use to multiple our "educated guesses" for points with. The sum of each providers
 points times the weight factor is the Basis of our Criteria. We used X if we did not find information about a given criteria
@@ -66,19 +66,30 @@ DWD only offers their data as ziped files and there is no API to access it. But 
 [pallet](https://flows.nodered.org/node/node-red-contrib-dwd-local-weather) in node-red, that provides
 data from DWD. To request the current weather or a forecast, we need to extract the id of the closest weather station from
 the [List of weather stations](https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication&nn=16102)
-and give it to the dwd-node this might be possible with a function-node. But there is a restriction with [Kaldi]()
-, we would need to
-enter every location, which we want to support, into Kaldis dictionary.
+and give it to the dwd-node this might be possible with a function-node. But there is a restriction with 
+[Kaldi](../tech-stack/kaldi.md)
+, we would need to enter every location, which we want to support, into Kaldis dictionary.
 
 #### [openweathermap.org](https://openweathermap.org/)
 
-Requiers registration, free plan for up to 60 calls per minute. (600 calls per minute for 40$ per month)
+Openweathermap provides current, future and historical weather data available in JSON over an API. There is a node Red
+pallet, that offers current weather and a 5 day forecast.
 
-Has an node Red pallet, that offers current weather and a 5 day forecast, current, future and historical weather data awailable in JSON
+To use openweathermap we need to register and use an API key for every data request. That's why we redact some points from
+privacy. It is possible to use the same key for a lot of different devices at the same time and with a free key we can
+ make up to 60 calls per minute. The next tier would be 600 calls per minute for 40$ per month. If we have a lot of devices
+ deployed in the future, every institution might use its own API key to prevent hitting the 60 calls per minute cap.
+ if ever device makes a call in an specific interval and stores the data in a global variable, weather request from the
+ user might be a bt faster, at the cost of a little accuracy or actuality. Furthermore it makes the need of API keys
+ predictable.
 
 On [openweathermap.org](https://openweathermap.org/find?q=) we can search for our location or city and enter the name and
-two character country code into the node, to get the local weather data. This is also dynamicly possible via a function node
+two character country code into the node, to get the local weather data. This is also dynamically possible via a function node
 but not jet implemented.
+
+### Conclusion
+
+The scores of DWD and OWM where pretty close and we would prefer to use OWM because its a bit easier to use.
 
 ## Implementation
 
@@ -116,6 +127,6 @@ wie ist das wetter in (Stadt){city}
     Different Intends?
 3. How do we handel expressions like "this afternoon | evening"
 
-## Sources
+## Other Sources
 
 [cstain.io](https://cstan.io/?p=12097&lang=en)
