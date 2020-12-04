@@ -1,7 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /dev/comitup/
+permalink: /tech-stack/comitup/
 ---
 
 # Installing Comitup
@@ -115,4 +115,4 @@ Rhasspy.
 
 Since we added Comitup to our tech-stack afterwards we have not tried to use a comitup image as base for our setup. You 
 can find up to date images at[davesteele.github.io/comitup/](https://davesteele.github.io/comitup/) and install them
-according to our [Getting Started Page](./setup.md).
+according to our [Getting Started Page](../setup.md).

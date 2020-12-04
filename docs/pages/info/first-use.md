@@ -1,13 +1,13 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /information/first-use/
+permalink: /info/user-experience/
+title: How we imagined the User Experience
 ---
 
-
-# First Use
 In this section we want to discuss different possibilities for the user to setup the rhasspy. However, it is important
- to keep in mind, that the range of our users skills and abilities might vastly differ.
+ to keep in mind, that the range of our users skills and abilities might vastly differ. Also we want to talk about custom
+ wakewords and how to add new devices.
 
 
 ### WLAN

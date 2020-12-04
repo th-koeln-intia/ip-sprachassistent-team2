@@ -35,11 +35,11 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 - Dialogue Management: [Hermes MQTT](pages/tech-stack/hermesmqtt.md)
 
 ### Other important technologies 
-- Protocol for massage management: [MQTT](pages/information/mqtt.md) 
-- Graphical development engine: [Node-Red](pages/information/node-red.md)
+- Protocol for massage management: [MQTT](pages/tech-stack/mqtt.md) 
+- Graphical development engine: [Node-Red](pages/tech-stack/node-red.md)
 
 ### First use
-- To see what to do at the first use and what we decided to go with, please take a look [here](pages/information/first-use.md).
+- To see what to do at the first use and what we decided to go with, please take a look [here](pages/info/first-use.md).
 
 ## Epics
 - These are the use cases which we want to implement:
@@ -61,8 +61,8 @@ To learn how to set up you Heimdall in your home click [here](pages/users/index.
 
 ## Other
 
-[Wake word engine comparison](pages/information/wake-word-engine-comparrison.md)
+[Wake word engine comparison](pages/info/wake-word-engine-comparrison.md)
 
 ## Sources
-- You can find a list of our sources [here](pages/information/source-links.md)
+- You can find a list of our sources [here](pages/info/source-links.md)
 

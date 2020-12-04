@@ -1,10 +1,9 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /information/node-red/
+permalink: /tech-stack/node-red/
 title: Node-Red
 ---
-
 
 ## What is Node-Red?
 Node-Red is a simple node.js based tool, to realize IoT-usecases.  
@@ -41,7 +40,7 @@ A `function`-node, which adds a new key with a string as value to `msg.payload`:
 
 And finally a `debug`-node, that prints out the `msg`-object to the debug-section of Node-Red:  
 
-![debugging-section](./../../assets/Node-Red/debug-section.png)  
+![debugging-section](../../assets/Node-Red/debug-section.png)  
 
 ## Social Development
 New Nodes can be created and published by the community and other users can add them for free.  

@@ -1,3 +1,6 @@
+- name: Setup
+  link: /setup/
+
 - name: Users
   link: /users/index/
   dropdown:
@@ -5,35 +8,19 @@
       link: /users/setup/
     - name: WI-FI
       link: /users/wi-fi/
+    - name: Adding Devices
+      link: /users/adding-devices/
 
-- name: Dev
-  link: /dev/index/
-  dropdown:
-    - name: Setup
-      link: /dev/setup/
-    - name: Comitup
-      link: /dev/comitup/
-    - name: Conclusion
-      link: /dev/conclusion.md/
-
-- name: Information
-  link: /information/index/
-  dropdown:
-    - name: mqtt
-      link: /information/mqtt/
-    - name: node-red
-      link: /information/node-red/
-    - name: first-use
-      link: /information/first-use/
-    - name: Wake-word-engines
-      link: /information/wake-word-engines/
-    - name: Sources
-      link: /information/sources/
-
-- name: Tech-stack
+- name: Tech-Stack
   link: /tech-stack/index/
   dropdown:
-    - name: Mycroft
+    - name: Mqtt
+      link: /tech-stack/mqtt/
+    - name: Node-Red
+      link: /tech-stack/node-red/
+    - name: Comitup
+      link: /dev/comitup/
+    - name: Mycroft-Precise
       link: /tech-stack/mycroft/
     - name: Kaldi
       link: /tech-stack/kaldi/
@@ -58,6 +45,15 @@
     - name: Weather
       link: /epics/weather/
 
+- name: Info
+  link: /info/index/
+  dropdown:
+    - name: User-Experience
+      link: /info/user-experience/
+    - name: Wake-Word-Engines
+      link: /info/wake-word-engines/
+    - name: Conclusion
+      link: /info/conclusion.md/
 
 - name: FAQ
   link: /troubleshooting/index/

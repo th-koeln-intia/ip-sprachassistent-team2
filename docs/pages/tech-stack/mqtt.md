@@ -1,10 +1,10 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /information/mqtt/
+permalink: /tech-stack/mqtt/
+title: MQTT
 ---
 
-# MQTT
 ## What is MQTT?
 
 MQTT is a messaging-protocol, that allows us to build up a connection between clients and a so-called "broker", fast and efficiently.   

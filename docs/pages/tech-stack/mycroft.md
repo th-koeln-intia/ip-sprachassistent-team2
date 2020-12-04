@@ -7,7 +7,7 @@ title: MyCroft
 
 # MyCroft-Precise
 
-We decided to go with [MyCroft-Precise](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/precise) for the given [reasons](../information/wake-word-engine-comparrison.md) and started to train our wake-word.  
+We decided to go with [MyCroft-Precise](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/precise) for the given [reasons](../info/wake-word-engine-comparrison.md) and started to train our wake-word.  
 Hereinafter we explain, how we made it and what the difficulties were.
 
 ## Basics
