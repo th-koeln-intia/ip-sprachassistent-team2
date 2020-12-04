@@ -4,6 +4,5 @@ layout: page
 permalink: /users/index/
 ---
 
-# Usersection
-
-1. [Connect to your Heimdal](wi-fi.md)
+1. [Connect to your Heimdall](wi-fi.md)
+2. [Adding new devices](adding-devices.md)

@@ -44,15 +44,15 @@ For our voice assistant we want to use the Raspberry Pi and multiple open source
 ## Epics
 - These are the use cases which we want to implement:
 - As user, I want to give the voice assistant commands in natural language (Speech-To-Text)
-- [As user, I want to control lighting bulbs with the command "Licht an"/"Licht aus" (Intent recognition)](pages/epics/lights.md)
-- [As user, I want to set an alarm](pages/epics/alarms.md)
-- [As user, I want to set a timer](pages/epics/timers.md)
+- [As user, I want to control lighting bulbs with the command "Licht an"/"Licht aus" (Intent recognition)](pages/features/lights.md)
+- [As user, I want to set an alarm](pages/features/alarms.md)
+- [As user, I want to set a timer](pages/features/timers.md)
 - As user, I want to ask for information on wikipedia
 - As user, I want to play music over Spotify
 
 
 #### Not required
-- ([As user, I want to ask for the current time](pages/epics/not-required/current-time.md))
+- ([As user, I want to ask for the current time](pages/features/not-required/current-time.md))
 
 ## User Guide
 

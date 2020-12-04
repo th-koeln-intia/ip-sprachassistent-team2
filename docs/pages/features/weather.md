@@ -1,7 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /epics/weather/
+permalink: /features/weather/
 title: Weather-service on Rhasspy
 ---
 
@@ -43,7 +43,7 @@ Accuweather is not free, the following table shows there pricing, structure.
 
 [developer.accuweather.com/packages](https://developer.accuweather.com/packages)
 
-#### [Dark Skies](darksky.net)
+#### [Dark Skies](https://darksky.net)
 
 Dark Sky got aquiered by Apple in March 2020.
 

@@ -11,6 +11,20 @@
     - name: Adding Devices
       link: /users/adding-devices/
 
+- name: Features
+  link: /features/index/
+  dropdown:
+    - name: Alarms
+      link: /features/alarms/
+    - name: Current time
+      link: /features/current-time/
+    - name: Lights
+      link: /features/lights/
+    - name: Timer
+      link: /features/timers/
+    - name: Weather
+      link: /features/weather/
+
 - name: Tech-Stack
   link: /tech-stack/index/
   dropdown:
@@ -31,20 +45,6 @@
     - name: HermesMQTT
       link: /tech-stack/hermesmqtt/
 
-- name: Features
-  link: /epics/index/
-  dropdown:
-    - name: Alarms
-      link: /epics/alarms/
-    - name: Current time
-      link: /epics/current-time/
-    - name: Lights
-      link: /epics/lights/
-    - name: Timer
-      link: /epics/timers/
-    - name: Weather
-      link: /epics/weather/
-
 - name: Info
   link: /info/index/
   dropdown:
@@ -56,11 +56,11 @@
       link: /info/conclusion.md/
 
 - name: FAQ
-  link: /troubleshooting/index/
+  link: /faq/index/
   dropdown:
     - name: Setup
-      link: /troubleshooting/setup/
+      link: /faq/setup/
     - name: Rasa-NLU
-      link: /troubleshooting/rasa-nlu/
+      link: /faq/rasa-nlu/
     - name: OPENSSL
-      link: /troubleshooting/openssl/
+      link: /faq/openssl/

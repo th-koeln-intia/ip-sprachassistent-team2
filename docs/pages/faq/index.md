@@ -1,7 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /troubleshooting/index/
+permalink: /faq/index/
 title: FAQ
 ---
 
