@@ -2,10 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/mycroft/
-title: MyCroft
+title: MyCroft-Precise
 ---
-
-# MyCroft-Precise
 
 We decided to go with [MyCroft-Precise](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/precise) for the given [reasons](../info/wake-word-engine-comparrison.md) and started to train our wake-word.  
 Hereinafter we explain, how we made it and what the difficulties were.

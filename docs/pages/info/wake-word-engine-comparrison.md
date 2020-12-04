@@ -2,9 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /information/wake-word-engines/
+title: Wake-word engine
 ---
-
-# Wake Word Engine
 
 For our project we need a Wake-Word or Hot Word Engine, which is local and always listens 
 for the user to start all the other processes.

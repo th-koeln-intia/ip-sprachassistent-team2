@@ -5,8 +5,6 @@ permalink: /tech-stack/marytts/
 title: MaryTTS
 ---
 
-# MaryTTS
-
 ## Introduction
 MaryTTS is a java-based open-source text to speech system.  
 It was developed by the [German Research Center for Artificial Intelligence](https://www.dfki.de/web/) and the [University of Saarland](https://www.uni-saarland.de/start.html).  

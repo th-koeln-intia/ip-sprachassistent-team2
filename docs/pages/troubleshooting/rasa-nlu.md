@@ -2,7 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /troubleshooting/rasa-nlu/
-title: Troubleshooting Rasa-NLU
+title: Rasa-NLU
 ---
 
 # What was our problem with Rasa?

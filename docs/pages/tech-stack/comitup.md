@@ -2,11 +2,8 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/comitup/
+title: Installing Comitup
 ---
-
-# Installing Comitup
-
-[Commit up on github.com](https://github.com/davesteele/comitup)
 
 ## What is Comitup
 
@@ -15,6 +12,7 @@ permalink: /tech-stack/comitup/
 If the Raspberry Pi is not able to establish a Wi-Fi connection, it will broadcast its own Wi-Fi network. We can then use this 
 network to connect to the pi via a Wi-Fi capable device and enter the credentials of the Wi-Fi network we want the pi to 
 operate in.
+[Commit up on github.com](https://github.com/davesteele/comitup)
 
 ## Two ways to Rome
 
@@ -115,4 +113,4 @@ Rhasspy.
 
 Since we added Comitup to our tech-stack afterwards we have not tried to use a comitup image as base for our setup. You 
 can find up to date images at[davesteele.github.io/comitup/](https://davesteele.github.io/comitup/) and install them
-according to our [Getting Started Page](../setup.md).
+according to our [Getting Started Page](./setup.md).
