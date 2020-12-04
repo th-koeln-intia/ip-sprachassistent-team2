@@ -2,9 +2,9 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /information/sources/
+title: Sources
 ---
 
-# Sources
 ## MQTT
 [MQTT](https://mqtt.org/)   
 [HIVEMQ](https://www.hivemq.com/mqtt-essentials/)

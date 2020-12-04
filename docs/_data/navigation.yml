@@ -66,6 +66,6 @@
       link: /troubleshooting/setup/
     - name: Rasa-NLU
       link: /troubleshooting/rasa-nlu/
-    - name: openssl
+    - name: OPENSSL
       link: /troubleshooting/openssl/
 

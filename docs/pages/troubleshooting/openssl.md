@@ -2,7 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /troubleshooting/openssl/
-title: Troubleshooting OPENSSL_1_1_1
+title: OPENSSL_1_1_1
 ---
 
 # What was our problem with OPENSSL?
