@@ -4,8 +4,6 @@
 - name: Users
   link: /users/index/
   dropdown:
-    - name: Setup
-      link: /users/setup/
     - name: WI-FI
       link: /users/wi-fi/
     - name: Adding Devices
