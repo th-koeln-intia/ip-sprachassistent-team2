@@ -2,17 +2,18 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /dev/setup/
+title: Setup for developers
 ---
 
-# Setup
-
 ## Setup with iso image
+
+Please reference the [setup guide for users](../users/setup.md)
 
 ## Setup fresh
 
 ### Download raspberry image and install on SD card
 
-You will probably need a 32 GB SD card if you want to train your own [wake word model](../../pages/tech-stack/mycroft.md) in precise.
+You will probably need a 32 GB SD card if you want to train your own [wake word model](../tech-stack/mycroft.md) in precise.
 We recommend to download and install the full verion with Graphical User Interface. Using the lightversion leeds to 
 many compatibility issues and you might need to install a lot of software, which is already included in the full version.
 https://www.raspberrypi.org/downloads/
