@@ -1,0 +1,69 @@
+style: is-light
+height: is-medium
+items:
+  - title: Getting Started
+    icon: fa-cogs
+    description: >
+      This is our setup guide for users
+
+      developers and everyone interested.
+    call_to_action_name: Get started!
+    call_to_action_link: /setup/
+
+
+  - title: User Section
+    icon: fa-users
+    description: >
+      Learn how to connect to WI-FI
+
+      and connect your devices.
+    call_to_action_name: Take a look!
+    call_to_action_link: /users/index/
+
+
+  - title: Features
+    icon: fa-toolbox
+    description: >
+      Learn what your Assistant can do for you
+
+      and how he does it.
+    call_to_action_name: Explore them!
+    call_to_action_link: /features/index/
+
+
+  - title: Tech-Stack
+    icon: fa-cubes
+    description: >
+      Find out what makes it all work.
+
+      From the wake-word to text to speech.
+    call_to_action_name: To the tech!
+    call_to_action_link: /tech-stack/index/
+
+  - title: Info
+    icon: fa-info
+    description: >
+      Get ready to dive deep into our
+
+      thoughts and visions of our Assistant.
+    call_to_action_name: Jump in!
+    call_to_action_link: /info/index/
+
+  - title: FAQ
+    icon: fa-swimming-pool
+    description: >
+      If you encounter obsticals your
+
+      journey this might help you!
+    call_to_action_name: Get a ladder!
+    call_to_action_link: /faq/index/
+
+  - title: GitHub
+    icon: fa-github
+    icon_brand: true
+    description: >
+      Here you can find our source code and
+
+      node-red flows. Maybe you even want to contribute.
+    call_to_action_name: Make it your own
+    call_to_action_link: https://github.com/th-koeln-intia/ip-sprachassistent-team2

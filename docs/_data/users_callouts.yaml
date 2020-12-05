@@ -1,0 +1,20 @@
+style: is-light
+height: is-medium
+items:
+  - title: Connecting to WI-FI
+    icon: fa-wifi
+    description: >
+      This is a short guide how to connect
+
+      to your WI-FI using Comitup.
+    call_to_action_name: Get connected!
+    call_to_action_link: /users/wi-fi/
+
+  - title: Add new devices
+    icon: fa-lightbulb
+    description: >
+      Connect your smart lights and
+
+      other IoT devices.
+    call_to_action_name: Let's go!
+    call_to_action_link: /users/adding-devices/
