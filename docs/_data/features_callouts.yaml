@@ -2,21 +2,21 @@ style: is-light
 height: is-medium
 items:
   - title: Alarm
-    icon: fa-bell-regular
+    icon: fa-bell
     description: >
 
     call_to_action_name: Weck mich!
     call_to_action_link: /features/alarms/
 
   - title: Timer
-    icon: fa-stopwatch-20-solid
+    icon: fa-stopwatch-20
     description: >
     call_to_action_name: Remind me!
     call_to_action_link: /features/timers/
 
 
   - title: Lights
-    icon: fa-lightbulb-regular
+    icon: fa-lightbulb
     description: >
     call_to_action_name: Remind me!
     call_to_action_link: /features/lights/
