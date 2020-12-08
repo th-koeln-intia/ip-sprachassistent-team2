@@ -8,4 +8,8 @@ subtitle: One Pi to rule them all
 
 ## Why is nothing here???
 
-Content coming soon...
+Home Assistant is not yet implemented
+
+## Next
+
+Features

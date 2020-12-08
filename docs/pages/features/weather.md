@@ -19,7 +19,7 @@ Deutscher Wetterdienst (DWD) and openweathermap(OWM).
 
 | Criteria      |Weight | Accu  | DS    | DWD   | OWM   |
 |---------------|:-----:|:-----:|:-----:|:-----:|:-----:|       
-| Privacie      | 4     | X     | X     | 10    | 8     |
+| Privacy       | 4     | X     | X     | 10    | 8     |
 | Opensource    | 1     | 0     | 0     | 5     | 5     |
 | free of charge| 2     | 0     | X     | 10    | 8     |
 | Usability     | 3     | X     | X     | 5     | 7     |
