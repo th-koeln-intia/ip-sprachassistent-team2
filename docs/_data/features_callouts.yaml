@@ -1,0 +1,28 @@
+style: is-light
+height: is-medium
+items:
+  - title: Alarm
+    icon: fa-bell-regular
+    description: >
+
+    call_to_action_name: Weck mich!
+    call_to_action_link: /features/alarms/
+
+  - title: Timer
+    icon: fa-stopwatch-20-solid
+    description: >
+    call_to_action_name: Remind me!
+    call_to_action_link: /features/timers/
+
+
+  - title: Lights
+    icon: fa-lightbulb-regular
+    description: >
+    call_to_action_name: Remind me!
+    call_to_action_link: /features/lights/
+
+  - title: Weather
+    icon: fa-cloud-sun-rain
+    description: >
+    call_to_action_name: Remind me!
+    call_to_action_link: /features/weather/
