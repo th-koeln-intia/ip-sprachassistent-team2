@@ -5,6 +5,8 @@ permalink: /tech-stack/hermesmqtt/
 title: HermesMQTT
 ---
 
+## Introduction
+
 Hermes is a mqtt-based protocol to control a voice assistant.  
 You publish to specific topics to activate or start a function and subscribe to other topics to receive the results of these functions.  
 For example to start [Kaldi](./kaldi.md), you have to publish to `hermes/asr/startListening` and subscribe to `hermes/asr/textCaptured` to receive the spoken text.  

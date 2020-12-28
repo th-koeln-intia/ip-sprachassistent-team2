@@ -2,15 +2,14 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/mycroft/
-title: MyCroft-Precise
+title: Mycroft-Precise
 ---
 
-We decided to go with [MyCroft-Precise](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/precise) for the given [reasons](../info/wake-word-engine-comparrison.md) and started to train our wake-word.  
+## Introduction
+
+We decided to go with [Mycroft-Precise](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/precise) for the given [reasons](../info/wake-word-engine-comparrison.md) and started to train our wake-word.  
 Hereinafter we explain, how we made it and what the difficulties were.
-
-## Basics
-
-MyCroft-Precise uses `.wav` files to train a model, which then can be used by Rhasspy to activate the voice assistant.  
+Mycroft-Precise uses `.wav` files to train a model, which then can be used by Rhasspy to activate the voice assistant.  
 From the recorded sound waves we can then use "Text to Speech" (TTS) and "Intent Recognition" to control other devices or ask for news and weather.  
 
 ## How to find a wake-word

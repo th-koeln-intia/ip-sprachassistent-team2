@@ -89,42 +89,54 @@ but not jet implemented.
 
 ### Conclusion
 
-The scores of DWD and OWM where pretty close and we would prefer to use OWM because its a bit easier to use.
-
-## Implementation
+The scores of DWD and OWM where pretty close and we would prefer to use OWM because it is a bit easier to use.
 
 
-## request weather data as global
-
-Saving Weatherdata as Globals since openweathermap
 
 
-### Intents
 
-First we want to implement the intents GetWeather and an intent GetWeatherWithLocation or GetWaetherLocation. We add the
-following sentences to sentences.ini in the Rhasspy web application. Later we want to implement a weather forecast as well
-
-```
-[GetWeather]
-wie ist das wetter
-
-[GetWeatherInLocation]
-wie ist das wetter in (Stadt){city}
+## Rhasspy
+In Rhasspy we have to add new lines to the `sentences.ini`:
+```textmate
+    [GetTemperature]
+    wie ist die temperatur (heute)
+    wie (heiß | kalt | warm) ist es (heute)
+    
+    [GetWeather]
+    wie (ist | wird) das wetter (heute)
+    
+    [GetForecast]
+    wie wird das wetter (die | in den) nächsten 5 (tage | tagen)
+    ich hätte gerne den wetterbericht für die nächsten 5 tage
 ```
 
-### Add ID to the Payload
+#### Example sentences
+Some example sentences are:
+```textmate
+    1. Wie warm ist es heute?
+    2. Wie wird das Wetter heute?
+    3. Wie wird das Wetter in den nächsten 5 Tagen?
+    4. Ich hätte gerne den Wetterbericht für die nächsten 5 Tage
+```
+## Node-Red
+
+You can find the flow for all functions of this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/weather.json).
+
+![weather-logic](../../assets/Node-Red/Epics/Weather/Weather.png)
+
+
 
 
 ## Open Questions
 
-1. How will users set there location?
+1. How will users set their location?
 
-    Setting location depending on ID
-    Extracting City from users command.
+   Setting location depending on ID
+   Extracting City from users command.
 
 2. How do we handle weekdays?
 
-    Different Intends?
+   Different Intends?
 3. How do we handel expressions like "this afternoon | evening"
 
 ## Other Sources
