@@ -1,0 +1,557 @@
+[
+  {
+    "id": "58ae6f09.88236",
+    "type": "tab",
+    "label": "Weather",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "f74f7051.a13b9",
+    "type": "link in",
+    "z": "58ae6f09.88236",
+    "name": "GetWeather IN",
+    "links": [
+      "45c055e0.0afddc"
+    ],
+    "x": 135,
+    "y": 700,
+    "wires": [
+      [
+        "c09edc51.2239c"
+      ]
+    ]
+  },
+  {
+    "id": "d525eef5.b426d",
+    "type": "comment",
+    "z": "58ae6f09.88236",
+    "name": "Weather",
+    "info": "",
+    "x": 180,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "6fb9f89c.373478",
+    "type": "comment",
+    "z": "58ae6f09.88236",
+    "name": "Get and save data from OWM",
+    "info": "",
+    "x": 240,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "84175253.6e3d6",
+    "type": "link in",
+    "z": "58ae6f09.88236",
+    "name": "GetWeatherLocation IN",
+    "links": [
+      "ce9a7005.17647",
+      "f6dfdc1c.3e41",
+      "f3e57bb1.d978c8",
+      "4b0b7a66.06e314"
+    ],
+    "x": 135,
+    "y": 740,
+    "wires": [
+      [
+        "8a833725.b00698"
+      ]
+    ]
+  },
+  {
+    "id": "e66ea6ae.aee128",
+    "type": "link out",
+    "z": "58ae6f09.88236",
+    "name": "WEATHER REPORT OUT",
+    "links": [
+      "d8f147bb.ccdd68"
+    ],
+    "x": 1135,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "c09edc51.2239c",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "creates audio-feedback",
+    "func": "var message = {};\n//var tempAvg = (global.get(\"currentweather\").payload.tempc).toFixed(1).split(\".\");\nvar tempMin = Math.round(global.get(\"currentweather\").payload.temp_minc)\nvar tempMax = Math.round(global.get(\"currentweather\").payload.temp_maxc);\n\n//tempMin = Math.round(-11.45);\n//tempMax = Math.round(-5);\n\nif (tempMin < 0){\n    tempMin = \"minus \" + Math.abs(tempMin);\n}\n\nif (tempMax < 0){\n    tempMax = \"minus \" + Math.abs(tempMax);\n}\n\n//message.payload = \"Es sind \" + temp[0] + \" Komma \" + temp[1] + \" Grad Celsius // \" + global.get(\"currentweather\").payload.detail;\nmessage.payload = \"Heute ist das Wetter \" + global.get(\"currentweather\").payload.detail + \" bei Temperaturen von \" + tempMin + \" bis \" + tempMax + \" Grad Celsius\";\n\nreturn message;\n\n//[0] + \" Komma \" + tempMin[1] ",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 710,
+    "y": 700,
+    "wires": [
+      [
+        "6c90d6b6.bf74b8",
+        "e66ea6ae.aee128"
+      ]
+    ]
+  },
+  {
+    "id": "b2ea24fa.391068",
+    "type": "link in",
+    "z": "58ae6f09.88236",
+    "name": "Epic Weather IN",
+    "links": [
+      "d8618b32.9da5d8",
+      "cd1b2ca5.e3532"
+    ],
+    "x": 135,
+    "y": 140,
+    "wires": [
+      [
+        "960bbbc9.68e928"
+      ]
+    ]
+  },
+  {
+    "id": "960bbbc9.68e928",
+    "type": "switch",
+    "z": "58ae6f09.88236",
+    "name": "Weather Switch",
+    "property": "intent",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "GetTemperature",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "GetWeather",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "GetForecast",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 260,
+    "y": 140,
+    "wires": [
+      [
+        "3c63e431.c86ebc"
+      ],
+      [
+        "45c055e0.0afddc"
+      ],
+      [
+        "4b0b7a66.06e314"
+      ]
+    ]
+  },
+  {
+    "id": "3c63e431.c86ebc",
+    "type": "link out",
+    "z": "58ae6f09.88236",
+    "name": "GetTemprature",
+    "links": [
+      "3e35fbf.90b8204"
+    ],
+    "x": 395,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "45c055e0.0afddc",
+    "type": "link out",
+    "z": "58ae6f09.88236",
+    "name": "GetWeather",
+    "links": [
+      "f74f7051.a13b9"
+    ],
+    "x": 435,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "4b0b7a66.06e314",
+    "type": "link out",
+    "z": "58ae6f09.88236",
+    "name": "Get Forecast OUT",
+    "links": [
+      "84175253.6e3d6"
+    ],
+    "x": 395,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "3e35fbf.90b8204",
+    "type": "link in",
+    "z": "58ae6f09.88236",
+    "name": "GetTemprature IN",
+    "links": [
+      "3c63e431.c86ebc"
+    ],
+    "x": 135,
+    "y": 660,
+    "wires": [
+      [
+        "9742e23b.f8c5e"
+      ]
+    ]
+  },
+  {
+    "id": "52c5a5fe.effc6c",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "formatter",
+    "func": "var index = 0;\nvar j = 0;\nvar forecast = new Array(5);\n\nforecast[0] = {};\nforecast[1] = {};\nforecast[2] = {};\nforecast[3] = {};\nforecast[4] = {};\n\nforecast[0].temp = new Array(8);\nforecast[1].temp = new Array(8);\nforecast[2].temp = new Array(8);\nforecast[3].temp = new Array(8);\nforecast[4].temp = new Array(8);\n\nforecast[0].description = new Array(8);\nforecast[1].description = new Array(8);\nforecast[2].description = new Array(8);\nforecast[3].description = new Array(8);\nforecast[4].description = new Array(8);\n\nforecast[0].weekday = \"\";\nforecast[1].weekday = \"\";\nforecast[2].weekday = \"\";\nforecast[3].weekday = \"\";\nforecast[4].weekday = \"\";\n\n\n\nweatherData = msg.payload;\n\ntempDay = new Date().toISOString().split(\"T\")[0];\ntempDay = new Date(tempDay);\n\nfor (var i in weatherData){\n    var dt = new Date(weatherData[i].dt_txt.split(\" \")[0]);\n    if (dt > tempDay){\n        index++;\n\n        j = 0;\n        tempDay = dt;\n    }\n\n    if (index <= 4){\n        forecast[index].temp[j] = weatherData[i].main.temp;\n        //forecast[index].temp[j] = msg.payload[i].main.temp + \" \" + msg.payload[i].dt_txt.split(\" \")[0]\n        forecast[index].description[j] = weatherData[i].weather[0].description;\n        forecast[index].weekday = dt.getDay();\n    }\n    j++;\n\n}\n\nvar message = {}\nmessage.payload = forecast;\nglobal.set(\"fivedayforecast\", message);\nreturn message;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 960,
+    "y": 420,
+    "wires": [
+      [
+        "6c2b5860.edaaa8"
+      ]
+    ]
+  },
+  {
+    "id": "6c2b5860.edaaa8",
+    "type": "debug",
+    "z": "58ae6f09.88236",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1210,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "c79e102d.b11dd",
+    "type": "openweathermap",
+    "z": "58ae6f09.88236",
+    "name": "Current Weather Cologne",
+    "wtype": "current",
+    "lon": "",
+    "lat": "",
+    "city": "",
+    "country": "",
+    "language": "de",
+    "x": 750,
+    "y": 380,
+    "wires": [
+      [
+        "9be2a89f.ab3db8"
+      ]
+    ]
+  },
+  {
+    "id": "b7b38e40.ac99e",
+    "type": "openweathermap",
+    "z": "58ae6f09.88236",
+    "name": "5 Day Forecast",
+    "wtype": "forecast",
+    "lon": "",
+    "lat": "",
+    "city": "",
+    "country": "",
+    "language": "de",
+    "x": 720,
+    "y": 420,
+    "wires": [
+      [
+        "52c5a5fe.effc6c"
+      ]
+    ]
+  },
+  {
+    "id": "307f2b92.76f394",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "set variables",
+    "func": "msg = {};\n\nmsg.location = {};\n\nmsg.location.city = global.get(\"city\");\nmsg.location.country = global.get(\"country\");\n\nif (msg.location.city  === undefined || msg.location.country === undefined){\n    return;\n}else{\n    return msg;\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 450,
+    "y": 400,
+    "wires": [
+      [
+        "b7b38e40.ac99e",
+        "c79e102d.b11dd"
+      ]
+    ]
+  },
+  {
+    "id": "64b392e7.c5fb0c",
+    "type": "inject",
+    "z": "58ae6f09.88236",
+    "name": "Every 30 Min.",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "1800",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 240,
+    "y": 400,
+    "wires": [
+      [
+        "307f2b92.76f394"
+      ]
+    ]
+  },
+  {
+    "id": "a6a02b21.f7c038",
+    "type": "inject",
+    "z": "58ae6f09.88236",
+    "name": "set",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 210,
+    "y": 280,
+    "wires": [
+      [
+        "95cc4f3a.7b1fb"
+      ]
+    ]
+  },
+  {
+    "id": "95cc4f3a.7b1fb",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "set cologne manually",
+    "func": "global.set(\"city\", \"Cologne\");\nglobal.set(\"country\", \"DE\");\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 480,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "9742e23b.f8c5e",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "creates audio-feedback",
+    "func": "var message = {};\nvar temp = (global.get(\"currentweather\").payload.tempc).toFixed(1).split(\".\");\n\nif (temp[0] < 0){\n    temp[0] = \"minus \" + Math.abs(temp[0]);\n}\n\nif (temp[1] > 0){\n    temp[1] = \" Komma \" + temp[1];\n}else{\n    temp[1] = \"\";\n}\n\nmessage.payload = \"Es sind \" + temp[0] + temp[1] + \" Grad Celsius \";\n\nreturn message;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 710,
+    "y": 660,
+    "wires": [
+      [
+        "6c90d6b6.bf74b8",
+        "e66ea6ae.aee128"
+      ]
+    ]
+  },
+  {
+    "id": "331490a7.622ba",
+    "type": "inject",
+    "z": "58ae6f09.88236",
+    "name": "delete",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 210,
+    "y": 340,
+    "wires": [
+      [
+        "1b011576.c99dbb"
+      ]
+    ]
+  },
+  {
+    "id": "1b011576.c99dbb",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "deletecologne manually",
+    "func": "global.set(\"city\", undefined);\nglobal.set(\"country\", undefined);\n\nglobal.set(\"currentweather\", undefined);\nglobal.set(\"fivedayforecast\", undefined);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 490,
+    "y": 340,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "9be2a89f.ab3db8",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "saves data",
+    "func": "global.set(\"currentweather\", msg);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 970,
+    "y": 380,
+    "wires": [
+      [
+        "6c2b5860.edaaa8"
+      ]
+    ]
+  },
+  {
+    "id": "4b2b473e.84e528",
+    "type": "inject",
+    "z": "58ae6f09.88236",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 210,
+    "y": 600,
+    "wires": [
+      [
+        "8a833725.b00698",
+        "9742e23b.f8c5e",
+        "c09edc51.2239c"
+      ]
+    ]
+  },
+  {
+    "id": "6c90d6b6.bf74b8",
+    "type": "debug",
+    "z": "58ae6f09.88236",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1170,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "8a833725.b00698",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "formatter",
+    "func": "var data = global.get(\"fivedayforecast\");\n\nif (data === undefined){\n    msg = {};\n    return msg;\n}\n\nvar weekdays = [\"Montag\", \"Dienstag\", \"Mittwoch\", \"Donnerstag\", \"Freitag\", \"Samstag\", \"Sonntag\"];\nvar days = [{}, {}, {}, {}, {}];\nvar dayIndex = 0;\n\nfor (var i in data.payload){\n    \n    var tempNumber = 0;\n    var temp = 0;\n    var min = data.payload[i].temp[0];\n    var max = data.payload[i].temp[0];\n    \n    for (var j in data.payload[i].temp){\n        if (data.payload[i].temp[j] !== null){\n            temp += data.payload[i].temp[j];\n            tempNumber++;\n            \n            if (data.payload[i].temp[j] < min){\n                min = data.payload[i].temp[j];\n            }\n            \n            if (data.payload[i].temp[j] > max){\n                max = data.payload[i].temp[j];\n            }\n        }\n    }\n    \n    days[i].weekday = weekdays[data.payload[i].weekday];\n    days[i].average = Math.round(temp/tempNumber);\n    days[i].min = Math.round(min);\n    days[i].max = Math.round(max);\n\n    if (days[i].average < 0){\n        days[i].average = \"minus \" + Math.abs(days[i].average);\n    }\n    \n    if (days[i].min < 0){\n        days[i].min = \"minus \" + Math.abs(days[i].min);\n    }\n    \n    if (days[i].max < 0){\n        days[i].max = \"minus \" + Math.abs(days[i].max);\n    }\n}\n\nmsg.payload = days;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 660,
+    "y": 740,
+    "wires": [
+      [
+        "81415e60.320b4"
+      ]
+    ]
+  },
+  {
+    "id": "81415e60.320b4",
+    "type": "function",
+    "z": "58ae6f09.88236",
+    "name": "creates audio-feedback",
+    "func": "var message = {};\nmessage.payload = \"\";\n\nif (msg.payload === undefined){\n    msg.payload = \"Derzeit liegen keine Wetterdaten vor\";\n    return msg;\n}\n\nfor (var i in msg.payload){\n    var ran = Math.floor(Math.random() * Math.floor(3));\n    \n    switch(ran){\n        case 0:\n            message.payload = message.payload + \" // Am \" + msg.payload[i].weekday + \" werden es Temperaturen zwischen \" + msg.payload[i].min + \" und \" + msg.payload[i].max + \" Grad Celsius\";\n            break;\n        \n        case 1:\n            message.payload = message.payload + \" // Temperaturen von \" + msg.payload[i].min + \" bis \" + msg.payload[i].max + \" Grad Celsius, erwarten uns am \" + msg.payload[i].weekday;\n            break;\n            \n        case 2:\n            message.payload = message.payload + \" // Wir dürfen uns über Temperaturen von \" + msg.payload[i].min + \" bis \" + msg.payload[i].max + \" Grad Celsius am \" + msg.payload[i].weekday + \" freuen\"; \n            break;\n    }\n    \n}\nreturn message;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 890,
+    "y": 740,
+    "wires": [
+      [
+        "6c90d6b6.bf74b8",
+        "e66ea6ae.aee128"
+      ]
+    ]
+  },
+  {
+    "id": "97dcb0b.6e2325",
+    "type": "start-up-trigger",
+    "z": "58ae6f09.88236",
+    "x": 240,
+    "y": 460,
+    "wires": [
+      [
+        "95cc4f3a.7b1fb",
+        "307f2b92.76f394"
+      ]
+    ]
+  },
+  {
+    "id": "b70df4ec.799ff8",
+    "type": "comment",
+    "z": "58ae6f09.88236",
+    "name": "Reads saved data",
+    "info": "",
+    "x": 210,
+    "y": 540,
+    "wires": []
+  }
+]

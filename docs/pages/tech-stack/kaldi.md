@@ -6,6 +6,7 @@ title: Kaldi
 ---
 
 ## Introduction
+
 Kaldi is a C++ based speech recognition tool. It is licensed under [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0) and used for **A**utomatic **S**peech **R**ecognition (**ASR**).  
 After Precise activates the assistant by detecting the [wake-word](./mycroft.md#how-to-find-a-wake-word), Kaldi should transform the recorded sounds to text, which is passed on to [FuzzyWuzzy](./fuzzywuzzy.md) to interpret the users intent.  
 

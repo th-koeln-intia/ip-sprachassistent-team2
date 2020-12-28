@@ -5,6 +5,8 @@ permalink: /tech-stack/fuzzywuzzy/
 title: FuzzyWuzzy
 ---
 
+## Introduction
+
 FuzzyWuzzy is an intent recognition system, that uses the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) to compare a given input to preset intent sentences.   
 It works best with a small amount of sentences.  
 
