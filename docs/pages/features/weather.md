@@ -123,21 +123,38 @@ Some example sentences are:
 You can find the flow for all functions of this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/weather.json).
 
 ![weather-logic](../../assets/Node-Red/Epics/Weather/Weather.png)
+*All intents enter the flow at the very first `link-in`-node and get split by the `Weather-Switch`*
 
+### Get and store the weather-data
+![getData](../../assets/Node-Red/Epics/Weather/getData.png)  
+`Green` section:  
+- All these nodes are just used to set/delete the global variables `city` and `country`, which later are used to get the weather of a specific region (in our case Cologne)  
+  
+`Blue` section:
+- `injection`-node: initiates the process every 30 minutes
+- `function`-node(left): sets `msg.location.city` and `msg.location.country` to the global variables
+- `openweathermap`-node(top): requests the current weather-data at a certain location
+- `openweathermap`-node(bottom): requests a five-day-forecast for a certain location
+- `function`-node(top): saves the data of the current weather 
+- `function`-node(bottom): formats the five-day-forecast-data to make the later use easier
 
+*To change the location to your city, you can simply change the city and country names in the top `function`-node of the first `green` section (`"set cologne manualy"`).  
+Openweathermap only update their data every 3 hours, so you may want to change the `injection`-node to trigger every 3 hours or less.*
 
+### Read the data aloud
+![readData](../../assets/Node-Red/Epics/Weather/readData.png)
 
-## Open Questions
+`Green` section (`[GetTemperature]`):
+-  `function`-node: extracts the temperature from the stored weather-data and creates a TTS-message
 
-1. How will users set their location?
+`Blue` section (`[GetWeather]`):  
+-  `function`-node: extracts the temperature and some additional data from the stored weather-data and creates a TTS-message 
 
-   Setting location depending on ID
-   Extracting City from users command.
+`Red` section (`[GetForecast]`):
+- `function`-node(left): reformats the five-day-forecast-data and adds the weekday-names
+- `function`-node(right): creates a TTS-message from the formatted data
 
-2. How do we handle weekdays?
-
-   Different Intends?
-3. How do we handel expressions like "this afternoon | evening"
+The `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts).
 
 ## Other Sources
 
