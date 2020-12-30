@@ -66,9 +66,10 @@ To simplify the usage of our audio-output we decided to create two main `audio-o
 To use TTS, you simply have to publish a message to `hermes/tts/say`, which contains the following keys in its payload:  
 - `text`: the text, which should be spoken
 - `siteId`: to identify the source of the message (in our case `default`)
+- `id`: to identify, which process started the TTS-output
 
-We decided to switch off the wake-word-detection and to delay our message to prevent detections by Rhasspy itself.
-After speaking the text, hermes publishes a message to `hermes/tts/sayFinished`, which we used to switch on the wake-word-detection.
+We decided to switch off the wake-word-detection and to delay our message to prevent detections by Rhasspy itself.  
+After speaking the text, hermes publishes a message to `hermes/tts/sayFinished`, which we used to switch on the wake-word-detection and to pass the `id` to following nodes (Callback).  
 
 ##### .wav-files
 
@@ -86,7 +87,7 @@ To reach this goal we added some nodes:
 ![command-request](./../../assets/Node-Red/Hermes/command-request.png)
 
 The blue `link`-nodes are the in- and output-nodes of this function.  
-The `link-in`-node will trigger the process and the `link-out`-node will return the intent.  
+The `link-in`-node will trigger the process and the `link-out`-node will return the intent (Callback).  
 To see the function of the first `function`-node and the two `mqtt-out`-nodes, you should check our [dialogue manager](#dialogue-manager).  
 The second `function`-node creates a new message and a `payload` with the value `false`, which later is used to toggle switches.  
   
