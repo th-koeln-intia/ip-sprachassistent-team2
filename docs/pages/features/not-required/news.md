@@ -38,3 +38,8 @@ Some example sentences are:
 ## Node-Red
 
 We decided to use the RSS-Feed of the "[Tagesschau](https://www.tagesschau.de/xml/rss2_https/)".
+
+![news](./../../../assets/Node-Red/Epics/News/news.png)
+![updateNews](./../../../assets/Node-Red/Epics/News/updateNews.png)
+![readNews](./../../../assets/Node-Red/Epics/News/readNews.png)
+![loop](./../../../assets/Node-Red/Epics/News/loop.png)
