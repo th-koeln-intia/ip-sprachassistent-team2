@@ -22,6 +22,8 @@
       link: /features/timers/
     - name: Weather
       link: /features/weather/
+    - name: News
+      link: /features/news/
 
 - name: Tech-Stack
   link: /tech-stack/index/

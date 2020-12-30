@@ -26,3 +26,9 @@ items:
     description: >
     call_to_action_name: Remind me!
     call_to_action_link: /features/weather/
+
+  - title: News
+    icon: fas fa-newspaper
+    description: >
+    call_to_action_name: Remind me!
+    call_to_action_link: /features/news/
