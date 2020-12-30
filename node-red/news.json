@@ -23,8 +23,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 280,
+        "x": 220,
+        "y": 240,
         "wires": [
             [
                 "40c9bc9b.d81d44"
@@ -36,7 +36,7 @@
         "type": "debug",
         "z": "5ae7a9a.f6b6758",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -44,8 +44,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 280,
+        "x": 1030,
+        "y": 240,
         "wires": []
     },
     {
@@ -61,8 +61,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 420,
-        "y": 280,
+        "x": 460,
+        "y": 240,
         "wires": [
             [
                 "690b945d.5f4ecc"
@@ -77,8 +77,8 @@
         "property": "payload",
         "attr": "A",
         "chr": "B",
-        "x": 620,
-        "y": 280,
+        "x": 660,
+        "y": 240,
         "wires": [
             [
                 "95df84db.ee4bc8"
@@ -89,14 +89,14 @@
         "id": "95df84db.ee4bc8",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "formatter",
         "func": "var message = {};\nmessage.payload = {};\nvar temp = {};\ntemp = msg.payload.rss.channel[0].item;\n\n\nfor (var i in temp){\n    message.payload[i] = {};\n    message.payload[i].title = temp[i].title[0];\n    message.payload[i].description = temp[i].description[0];\n}\n\nglobal.set(\"news\", message.payload);\n\nreturn message;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 780,
-        "y": 280,
+        "x": 820,
+        "y": 240,
         "wires": [
             [
                 "fee6098d.721d98"
@@ -109,11 +109,10 @@
         "z": "5ae7a9a.f6b6758",
         "name": "News-Out",
         "links": [
-            "24c67ec.ea70882",
             "d8f147bb.ccdd68"
         ],
-        "x": 1095,
-        "y": 460,
+        "x": 1195,
+        "y": 420,
         "wires": []
     },
     {
@@ -124,8 +123,8 @@
         "links": [
             "652b599d.8452a8"
         ],
-        "x": 281,
-        "y": 460,
+        "x": 141,
+        "y": 420,
         "wires": [
             [
                 "40b6c52b.c67d1c"
@@ -138,55 +137,25 @@
         "z": "5ae7a9a.f6b6758",
         "name": "News",
         "info": "",
-        "x": 150,
-        "y": 100,
+        "x": 110,
+        "y": 60,
         "wires": []
     },
     {
         "id": "12b8c541.dd12ab",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "get title",
         "func": "var temp = flow.get(\"newsIndex\");\nmsg.payload = msg.payload + global.get(\"news\")[temp].title;\nmsg.ttsId = \"news\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 800,
-        "y": 460,
+        "x": 700,
+        "y": 420,
         "wires": [
             [
-                "9c50eb5b.df07e8",
                 "553aeeae.de0d4"
-            ]
-        ]
-    },
-    {
-        "id": "f86d6084.52c68",
-        "type": "inject",
-        "z": "5ae7a9a.f6b6758",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 310,
-        "y": 380,
-        "wires": [
-            [
-                "40b6c52b.c67d1c"
             ]
         ]
     },
@@ -196,11 +165,10 @@
         "z": "5ae7a9a.f6b6758",
         "name": "News-Command-Request-Out",
         "links": [
-            "b99bcc04.7185",
             "813a0bca.186508"
         ],
-        "x": 1575,
-        "y": 740,
+        "x": 715,
+        "y": 780,
         "wires": []
     },
     {
@@ -213,11 +181,10 @@
             "874686c1.6c8fa8"
         ],
         "x": 135,
-        "y": 600,
+        "y": 520,
         "wires": [
             [
-                "e86ba1f9.a3b49",
-                "4ea586bd.823f08"
+                "e86ba1f9.a3b49"
             ]
         ]
     },
@@ -251,8 +218,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 416,
-        "y": 600,
+        "x": 456,
+        "y": 520,
         "wires": [
             [
                 "cf6bfd46.b1643"
@@ -272,14 +239,14 @@
         "id": "40b6c52b.c67d1c",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "setup feature",
         "func": "msg = {};\nflow.set(\"newsIndex\", 0);\nmsg.payload = \"Nachrichten der tagesschau / / \"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 460,
-        "y": 460,
+        "x": 370,
+        "y": 420,
         "wires": [
             [
                 "12b8c541.dd12ab"
@@ -290,14 +257,14 @@
         "id": "cf6bfd46.b1643",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "increase index",
         "func": "msg = {};\nvar temp = flow.get(\"newsIndex\");\ntemp++\nif (temp > 9){\n    temp = 0;\n    msg.payload = \"Das waren alle aktuellen Nachrichten\";\n}else{\n    msg.payload = \"\";\n}\nflow.set(\"newsIndex\", temp);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 580,
-        "y": 520,
+        "x": 680,
+        "y": 500,
         "wires": [
             [
                 "76ef24f9.45f25c"
@@ -324,107 +291,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 750,
-        "y": 520,
+        "x": 830,
+        "y": 500,
         "wires": [
             [
                 "12b8c541.dd12ab"
             ],
             [
-                "9c50eb5b.df07e8",
                 "553aeeae.de0d4"
-            ]
-        ]
-    },
-    {
-        "id": "ca275245.ac2d2",
-        "type": "inject",
-        "z": "5ae7a9a.f6b6758",
-        "name": "NextNews",
-        "props": [
-            {
-                "p": "intent",
-                "v": "NextNews",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 220,
-        "y": 680,
-        "wires": [
-            [
-                "423800e0.032b2"
-            ]
-        ]
-    },
-    {
-        "id": "9c50eb5b.df07e8",
-        "type": "debug",
-        "z": "5ae7a9a.f6b6758",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "19e657c7.8a5298",
-        "type": "inject",
-        "z": "5ae7a9a.f6b6758",
-        "name": "MoreNews",
-        "props": [
-            {
-                "p": "intent",
-                "v": "MoreNews",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 220,
-        "y": 740,
-        "wires": [
-            [
-                "423800e0.032b2"
-            ]
-        ]
-    },
-    {
-        "id": "bfb843ef.52676",
-        "type": "inject",
-        "z": "5ae7a9a.f6b6758",
-        "name": "Stop",
-        "props": [
-            {
-                "p": "intent",
-                "v": "Stop",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 210,
-        "y": 800,
-        "wires": [
-            [
-                "423800e0.032b2"
             ]
         ]
     },
@@ -432,17 +306,16 @@
         "id": "27e1f846.0e9188",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "get description",
         "func": "msg = {};\nvar temp = flow.get(\"newsIndex\");\nmsg.payload = global.get(\"news\")[temp].description;\nmsg.ttsId = \"news\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 800,
-        "y": 580,
+        "x": 760,
+        "y": 560,
         "wires": [
             [
-                "9c50eb5b.df07e8",
                 "553aeeae.de0d4"
             ]
         ]
@@ -451,17 +324,16 @@
         "id": "272ac6cc.64549a",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "stop feature",
         "func": "msg = {};\nmsg.payload = \"Alles klar\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 800,
-        "y": 620,
+        "x": 750,
+        "y": 600,
         "wires": [
             [
-                "9c50eb5b.df07e8",
                 "553aeeae.de0d4"
             ]
         ]
@@ -470,14 +342,14 @@
         "id": "564c1b31.bc9e84",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "failure",
         "func": "msg = {};\nmsg.payload = \"Entschuldigung ich habe dich nicht verstanden\";\nmsg.ttsId = \"news\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 800,
-        "y": 660,
+        "x": 730,
+        "y": 640,
         "wires": [
             [
                 "553aeeae.de0d4"
@@ -490,11 +362,10 @@
         "z": "5ae7a9a.f6b6758",
         "name": "",
         "links": [
-            "16785a27.8f4776",
             "745640e0.69d7c"
         ],
-        "x": 995,
-        "y": 740,
+        "x": 135,
+        "y": 780,
         "wires": [
             [
                 "7bcbf659.6f8778"
@@ -514,51 +385,26 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1370,
-        "y": 800,
+        "x": 510,
+        "y": 840,
         "wires": []
     },
     {
         "id": "7bcbf659.6f8778",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "set source",
         "func": "var source = msg.payload.id.split(\"I\")[0];\nif (source === \"news\"){\n    return {\"commandRequestId\": \"news\"};\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1160,
-        "y": 740,
+        "x": 310,
+        "y": 780,
         "wires": [
             [
                 "2dd561f4.6a906e",
                 "128a8e0d.949522"
-            ]
-        ]
-    },
-    {
-        "id": "21502d27.c103e2",
-        "type": "inject",
-        "z": "5ae7a9a.f6b6758",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Test ",
-        "payloadType": "str",
-        "x": 860,
-        "y": 380,
-        "wires": [
-            [
-                "553aeeae.de0d4"
             ]
         ]
     },
@@ -577,8 +423,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1380,
-        "y": 740,
+        "x": 520,
+        "y": 780,
         "wires": [
             [
                 "5d089a8.67da064"
@@ -589,48 +435,60 @@
         "id": "e86ba1f9.a3b49",
         "type": "function",
         "z": "5ae7a9a.f6b6758",
-        "name": "",
+        "name": "filter by source",
         "func": "var source = msg.sessionId.split(\"I\")[0];\nif (source === \"news\"){\n    return msg;\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 240,
-        "y": 600,
+        "x": 280,
+        "y": 520,
         "wires": [
             [
-                "423800e0.032b2",
-                "4ea586bd.823f08"
+                "423800e0.032b2"
             ]
         ]
-    },
-    {
-        "id": "4ea586bd.823f08",
-        "type": "debug",
-        "z": "5ae7a9a.f6b6758",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "6c3f66f2.0a3b68",
         "type": "start-up-trigger",
         "z": "5ae7a9a.f6b6758",
-        "x": 160,
+        "x": 220,
         "y": 180,
         "wires": [
             [
                 "40c9bc9b.d81d44"
             ]
         ]
+    },
+    {
+        "id": "f21363b7.37c71",
+        "type": "comment",
+        "z": "5ae7a9a.f6b6758",
+        "name": "Read news",
+        "info": "",
+        "x": 160,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c8772fef.83e65",
+        "type": "comment",
+        "z": "5ae7a9a.f6b6758",
+        "name": "update news",
+        "info": "",
+        "x": 170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bb912235.f32ae",
+        "type": "comment",
+        "z": "5ae7a9a.f6b6758",
+        "name": "Loop",
+        "info": "",
+        "x": 150,
+        "y": 700,
+        "wires": []
     }
 ]

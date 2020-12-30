@@ -120,9 +120,9 @@ Some example sentences are:
 ```
 ## Node-Red
 
-You can find the flow for all functions of this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/weather.json).
+You can find the flow for all functions of this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/weather.json).  
 
-![weather-logic](../../assets/Node-Red/Epics/Weather/Weather.png)
+![weather-logic](../../assets/Node-Red/Epics/Weather/Weather.png)  
 *All intents enter the flow at the very first `link-in`-node and get split by the `Weather-Switch`*
 
 ### Get and store the weather-data
@@ -142,7 +142,7 @@ You can find the flow for all functions of this feature [here](https://github.co
 Openweathermap only update their data every 3 hours, so you may want to change the `injection`-node to trigger every 3 hours or less.*
 
 ### Read the data aloud
-![readData](../../assets/Node-Red/Epics/Weather/readData.png)
+![readData](../../assets/Node-Red/Epics/Weather/readData.png)  
 
 `Green` section (`[GetTemperature]`):
 -  `function`-node: extracts the temperature from the stored weather-data and creates a TTS-message
