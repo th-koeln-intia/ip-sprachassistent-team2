@@ -68,3 +68,11 @@ There are three levels of QOS:
 
 If the retain-flag of a message is true, the broker will store this message and send it to every new subscriber.  
 The broker stores only one message per topic.
+
+## Sources
+[mqtt.org](https://mqtt.org/)  
+[HiveMQ-Documentation](https://www.hivemq.com/mqtt-protocol/)
+
+## What's next?
+
+At our [Node-Red-page](./node-red.md) you will learn, how to use the MQTT-protocol to control lights and other features.

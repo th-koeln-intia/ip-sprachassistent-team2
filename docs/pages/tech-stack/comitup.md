@@ -80,8 +80,11 @@ according to our [Getting Started Page](../setup.md).
 
 Please read our [user-guide](../users/wi-fi.md) on how to connect to use the Comitup-network.
 
+## Sources
+[Dave Steele's Blog](https://davesteele.github.io/comitup/)
+
 ## What's next?
 
-[Mycroft-Precise](./mycroft.md)
+We start our voice assistant with [Mycroft-Precise](./mycroft.md).
 
 

@@ -75,3 +75,11 @@ Kaldi understands numbers and digits, too. So if there is a ``15`` or something 
 ````
 [DEBUG:2020-10-14 13:20:10,706] rhasspyasr_kaldi.transcribe: ['fünfzehn ', 'fünfzehn ']
 ````
+
+## Sources
+[Kaldi-Documentation](https://kaldi-asr.org/doc/)
+[Rhasspy-Documentation](https://rhasspy.readthedocs.io/en/latest/speech-to-text/)
+
+## What's next?
+
+The spoken text will be passed to [FuzzyWuzzy](./fuzzywuzzy.md) to understand your intent.
