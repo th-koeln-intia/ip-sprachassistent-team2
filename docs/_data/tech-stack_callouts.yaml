@@ -2,7 +2,7 @@ style: is-light
 height: is-medium
 items:
   - title: MQTT
-    icon: fas fa-project-diagram
+    icon: fas fa-broadcast-tower
     description: >
     call_to_action_name: Smart!
     call_to_action_link: /tech-stack/mqtt/
