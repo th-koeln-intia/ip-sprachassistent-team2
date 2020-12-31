@@ -90,4 +90,7 @@ The nodes are used for:
 - `function`-node: filters by the source
 - `delay`-node: delays the message by one second to prevent errors
 
+## What's Next?
 
+You want to know how it works?  
+Look at our [Tech-Stack](./../../tech-stack/index.md)!

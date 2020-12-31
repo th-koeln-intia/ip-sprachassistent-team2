@@ -58,3 +58,8 @@ The nodes are used for:
 - `function`-node("feedback"): creates  TTS-feedback
 - `link`-node(top): just links to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts)
 - `link`-node(bottom): just links to a default `mqtt-out`-node (topic and payload are set by previous `function`-nodes)
+
+
+## What's Next?
+
+How to get the [current time](./not-required/current-time.md)?

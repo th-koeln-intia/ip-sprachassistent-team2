@@ -65,3 +65,7 @@ This `function`-node contains a script, which:
 *Code of the `function`-node.*
 
 The `function`-node passes the created message to our main [TTS-node](./../../tech-stack/hermesmqtt.md#tts).
+
+## What's Next?
+
+Set my [alarm](./../alarms.md) and wake me up!
