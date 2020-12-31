@@ -21,6 +21,11 @@ Deutscher Wetterdienst and openweathermap.
 
 Is not free. We would need to request prices from there sales department.
 
+#### [Dark Skies](https://darksky.net/)
+Dark Skies was bought by Apple. They will be IOS and MacOS exclusive and stop providing data over their API in 2021.
+
+
+
 #### [Deutscher Wetterdienst (dwd)](https://www.dwd.de/DE/derdwd/derdwd_node.html)
 
 > The Deutscher Wetterdienst is a public institution with partial legal capacity under the Federal Ministry of Transport
