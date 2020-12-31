@@ -20,15 +20,15 @@ To achieve this goal we want to develop a private and local Voice Assistant. The
 other Internet of Things (IoT) devices locally without internet access, as well as search for information on wikipedia.
 On top of this the user should be able to ask for the time, set alarms and timers. If there are use cases which require 
 internet access e.g. playing music or getting a weather report, we want no personal information to be send to external 
-servers. Here you can read more about the [features](pages/features/index.md)
+servers. Here you can read more about the [features](pages/features/index.md).
 
 For our voice assistant we want to use [Rhasspy](https://rhasspy.readthedocs.io/en/latest/) on a Raspberry Pi 
 and multiple open source software packages, which you can find in the our [tech-stack](pages/tech-stack/index.md) section.
 
 
-## Whats Next?
+## What's Next?
 
-Jump right in and [get started](/setup/)
+Jump right in and [get started](pages/setup.md)
 
 
 

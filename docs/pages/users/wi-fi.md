@@ -6,8 +6,8 @@ permalink: /users/wi-fi/
 
 ## Connect by comitup
 
-Comitup broadcasts a WI-FI Network if the Raspberry Pi is not connected to one. We can use this to control the Pi and 
- coneect it to our WI-FI.
+Comitup broadcasts a WI-FI Network, if the Raspberry Pi is not connected to one. We can use this to control the Pi and 
+ connect it to our WI-FI.
 
 ### Connect to Raspberry Pi
 
@@ -34,7 +34,7 @@ There you can Tap "Verwalten des Routers"
 
 ![](../../assets/comitup-connect-android-3.png)
 
-The browser will open and we can select the ssid of our network or search a hidden or missing one.
+The browser will open, and we can select the ssid of our network or search a hidden or missing one.
 
 ![](../../assets/comitup-connect-android-4.png)
 
@@ -44,7 +44,7 @@ After connecting to the comitup hotspot you can enter the following address in y
     "http://comitup-nn.local" remember to replace nn with th networks ID.
 
 If this is not working you might be able to use "http://10.41.0.1.", the dot at the end of the IP-address is supposed
-    to be part of the hack. But this has not worked for us.
+    to be part of the hack, but this has not worked for us.
 
 #### For IOs
 
@@ -53,8 +53,8 @@ Unfortunately we don't have an IOs device to test on.
 
 ## Connect by wpa_supplicant.conf
 
-Look at the [Setup Guide](/setup/)
+Look at the [Setup Guide](../setup.md)
 
-## Whats next?
+## What's next?
 
 [How to add your devices](./adding-devices.md)
