@@ -99,3 +99,10 @@ The two `traffic`-nodes decides where to pass the intents.
 If a wake-word is detected, the intent will be passed to our "[Intent-Switch](#intent-switch)".   
 If no wake-word is detected, the intent will be passed to the "Command-Request-Output".  
 All new `function`-nodes were created to control the `traffic`-nodes.  
+
+## Sources
+[Snips-Documentation](https://docs.snips.ai/reference/hermes)
+
+## What's next?
+
+To get some other useful information about this project, you may want to take a look [here](./../info/index.md).

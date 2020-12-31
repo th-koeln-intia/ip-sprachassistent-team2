@@ -102,3 +102,12 @@ Alternatively you can add the following lines to your `profile.json`.
       }
     }
 ```
+
+## Sources 
+[Precise-Documentation](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/precise)  
+[Precise-Repository](https://github.com/MycroftAI/mycroft-precise)  
+[Rhasspy-Documentation](https://rhasspy.readthedocs.io/en/latest/wake-word/)
+
+## What's next?
+
+Precise triggers [Kaldi](./kaldi.md), to listen to our commands.

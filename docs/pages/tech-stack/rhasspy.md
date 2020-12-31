@@ -57,3 +57,9 @@ This is not only the landing page of the Rhasspy-Webinterface, but also the test
 ## Sources
 [Rhasspy-Documentation](https://rhasspy.readthedocs.io/en/latest/)  
 [Rhasspy-Repository](https://github.com/rhasspy/rhasspy)  
+
+## What's next?
+
+If you want to know how to use our Tech-Stack, we recommend you to visit our documentation of [Mycroft-Precise](./mycroft.md).  
+To understand how we communicate with our lights, you should take a look at our [MQTT-page](./mqtt.md).  
+But if you want to know how we implemented our features, you should start with our [light-feature](./../features/lights.md).  

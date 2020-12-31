@@ -131,3 +131,11 @@ Flows can be imported and exported as JSON-files, to share them with others.
 *This is the flow from the [image](./node-red.md#flows) above.*  
 
 If you want to use our flows, you just have to import them to your Node-Red webinterface.  
+
+## Sources
+
+[Node-Red](https://nodered.org/)
+
+## What's next?
+
+If you want to know how we installed Comitup, you should click [here](./comitup.md).  

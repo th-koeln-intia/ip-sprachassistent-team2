@@ -156,8 +156,11 @@ Openweathermap only update their data every 3 hours, so you may want to change t
 
 The `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts).
 
-## Other Sources
-
+## Sources
+[accuweather](https://www.accuweather.com/)
+[Dark Skies](https://darksky.net)
+[Deutscher Wetterdienst (dwd)](https://www.dwd.de/DE/derdwd/derdwd_node.html)
+[openweathermap.org](https://openweathermap.org/)
 [cstain.io](https://cstan.io/?p=12097&lang=en)
 
 ## What's Next?
