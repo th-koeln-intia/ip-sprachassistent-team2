@@ -4,5 +4,6 @@ layout: page
 permalink: /features/index/
 hero_height: is-low
 title: Features
+subtitle: It's magic!
 callouts: features_callouts
 ---
