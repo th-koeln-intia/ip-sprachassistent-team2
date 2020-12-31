@@ -93,3 +93,12 @@ By pressing the "Speak"-button you should be able to hear the spoken text throug
 ### Call TTS from Node-Red
 
 To see how we use Node-Red to interact with MaryTTS, click [here](./hermesmqtt.md#tts).
+
+## Sources
+[MaryTTS-Documentation](http://mary.dfki.de/)  
+[DFKI](https://www.dfki.de/web/)  
+[Univerität des Saarlands](https://www.uni-saarland.de/start.html)
+
+## What's next?
+
+If you do not want to use Rhasspy's own dialogue manager you can use [HermesMQTT](./hermesmqtt.md).

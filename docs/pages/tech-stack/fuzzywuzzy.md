@@ -32,3 +32,11 @@ To use Rhasspy with FuzzyWuzzy, you just have to select it in the settings or ad
 }
 ```
 After retraining Rhasspy you should be able to recognise the intents in your `sentences.ini`.
+
+## Sources
+
+[Rhasspy-Documentation](https://rhasspy.readthedocs.io/en/latest/intent-recognition/)
+
+## What's next?
+
+After [Node-Red](./node-red.md) handles the command, [MaryTTS](./marytts.md) will give an audio feedback.

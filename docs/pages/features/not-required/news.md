@@ -90,6 +90,10 @@ The nodes are used for:
 - `function`-node: filters by the source
 - `delay`-node: delays the message by one second to prevent errors
 
+## Sources
+[Tagesschau](https://www.tagesschau.de/)
+[Tagesschau-RSS](https://www.tagesschau.de/xml/rss2_https/)
+
 ## What's Next?
 
 You want to know how it works?  
