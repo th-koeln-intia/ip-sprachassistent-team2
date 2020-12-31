@@ -89,3 +89,7 @@ The nodes are used for:
 - *green: [command-request](./../tech-stack/hermesmqtt.md#command-request)*  
 - *blue: [audio-output(TTS)](./../tech-stack/hermesmqtt.md#tts)*  
 - *orange [audio-output(.wav)](./../tech-stack/hermesmqtt.md#wav-files)*  
+
+## What's Next?
+
+I want to cock my egg for 59 minutes, please set a [timer](./timers.md)!

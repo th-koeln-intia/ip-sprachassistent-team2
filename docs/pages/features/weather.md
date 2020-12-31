@@ -159,3 +159,8 @@ The `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmq
 ## Other Sources
 
 [cstain.io](https://cstan.io/?p=12097&lang=en)
+
+## What's Next?
+
+What happened in the world?
+Get the [news](./not-required/news.md)!
