@@ -4,35 +4,41 @@ items:
   - title: Lights
     icon: fa-lightbulb
     description: >
+      Let there be Light!
     call_to_action_name: Lights on!
     call_to_action_link: /features/lights/
 
   - title: Current Time
     icon: fas fa-clock
     description: >
+      Time you enjoy wasting, was not wasted.
     call_to_action_name: Time is money!
     call_to_action_link: /features/current-time/
 
   - title: Alarm
     icon: fa-bell
     description: >
+      Wake me up before you go go!
     call_to_action_name: Wake me up!
     call_to_action_link: /features/alarms/
 
   - title: Timer
     icon: fa-stopwatch-20
     description: >
+      Run Forrest! Run!
     call_to_action_name: Remind me!
     call_to_action_link: /features/timers/
 
   - title: Weather
     icon: fa-cloud-sun-rain
     description: >
+      There is no such thing as bad weather...
     call_to_action_name: Remind me!
     call_to_action_link: /features/weather/
 
   - title: News
     icon: fas fa-newspaper
     description: >
+      News is what somebody somewhere wants to suppress...
     call_to_action_name: Remind me!
     call_to_action_link: /features/news/
