@@ -1,6 +1,18 @@
 style: is-light
 height: is-medium
 items:
+  - title: Lights
+    icon: fa-lightbulb
+    description: >
+    call_to_action_name: Lights on!
+    call_to_action_link: /features/lights/
+
+  - title: Current Time
+    icon: fas fa-clock
+    description: >
+    call_to_action_name: Time is money!
+    call_to_action_link: /features/current-time/
+
   - title: Alarm
     icon: fa-bell
     description: >
@@ -12,12 +24,6 @@ items:
     description: >
     call_to_action_name: Remind me!
     call_to_action_link: /features/timers/
-
-  - title: Lights
-    icon: fa-lightbulb
-    description: >
-    call_to_action_name: Lights on!
-    call_to_action_link: /features/lights/
 
   - title: Weather
     icon: fa-cloud-sun-rain
