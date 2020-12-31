@@ -4,8 +4,7 @@ items:
   - title: Alarm
     icon: fa-bell
     description: >
-
-    call_to_action_name: Weck mich!
+    call_to_action_name: Wake me up!
     call_to_action_link: /features/alarms/
 
   - title: Timer
@@ -14,11 +13,10 @@ items:
     call_to_action_name: Remind me!
     call_to_action_link: /features/timers/
 
-
   - title: Lights
     icon: fa-lightbulb
     description: >
-    call_to_action_name: Remind me!
+    call_to_action_name: Lights on!
     call_to_action_link: /features/lights/
 
   - title: Weather
