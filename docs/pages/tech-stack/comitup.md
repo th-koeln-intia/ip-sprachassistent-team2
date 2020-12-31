@@ -23,7 +23,7 @@ Rhasspy.
 ## Installing Comitup
 [Original post](https://github.com/davesteele/comitup/wiki/Installing-Comitup)
 
-1. Install the commitup package. 
+1. Install the Comitup package. 
 
    ```sudo apt-get install comitup```
 
@@ -55,7 +55,7 @@ Rhasspy.
 5. Masking dnsmasq.service
 
     > Comitup uses a local configuration of the DHCP setup utility dnsmasq to handle the network configuration of devices
-    onnecting to the Comitup hotspot. 
+    connecting to the Comitup hotspot. 
 
     We want to mask the dnsmasq.service to prevent some known issues with conflicting ports.
 
@@ -68,10 +68,20 @@ Rhasspy.
 
 6. Reboot
 
-7. 
+7. After the pi rebooted it should broadcast a comitup Wi-Fi network
     
 ## Using the Comitup Image
 
 Since we added Comitup to our tech-stack afterwards we have not tried to use a comitup image as base for our setup. You 
 can find up to date images at[davesteele.github.io/comitup/](https://davesteele.github.io/comitup/) and install them
 according to our [Getting Started Page](../setup.md).
+
+## Connecting to Wi-Fi
+
+Please read our [user-guide](../users/wi-fi.md) on how to connect to use the Comitup-network.
+
+## What's next?
+
+[Mycroft-Precise](./mycroft.md)
+
+
