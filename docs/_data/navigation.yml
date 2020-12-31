@@ -12,12 +12,12 @@
 - name: Features
   link: /features/index/
   dropdown:
-    - name: Alarms
-      link: /features/alarms/
-    - name: Current time
-      link: /features/current-time/
     - name: Lights
       link: /features/lights/
+    - name: Current time
+      link: /features/current-time/
+    - name: Alarms
+      link: /features/alarms/
     - name: Timer
       link: /features/timers/
     - name: Weather
@@ -28,6 +28,8 @@
 - name: Tech-Stack
   link: /tech-stack/index/
   dropdown:
+    - name: Rhasspy
+      link: /tech-stack/rhasspy/
     - name: Mqtt
       link: /tech-stack/mqtt/
     - name: Node-Red
