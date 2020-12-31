@@ -6,4 +6,5 @@ hero_height: is-low
 title: Features
 subtitle: It's magic!
 callouts: features_callouts
+hide_footer: true
 ---

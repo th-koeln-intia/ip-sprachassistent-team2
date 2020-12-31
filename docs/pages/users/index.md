@@ -6,4 +6,5 @@ hero_height: is-low
 title: User section
 subtitle: everything you need to make your Heimdall work
 callouts: users_callouts
+hide_footer: true
 ---

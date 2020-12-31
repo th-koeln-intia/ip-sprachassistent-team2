@@ -3,8 +3,7 @@
 layout: page
 permalink: /faq/index/
 title: FAQ
+subtitle: If you are in trouble you might be at the right place.
+callouts: faq_callouts
+hide_footer: true
 ---
-
-1. [Setup](setup.md)
-2. [openssl](openssl.md)
-3. [rasa-nlu](rasa-nlu.md)

@@ -4,53 +4,62 @@ items:
   - title: Rhasspy
     icon: fas fa-brain
     description: >
+      Brings technologies together
     call_to_action_name: Intelligent!
     call_to_action_link: /tech-stack/rhasspy/
 
   - title: MQTT
     icon: fas fa-broadcast-tower
     description: >
+      Communications between smart-devices is
     call_to_action_name: Smart!
     call_to_action_link: /tech-stack/mqtt/
 
   - title: Node-Red
     icon: fab fa-code-branch
     description: >
+      Programming new features made
     call_to_action_name: Easy!
     call_to_action_link: /tech-stack/node-red/
 
   - title: Comitup
     icon: fas fa-wifi
     description: >
+      Connect me to the world
     call_to_action_name: Useful!
     call_to_action_link: /tech-stack/comitup/
 
   - title: Mycroft-Precise
-    icon: fas fa-play
+    icon: fas fa-exclamation-circle
     description: >
-    call_to_action_name: Precise!
+      Wake-Word-Engine
+    call_to_action_name: Precisely!
     call_to_action_link: /tech-stack/mycroft/
 
   - title: Kaldi
-    icon: fas fa-microphone
+    icon: fas fa-phone-volume
     description: >
+      Speech to Text
     call_to_action_name: Talk to me!
     call_to_action_link: /tech-stack/kaldi/
 
   - title: FuzzyWuzzy
-    icon: fas fa-ruler-horizontal
+    icon: fas fa-comment
     description: >
+      Intend Recognition
     call_to_action_name: I know what want!
     call_to_action_link: /tech-stack/fuzzywuzzy/
 
   - title: MaryTTS
-    icon: fas fa-volume-up
+    icon: fas fa-paper-plane
     description: >
+      Text to Speech
     call_to_action_name: Remind me!
     call_to_action_link: /tech-stack/marytts/
 
   - title: HermesMQTT
-    icon: fas fa-feather-alt
+    icon: fas fa-tasks
     description: >
+      Dialogue management
     call_to_action_name: Remind me!
     call_to_action_link: /tech-stack/hermesmqtt/

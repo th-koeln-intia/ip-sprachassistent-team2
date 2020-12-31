@@ -4,20 +4,20 @@ items:
   - title: User Experience
     icon: fa-users
     description: >
-      Let there be Light!
-    call_to_action_name: Lights on!
+      A Discussion
+    call_to_action_name: Dive in!
     call_to_action_link: /info/user-experience/
 
   - title: Wake-wordengines
-    icon: fa-microphone-alt
+    icon: fa-exclamation-circle
     description: >
-      Let there be Light!
-    call_to_action_name: Lights on!
+      Which is the best?
+    call_to_action_name: Find out!
     call_to_action_link: /info/wake-word-engines/
 
   - title: Conclusion
     icon: fa-flask
     description: >
-      Let there be Light!
-    call_to_action_name: Lights on!
+      Our thoughts about this project
+    call_to_action_name: Read more!
     call_to_action_link: /info/conclusion/

@@ -6,5 +6,6 @@ hero_height: is-low
 title: Further Information
 subtitle: From comparisons to conclusion
 callouts: info_callouts
+hide_footer: true
 ---
 
