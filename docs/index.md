@@ -1,9 +1,13 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
----
+title: Heimdall
+subtitle: Your own private Voice Assistant
+callouts: landing_callouts
+hero_link: /setup/
+hero_link_text: Get started
 
-# Documentation
+---
 
 ## Introduction
 
@@ -14,55 +18,17 @@ institutions.
 
 To achieve this goal we want to develop a private and local Voice Assistant. The user should be able to control lights and 
 other Internet of Things (IoT) devices locally without internet access, as well as search for information on wikipedia.
-On top of this the user should be able to ask for the time and set alarms. If there are use cases which require internet 
-access e.g. playing music or getting a weather report, we want no personal information to be send to external servers.
+On top of this the user should be able to ask for the time, set alarms and timers. If there are use cases which require 
+internet access e.g. playing music or getting a weather report, we want no personal information to be send to external 
+servers. Here you can read more about the [features](pages/features/index.md)
 
-For our voice assistant we want to use the Raspberry Pi and multiple open source software packages.
-
-
-## How to get started
-### Used hardware
-- Raspberry Pi 3 B or better
-- Power supply according to your Raspberry Pi
-- 32 GB SD card or bigger
-- Microphone (USB or compatible with the 40 Pin Header of the Pi)
-
-### Used software
-- Wake word engine: [MyCroft-Precise](pages/tech-stack/mycroft.md)
-- Speech to Text: [Kaldi](pages/tech-stack/kaldi.md)
-- Intent Recognition: [FuzzyWuzzy](./pages/tech-stack/fuzzywuzzy.md)
-- Text to Speech: [MaryTTS](pages/tech-stack/marytts.md) 
-- Dialogue Management: [Hermes MQTT](pages/tech-stack/hermesmqtt.md)
-
-### Other important technologies 
-- Protocol for massage management: [MQTT](pages/information/mqtt.md) 
-- Graphical development engine: [Node-Red](pages/information/node-red.md)
-
-### First use
-- To see what to do at the first use and what we decided to go with, please take a look [here](pages/information/first-use.md).
-
-## Epics
-- These are the use cases which we want to implement:
-- As user, I want to give the voice assistant commands in natural language (Speech-To-Text)
-- [As user, I want to control lighting bulbs with the command "Licht an"/"Licht aus" (Intent recognition)](pages/epics/lights.md)
-- [As user, I want to set an alarm](pages/epics/alarms.md)
-- [As user, I want to set a timer](pages/epics/timers.md)
-- As user, I want to ask for information on wikipedia
-- As user, I want to play music over Spotify
+For our voice assistant we want to use [Rhasspy](https://rhasspy.readthedocs.io/en/latest/) on a Raspberry Pi 
+and multiple open source software packages, which you can find in the our [tech-stack](pages/tech-stack/index.md) section.
 
 
-#### Not required
-- ([As user, I want to ask for the current time](./pages/epics/not-required/current-time.md))
+## Whats Next?
 
-## User Guide
-
-To learn how to set up you Heimdall in your home click [here](pages/users/index.md)
+Jump right in and [get started](/setup/)
 
 
-## Other
-
-[Wake word engine comparison](pages/information/wake-word-engine-comparrison.md)
-
-## Sources
-- You can find a list of our sources [here](pages/information/source-links.md)
 

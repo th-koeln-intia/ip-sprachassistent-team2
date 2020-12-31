@@ -1,29 +1,40 @@
-- name: Dev
-  link: /dev/index/
-  dropdown:
-    - name: Setup
-      link: /dev/setup/
-    - name: Comitup
-      link: /dev/comitup/
+- name: Setup
+  link: /setup/
 
-- name: information
-  link: /information/index/
+- name: Users
+  link: /users/index/
   dropdown:
-    - name: mqtt
-      link: /information/mqtt/
-    - name: node-red
-      link: /information/node-red/
-    - name: first-use
-      link: /information/first-use/
-    - name: Wake-word-engines
-      link: /information/wake-word-engines/
-    - name: Sources
-      link: /information/sources/
+    - name: WI-FI
+      link: /users/wi-fi/
+    - name: Adding Devices
+      link: /users/adding-devices/
 
-- name: tech-stack
+- name: Features
+  link: /features/index/
+  dropdown:
+    - name: Alarms
+      link: /features/alarms/
+    - name: Current time
+      link: /features/current-time/
+    - name: Lights
+      link: /features/lights/
+    - name: Timer
+      link: /features/timers/
+    - name: Weather
+      link: /features/weather/
+    - name: News
+      link: /features/news/
+
+- name: Tech-Stack
   link: /tech-stack/index/
   dropdown:
-    - name: Mycroft
+    - name: Mqtt
+      link: /tech-stack/mqtt/
+    - name: Node-Red
+      link: /tech-stack/node-red/
+    - name: Comitup
+      link: /tech-stack//comitup/
+    - name: Mycroft-Precise
       link: /tech-stack/mycroft/
     - name: Kaldi
       link: /tech-stack/kaldi/
@@ -34,33 +45,22 @@
     - name: HermesMQTT
       link: /tech-stack/hermesmqtt/
 
-- name: Epics
-  link: /epics/index/
+- name: Info
+  link: /info/index/
   dropdown:
-    - name: Alarms
-      link: /epics/alarms/
-    - name: Lights
-      link: /epics/lights/
-    - name: Timer
-      link: /epics/timers/
-    - name: Weather
-      link: /epics/weather/
+    - name: User-Experience
+      link: /info/user-experience/
+    - name: Wake-Word-Engines
+      link: /info/wake-word-engines/
+    - name: Conclusion
+      link: /info/conclusion.md/
 
-
-- name: troubleshooting
-  link: /troubleshooting/index/
+- name: FAQ
+  link: /faq/index/
   dropdown:
     - name: Setup
-      link: /troubleshooting/setup/
-    - name: Hermes
-      link: /troubleshooting/hermes/
+      link: /faq/setup/
     - name: Rasa-NLU
-      link: /troubleshooting/rasa-nlu/
-    - name: openssl
-      link: /troubleshooting/openssl/
-
-- name: users
-  link: /users/index/
-  dropdown:
-    - name: WI-FI
-      link: /users/wi-fi/
+      link: /faq/rasa-nlu/
+    - name: OPENSSL
+      link: /faq/openssl/

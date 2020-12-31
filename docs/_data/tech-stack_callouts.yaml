@@ -1,0 +1,50 @@
+style: is-light
+height: is-medium
+items:
+  - title: MQTT
+    icon: fas fa-broadcast-tower
+    description: >
+    call_to_action_name: Smart!
+    call_to_action_link: /tech-stack/mqtt/
+
+  - title: Node-Red
+    icon: fab fa-code-branch
+    description: >
+    call_to_action_name: Easy!
+    call_to_action_link: /tech-stack/node-red/
+
+  - title: Comitup
+    icon: fas fa-wifi
+    description: >
+    call_to_action_name: Useful!
+    call_to_action_link: /tech-stack/comitup/
+
+  - title: Mycroft-Precise
+    icon: fas fa-play
+    description: >
+    call_to_action_name: Precise!
+    call_to_action_link: /tech-stack/mycroft/
+
+  - title: Kaldi
+    icon: fas fa-microphone
+    description: >
+    call_to_action_name: Talk to me!
+    call_to_action_link: /tech-stack/kaldi/
+
+  - title: FuzzyWuzzy
+    icon: fas fa-ruler-horizontal
+    description: >
+    call_to_action_name: I know what want!
+    call_to_action_link: /tech-stack/fuzzywuzzy/
+
+  - title: MaryTTS
+    icon: fas fa-volume-up
+    description: >
+    call_to_action_name: Remind me!
+    call_to_action_link: /tech-stack/marytts/
+
+  - title: HermesMQTT
+    icon: fas fa-feather-alt
+    description: >
+    call_to_action_name: Remind me!
+    call_to_action_link: /tech-stack/hermesmqtt/

@@ -1,7 +1,7 @@
 # Custom area
 venv
 .idea
-src/models
+deprecated/RasaNLU/src/models
 
 <<<<<<< HEAD
 venv/*
