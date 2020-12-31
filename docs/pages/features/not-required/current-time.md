@@ -1,7 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /epics/current-time/
+permalink: /features/current-time/
 title: Get the current time
 ---
 
