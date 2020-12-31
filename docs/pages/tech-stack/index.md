@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/index/
 title:  Tech-Stack
+hero_height: is-low
 callouts: tech-stack_callouts
 ---
 
