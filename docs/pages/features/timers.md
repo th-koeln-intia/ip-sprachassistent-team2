@@ -42,4 +42,10 @@ The `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmq
 The nodes are used for:
 - `function`-node(top): creates TTS-message as command-feedback  
 - `function`-node(bottom): calculates the time, sets `msg.delay` as milliseconds and creates TTS-message as timer-sound  
-- `delay`-node: delays the `msg`-object by the `msg.delay`-time
+- `delay`-node: delays the `msg`-object by the `msg.delay`-time 
+
+
+## What's Next?
+
+Let it Snow!  
+Or at least get information to the [weather](./weather.md)!

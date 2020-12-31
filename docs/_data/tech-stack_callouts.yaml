@@ -1,6 +1,12 @@
 style: is-light
 height: is-medium
 items:
+  - title: Rhasspy
+    icon: fas fa-brain
+    description: >
+    call_to_action_name: Intelligent!
+    call_to_action_link: /tech-stack/rhasspy/
+
   - title: MQTT
     icon: fas fa-broadcast-tower
     description: >
