@@ -79,3 +79,7 @@ algolia:
 
 # Sidebar
 
+
+# Site Footer
+footer_menu: footer
+

@@ -2,11 +2,10 @@
 # This top area is to give jekyll information about the page.
 layout: page
 title: Heimdall
-subtitle: Your own private Voice Assistant
+subtitle: Your own private voice assistant
 callouts: landing_callouts
 hero_link: /setup/
 hero_link_text: Get started
-
 ---
 
 ## Introduction
@@ -16,7 +15,7 @@ This project is part of [INTIA](https://dites.web.th-koeln.de/forschung/projekte
 The aim of project is to improve possibilities of digital participation for clients of social work organisations and other
 institutions.   
 
-To achieve this goal we want to develop a private and local Voice Assistant. The user should be able to control lights and 
+To achieve this goal we want to develop a private and local voice assistant. The user should be able to control lights and 
 other Internet of Things (IoT) devices locally without internet access, as well as search for information on wikipedia.
 On top of this the user should be able to ask for the time, set alarms and timers. If there are use cases which require 
 internet access e.g. playing music or getting a weather report, we want no personal information to be send to external 
