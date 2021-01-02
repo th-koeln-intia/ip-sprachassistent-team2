@@ -4,6 +4,7 @@ layout: page
 permalink: /features/news/
 title: News
 subtitle: News is what somebody somewhere wants to suppress; all the rest is advertising.
+hero_height: is-low
 ---
 
 ## Goals

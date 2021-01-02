@@ -3,6 +3,7 @@
 layout: page
 permalink: /features/timers/
 title: Timers
+hero_height: is-low
 ---
 
 ## Goals

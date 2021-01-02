@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/fuzzywuzzy/
 title: FuzzyWuzzy
+hero_height: is-low
 ---
 
 ## Introduction

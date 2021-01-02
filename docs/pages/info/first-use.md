@@ -3,6 +3,7 @@
 layout: page
 permalink: /info/user-experience/
 title: How we imagined the User Experience
+hero_height: is-low
 ---
 
 In this section we want to discuss different possibilities for the user to set up the rhasspy. However, it is important

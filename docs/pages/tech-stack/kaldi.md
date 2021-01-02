@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/kaldi/
 title: Kaldi
+hero_height: is-low
 ---
 
 ## Introduction

@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/rhasspy/
 title: Rhasspy
+hero_height: is-low
 ---
 
 ## Introduction

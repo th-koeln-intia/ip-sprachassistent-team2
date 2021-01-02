@@ -2,6 +2,7 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /users/wi-fi/
+hero_height: is-low
 ---
 
 ## Connect by comitup

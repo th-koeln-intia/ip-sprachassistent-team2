@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/mycroft/
 title: Mycroft-Precise
+hero_height: is-low
 ---
 
 ## Introduction
