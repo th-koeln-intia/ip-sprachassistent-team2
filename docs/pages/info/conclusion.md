@@ -3,6 +3,8 @@
 layout: page
 permalink: /info/conclusion/
 title: Conclusion
+hero_height: is-low
+subtitle: A conclusion of the project and the Tech-Stack
 ---
 
 
