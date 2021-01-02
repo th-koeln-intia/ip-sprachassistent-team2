@@ -10,6 +10,6 @@ subtitle: One Pi to rule them all
 
 Home Assistant is not yet implemented
 
-## Next
+## What's next?
 
-Features
+Heimdall has some useful [features](./../features/index.md).
