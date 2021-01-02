@@ -1,7 +1,5 @@
 ---
 # This top area is to give jekyll information about the page.
-layout: page
-permalink: /readme/
 title: Readme
 ---
 
@@ -13,7 +11,7 @@ During this project we try to develop a private and local Voice-Assistant, based
 is supposed to be used in education and diaconal institutions, like orphanages or homes for elderly or disabled people.
 
 While providing a save and fun way to get accustomed to future technologies, we don't want any personal data stored on 
-external or even foreign servers, since heimdalls users might be vulnerable and or exploitable.
+external or even foreign servers, since Heimdall's users might be vulnerable and or exploitable.
 
 Our part in this project was to evaluate different technologies by first installing them on a raspberry pi (an affordable 
 mini computer) and afterwards implementing different skills, like telling [current time](./docs/pages/features/not-required/current-time.md),
