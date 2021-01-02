@@ -3,6 +3,7 @@
 layout: page
 permalink: /faq/openssl/
 title: OPENSSL_1_1_1
+hero_height: is-low
 ---
 
 # What was our problem with OPENSSL?

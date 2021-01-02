@@ -3,6 +3,7 @@
 layout: page
 permalink: /faq/rasa-nlu/
 title: Rasa-NLU
+hero_height: is-low
 ---
 
 # What was our problem with Rasa?

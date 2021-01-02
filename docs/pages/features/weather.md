@@ -3,6 +3,7 @@
 layout: page
 permalink: /features/weather/
 title: Weather-service on Rhasspy
+hero_height: is-low
 ---
 
 ## Goals

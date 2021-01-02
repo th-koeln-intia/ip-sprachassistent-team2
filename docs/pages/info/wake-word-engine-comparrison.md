@@ -3,6 +3,7 @@
 layout: page
 permalink: /info/wake-word-engines/
 title: Wake-word engine
+hero_height: is-low
 ---
 
 For our project we need a Wake-Word or Hot Word Engine, which is local and always listens 

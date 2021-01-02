@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/marytts/
 title: MaryTTS
+hero_height: is-low
 ---
 
 ## Introduction
