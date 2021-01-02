@@ -1,8 +1,8 @@
-# Heimdall Voice-Assistant
+# Heimdall voice assistant
 
 Heimdall is part of the [INTIA](https://dites.web.th-koeln.de/forschung/projekte/intia/) project.
 
-During this project we try to develop a private and local Voice-Assistant, based on open-source technologies. The assistant
+During this project we try to develop a private and local voice assistant, based on open-source technologies. The assistant
 is supposed to be used in education and diaconal institutions, like orphanages or homes for elderly or disabled people.
 
 While providing a save and fun way to get accustomed to future technologies, we don't want any personal data stored on 
