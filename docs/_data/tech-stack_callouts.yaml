@@ -54,12 +54,12 @@ items:
     icon: fas fa-paper-plane
     description: >
       Text to Speech
-    call_to_action_name: !
+    call_to_action_name: This sounds greate!
     call_to_action_link: /tech-stack/marytts/
 
   - title: HermesMQTT
     icon: fas fa-tasks
     description: >
       Dialogue management
-    call_to_action_name: Remind me!
+    call_to_action_name: Please what?
     call_to_action_link: /tech-stack/hermesmqtt/
