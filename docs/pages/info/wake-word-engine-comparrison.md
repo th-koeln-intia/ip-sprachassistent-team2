@@ -16,7 +16,7 @@ to consider following criteria:
 -	Open source and free to use
 -	Supported by a bigger community or company
 
-Furthermore, it would be nice if its easy to use and we could monetize the product, because we cannot limit the use to 
+Furthermore, it would be nice if it is easy to use and we could monetize the product, because we cannot limit the use to 
 charity.
 
 
@@ -51,7 +51,7 @@ Training custom wake words is restricted to x86_64 CPU architecture.
 
 Raven is available on [github](https://github.com/rhasspy/rhasspy-wake-raven) under the MIT license. It is mainly based 
 on the Snips engine and allows for custom wake words. There are two people maintaining the repository, who are also 
-responsible for the Rhasspy Assistant. Its also used by the first team as wake word engine. 
+responsible for the Rhasspy Assistant. It is also used by the first team as wake word engine. 
 
 ### Snips
 
@@ -71,3 +71,7 @@ Since all the above are open-source wake word engines and seem to run locally wh
 decide on the engine with the best support. Snowboy and Snips are EOL or don't get much support. Porcupine requires
 a paid license for our use case. Raven and Pocketsphinx already get used by our other team, which only leaves us 
 Precise.
+
+## What's next?
+
+To see our overall conclusion to this project and to our tech-stack, you should click [here](./conclusion.md).

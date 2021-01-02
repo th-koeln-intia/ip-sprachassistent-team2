@@ -5,15 +5,15 @@ permalink: /info/user-experience/
 title: How we imagined the User Experience
 ---
 
-In this section we want to discuss different possibilities for the user to setup the rhasspy. However, it is important
+In this section we want to discuss different possibilities for the user to set up the rhasspy. However, it is important
  to keep in mind, that the range of our users skills and abilities might vastly differ. Also we want to talk about custom
- wakewords and how to add new devices.
+ wake-words and how to add new devices.
 
 
 ### WLAN
 - Do we need an internet connection?
 
-Firstly there will probably be some clients, who should not use the Internet unattended and we should ship a Version
+Firstly there will probably be some clients, who should not use the internet unattended and we should ship a Version
 with no ability to connect to the internet or provide guidance to caretakers how to disable the internet connection on 
 the pi or on the network level. 
 
@@ -37,7 +37,7 @@ Maybe it is possible to update the pi over git remotely.
 - How to add a new smart device (e.g. a new lamp)?
 
 Maybe we can use [Home Assistant](https://www.home-assistant.io/) to let the user add new devices to the assistant.
-Home Assistants mobile app also offers an convinient way to controll the connected smart devices.
+Home Assistants mobile app also offers a convenient way to control the connected smart devices.
 
 - How to add such a device to one or more groups?
 
@@ -54,3 +54,8 @@ Home Assistant supports rooms and groups.
 - How to define new Commands for specific tasks (e.g. groups of lamps)?
 - Do we pre-set a bunch of groups (e.g. living room, kitchen, bedroom)?
 - Which functions should be implemented? (Reading data from thermometers, or just switching lights and sockets?)  
+
+
+## What's next?
+
+Before we decided to go with [Mycroft-Precise](./../tech-stack/mycroft.md), we compared some [wake-word-engines](./wake-word-engine-comparrison.md).

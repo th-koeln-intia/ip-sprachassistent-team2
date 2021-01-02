@@ -55,7 +55,7 @@
     - name: Wake-Word-Engines
       link: /info/wake-word-engines/
     - name: Conclusion
-      link: /info/conclusion.md/
+      link: /info/conclusion/
 
 - name: FAQ
   link: /faq/index/

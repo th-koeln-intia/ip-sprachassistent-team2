@@ -12,14 +12,14 @@ Comitup broadcasts a WI-FI Network, if the Raspberry Pi is not connected to one.
 ### Connect to Raspberry Pi
 
 Now we use a Wi-Fi capable device like a laptop or smartphone to connect to the hotspot. Open the Wi-Fi network dialog.
-    Connect to the network named "Comitup-nn", where nn is a randomized two digit ID. This ID might be important in the next
+    Connect to the network named "Comitup-nn", where nn is a randomized two-digit ID. This ID might be important in the next
     step.
 
 ### Enter your Wi-Fi Credentials
 
 ####For Android  
 
-In this case we used a Galaxy Note 10+ and Google chrome as test device and assume, that other Android devices work
+In this case we used a Galaxy Note 10+ and Google Chrome as test device and assume, that other Android devices work
     similarly, but we won't test with other devices.
 
 For android phones you can enter the Wi-Fi settings. Hold the Wi-Fi icon in your quick-menu.
@@ -57,4 +57,4 @@ Look at the [Setup Guide](../setup.md)
 
 ## What's next?
 
-[How to add your devices](./adding-devices.md)
+Adding new [smart devices](./adding-devices.md).

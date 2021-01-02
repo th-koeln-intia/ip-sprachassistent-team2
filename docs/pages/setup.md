@@ -146,43 +146,15 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/mast
 sudo systemctl enable nodered.service # This starts Node-Red when the pi is booting.
 ```
 
-You can enter Node-Red under http://<hostname>:1880
+You can enter Node-Red under `http://<hostname>:1880`.
 
 
+## What's next?
 
+If you used our image to install Heimdall, you may want to take a look at our [user-section](./users/index.md).   
+But if you are installing Hemdall from scratch, you should check our documentation of [Rhasspy](./tech-stack/rhasspy.md).  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+After you fully installed and set up Heimdall, you should read our [features-pages](./features/index.md) starting with the [light-control](./features/lights.md).  
 
 
 
