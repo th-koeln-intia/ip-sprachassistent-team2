@@ -47,14 +47,14 @@ items:
     icon: fas fa-comment
     description: >
       Intend Recognition
-    call_to_action_name: I know what want!
+    call_to_action_name: I know what I want!
     call_to_action_link: /tech-stack/fuzzywuzzy/
 
   - title: MaryTTS
     icon: fas fa-paper-plane
     description: >
       Text to Speech
-    call_to_action_name: Remind me!
+    call_to_action_name: !
     call_to_action_link: /tech-stack/marytts/
 
   - title: HermesMQTT

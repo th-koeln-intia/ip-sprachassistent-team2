@@ -33,12 +33,12 @@ items:
     icon: fa-cloud-sun-rain
     description: >
       There is no such thing as bad weather...
-    call_to_action_name: Remind me!
+    call_to_action_name: Tell me!
     call_to_action_link: /features/weather/
 
   - title: News
     icon: fas fa-newspaper
     description: >
       News is what somebody somewhere wants to suppress...
-    call_to_action_name: Remind me!
+    call_to_action_name: Get informed!
     call_to_action_link: /features/news/
