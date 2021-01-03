@@ -3,6 +3,7 @@
 layout: page
 permalink: /setup/
 title: Setup
+hero_height: is-low
 ---
 
 ## Setup with iso image

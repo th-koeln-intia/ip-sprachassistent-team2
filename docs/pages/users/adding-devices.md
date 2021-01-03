@@ -4,6 +4,7 @@ layout: page
 permalink: /users/adding-devices/
 title: How to add your devices
 subtitle: One Pi to rule them all
+hero_height: is-low
 ---
 
 ## Why is nothing here???

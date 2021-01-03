@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/mqtt/
 title: MQTT
+hero_height: is-low
 ---
 
 ## What is MQTT?

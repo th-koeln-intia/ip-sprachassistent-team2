@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/hermesmqtt/
 title: HermesMQTT
+hero_height: is-low
 ---
 
 ## Introduction

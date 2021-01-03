@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/comitup/
 title: Installing Comitup
+hero_height: is-low
 ---
 
 ## What is Comitup

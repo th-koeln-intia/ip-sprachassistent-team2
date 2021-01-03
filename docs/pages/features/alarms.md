@@ -3,6 +3,7 @@
 layout: page
 permalink: /features/alarms/
 title: Alarms
+hero_height: is-low
 ---
 
 ## Goals

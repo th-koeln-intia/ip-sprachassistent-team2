@@ -6,4 +6,5 @@ title: FAQ
 subtitle: If you are in trouble you might be at the right place.
 callouts: faq_callouts
 hide_footer: true
+hero_height: is-low
 ---

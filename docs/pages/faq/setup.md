@@ -3,6 +3,7 @@
 layout: page
 permalink: /faq/setup/
 title: Setup
+hero_height: is-low
 ---
 
 # What was the main problem at the setup?
