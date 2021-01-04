@@ -38,7 +38,29 @@ To write an image to your SD-Card you can use one of the following Programs:
 
 - [Raspberry Pi Imager](https://www.raspberrypi.org/software/) (Win, Ubuntu, Mac)
 - [Belenaetcher](https://www.electronjs.org/apps/etcher) (Win, Ubuntu, Mac)
-- [Rufus](https://rufus.ie/) (Windows only)
+- [Rufus](https://rufus.ie/) (Windows only, can write bigger images on smaller SD-cards)
+
+### Expanding the file system in the command line
+
+If you used a bigger SD-card bigger than your image you should expand the file system to use all available space on the 
+SD-card. In the following screenshots we wrote a 16 GB image on a 32 GB SD-Card.
+
+With the command `df -h` you can list the filesystem (fs).
+
+![Filesystem after using an image for setup](../assets/PI-df-h-after-using-image-for-setup.png)
+
+In the first row you can see that the `/dev/root` folder only takes up 15 GB of space. `sudo raspi-config --expand-rootfs`
+expands the filesystem.
+
+![Expanding fs](../assets/Pi-expand-rootfs.png)
+
+
+Using `df -h` again...
+
+![Expanded fs](../assets/Pi-expanded-file-system.png)
+
+you can check that `/dev/root` uses almost all the 32 GB of the SD-Card.
+
 
 ## Setup fresh
 

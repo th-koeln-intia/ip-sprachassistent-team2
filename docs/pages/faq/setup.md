@@ -15,19 +15,7 @@ This can result in to little hard drive space for all technologies to be install
 
 We used the command Line to expand the filesystem:  
 
-With the command `df -h` we can list the filesystem (fs).
 
-![Filesystem after using an image for setup](../../assets/PI-df-h-after-using-image-for-setup.png)
-
-In the first row we can see that the `/dev/root` only takes up 15 GB of space.  
-With `sudo raspi-config --expand-rootfs` we expanded the filesystem.  
-
-![Expanding fs](../../assets/Pi-expand-rootfs.png)
-
-
-![Expanded fs](../../assets/Pi-expanded-file-system.png)
-
-Here we can see that `/dev/root` uses almost all the 32 GB of the SD-Card.
 
 <!--- 
 # Solutions that did not work
