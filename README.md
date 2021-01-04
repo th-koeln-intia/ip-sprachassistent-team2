@@ -9,8 +9,8 @@ While providing a save and fun way to get accustomed to future technologies, we 
 external or even foreign servers, since Heimdall's users might be vulnerable and or exploitable.
 
 Our part in this project was to evaluate different technologies by first installing them on a raspberry pi (an affordable 
-mini computer) and afterwards implementing different skills, like telling [current time](./docs/pages/features/not-required/current-time.md),
-setting [alarms](./docs/pages/features/alarms.md), or getting a [weather forecast](./docs/pages/features/weather.md).
+mini computer) and afterwards implementing different skills, like telling [current time](https://ip-team2.intia.de/features/current-time/),
+setting [alarms](https://ip-team2.intia.de/features/alarms/), or getting a [weather forecast](https://ip-team2.intia.de/features/weather/).
 We try to answer the following questions:
 
 - How easy are these technologies to implement and use?
