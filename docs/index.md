@@ -6,7 +6,7 @@ subtitle: Your own private voice assistant
 callouts: landing_callouts
 hero_link: /setup/
 hero_link_text: Get started
-permalink: /home/
+
 ---
 
 ## Introduction
