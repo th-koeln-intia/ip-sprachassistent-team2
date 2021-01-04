@@ -75,4 +75,4 @@ Precise.
 
 ## What's next?
 
-To see our overall conclusion to this project and to our tech-stack, you should click [here](./conclusion.md).
+Why we did not use [Openssl](./openssl.md).

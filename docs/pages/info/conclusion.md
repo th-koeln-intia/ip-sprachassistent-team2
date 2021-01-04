@@ -67,4 +67,4 @@ You should use HermesMQTT, if you want to have full control over you voice assis
 
 ## What's next?
 
-If you want to see, which problems we ran into during this project, you should click [here](./../faq/index.md).
+[Here](./user-experience.md) you can read how we imagined the user-experience at the beginning.

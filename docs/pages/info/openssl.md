@@ -3,10 +3,11 @@
 layout: page
 permalink: /info/openssl/
 title: OPENSSL_1_1_1
+subtitle: 
 hero_height: is-low
 ---
 
-# What was our problem with OPENSSL?
+## Rhasspy 2.5.5 is not compatible with OPENSSL
 
 We tried to use MaryTTS as our "text-to-speech"-system, but it did not work.  
 Rhasspy shows the following log-message:
@@ -45,7 +46,7 @@ rhasspyserver_hermes.TtsException: Non-zero exit code: 1
 It seems that Rhasspy could not find `'OPENSSL_1_1_1'`.
 
 
-# What were our next steps?
+## What were our next steps?
 
 We tried to install it by typing the following commands:  
 
@@ -66,8 +67,9 @@ But that also did not work.
 (Not with alias not with other paths.)
 
 
-# What was the solution?
+## What was the solution?
 
 We finally copied all files from `~/openssl-1.1.1` to `/usr/lib/rhasspy/rhasspy` and reinstalled it as root-user.  
 That finally worked.  
 Maybe one of the attempts above may work for you.  
+
