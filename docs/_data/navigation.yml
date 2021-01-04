@@ -56,6 +56,8 @@
       link: /info/wake-word-engines/
     - name: Conclusion
       link: /info/conclusion/
+    - name: AVA
+      link: /info/ava
 
 - name: FAQ
   link: /faq/index/

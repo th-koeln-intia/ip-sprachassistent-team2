@@ -15,24 +15,24 @@ hero_height: is-low
 - MicroSD Card reader
 - Power supply 
     
-    We would recommend to use an official power supply for Raspberry Pi, but if you are on a budget you could also try to 
-    use an charger for a mobile phone.
+    We would recommend using an official power supply for Raspberry Pi, but if you are on a budget you could also try to 
+    use a charger for a mobile phone.
 
 - Microphone
     
     In our setup we use the [ReSpeaker 4-Mic Array for Raspberry Pi](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
-    but most USB-microphnes should work as well.
+    but most USB-microphones should work as well.
     
 - Speakers
     
     We used different kinds of analog speakers.
     
 
-### Download Image
+### Download image
 
 [image]
 
-### Write the Image on a SD-Card
+### Write the image on a SD-Card
 
 To write an image to your SD-Card you can use one of the following Programs:
 
@@ -45,15 +45,15 @@ To write an image to your SD-Card you can use one of the following Programs:
 ### Download raspberry image and install on SD card
 
 You will probably need a 32 GB SD card if you want to train your own [wake word model](/docs/pages/tech-stack/mycroft.md) in precise.
-We recommend to download and install the full verion with Graphical User Interface. Using the lightversion leeds to 
-many compatibility issues and you might need to install a lot of software, which is already included in the full version.
+We recommend downloading and installing the full version with Graphical User Interface. Using the light version leeds to 
+many compatibility issues. You might need to install a lot of software, which is already included in the full version.
 https://www.raspberrypi.org/downloads/
 
-### Enable SSH and WIFI
+### Enable SSH and Wi-Fi
 
-After you installing the image on your SD card you can enable `SSH` by creating a file with the name SSH and no fileextention.
+After installing the image on your SD card, you can enable `SSH` by creating a file with the name SSH and no file extension.
 
-You can make your pi connect to WIFI automaticly by creating a file named `wpa_supplicant.conf` in the `boot` directory.
+You can make your pi connect to Wi-Fi automatically by creating a file named `wpa_supplicant.conf` in the `boot` directory.
 It has to have the following content:
 
 ```
@@ -70,7 +70,7 @@ network={
 ### Connect to your Raspberry
 
 After inserting the SD card and booting the Pi you can ssh after a little while. You will need your Pi's IP-Address to
-connect with via a SSH tool like Putty. You can find it in your routers web-interface. 
+connect with via a SSH tool like Putty. You can find it in your router's web-interface. 
 
 Default user is `pi` and the password is `raspberry`.
 

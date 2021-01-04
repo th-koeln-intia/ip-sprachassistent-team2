@@ -21,3 +21,12 @@ items:
       Our thoughts about this project
     call_to_action_name: Read more!
     call_to_action_link: /info/conclusion/
+
+  - title: AVA
+    icon: fa-mobile
+    description: >
+      A Voice Assistant
+
+      by A\\WARE
+    call_to_action_name: Read more!
+    call_to_action_link: /info/ava/

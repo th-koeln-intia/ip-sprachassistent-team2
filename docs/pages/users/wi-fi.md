@@ -7,8 +7,8 @@ hero_height: is-low
 
 ## Connect by comitup
 
-Comitup broadcasts a WI-FI Network, if the Raspberry Pi is not connected to one. We can use this to control the Pi and 
- connect it to our WI-FI.
+Comitup broadcasts a Wi-Fi Network, if the Raspberry Pi is not connected to one. We can use this to control the Pi and 
+ connect it to our Wi-Fi.
 
 ### Connect to Raspberry Pi
 
@@ -42,7 +42,7 @@ The browser will open, and we can select the ssid of our network or search a hid
 #### For Windows
 
 After connecting to the comitup hotspot you can enter the following address in your browser end connect to the comitup dialog.
-    "http://comitup-nn.local" remember to replace nn with th networks ID.
+    "http://comitup-nn.local" remember to replace nn with the network's ID.
 
 If this is not working you might be able to use "http://10.41.0.1.", the dot at the end of the IP-address is supposed
     to be part of the hack, but this has not worked for us.

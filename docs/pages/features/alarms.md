@@ -93,4 +93,4 @@ The nodes are used for:
 
 ## What's Next?
 
-I want to cock my egg for 59 minutes, please set a [timer](./timers.md)!
+I want to cook my egg for 59 minutes, please set a [timer](./timers.md)!

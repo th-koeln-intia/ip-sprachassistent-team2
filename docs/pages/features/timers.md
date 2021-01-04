@@ -7,7 +7,7 @@ hero_height: is-low
 ---
 
 ## Goals
-The goal was to set a timer via a voice command.
+The goal was to set a timer via voice command.
 
 ## Rhasspy
 In Rhasspy we have to add new lines to the `sentences.ini`:
@@ -33,7 +33,7 @@ Some example sentences are:
 ## Node-Red
 
 You can find the flow for all functions of this feature [here](https://github.com/th-koeln-intia/ip-sprachassistent-team2/blob/master/node-red/time_alarm_timer.json).  
-*(It is the same flow, we used for the [time-request](./not-required/current-time.md) and the [alarm](./alarms.md))*
+*(It is the same flow, that we used for the [time-request](./not-required/current-time.md) and the [alarm](./alarms.md) feature)*
 
 The `link-in`-node is coming from the "[Intent-Switch](./../tech-stack/hermesmqtt.md#intent-switch)".  
 The `link-out`-node is connected to our main [TTS-node](./../tech-stack/hermesmqtt.md#tts).
