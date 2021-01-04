@@ -33,9 +33,6 @@ You should now be able to see your device on the left side of the GUI.
 Now you can add it to a group or create a new group, but make sure, that you use the exact same name as in Rhasspy.  
 (If you do not want to use your device in a group, you have to change the name of the device in the GUI.)
 
-## Home Assistant
-
-Home Assistant is a 
 
 ## What's next?
 
