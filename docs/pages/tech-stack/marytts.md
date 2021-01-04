@@ -2,8 +2,9 @@
 # This top area is to give jekyll information about the page.
 layout: page
 permalink: /tech-stack/marytts/
-title: MaryTTS
-hero_height: is-low
+title: MaryTTS  
+hero_height: is-low  
+subtitle: Text to Speech
 ---
 
 ## Introduction
@@ -98,7 +99,7 @@ To see how we use Node-Red to interact with MaryTTS, click [here](./hermesmqtt.m
 ## Sources
 [MaryTTS-Documentation](http://mary.dfki.de/)  
 [DFKI](https://www.dfki.de/web/)  
-[Univerität des Saarlands](https://www.uni-saarland.de/start.html)
+[Universität des Saarlands](https://www.uni-saarland.de/start.html)
 
 ## What's next?
 

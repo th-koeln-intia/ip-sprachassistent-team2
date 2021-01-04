@@ -4,6 +4,7 @@ layout: page
 permalink: /features/weather/
 title: Weather-service on Rhasspy
 hero_height: is-low
+subtitle: There is no such thing as bad weather...
 ---
 
 ## Goals

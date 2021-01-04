@@ -56,9 +56,9 @@
       link: /info/user-experience/
     - name: Wake-Word-Engines
       link: /info/wake-word-engines/
-    - name: Rasa-NLU
-      link: /info/rasa-nlu/
     - name: OPENSSL
       link: /info/openssl/
+    - name: Rasa-NLU
+      link: /info/rasa-nlu/
     - name: AVA
       link: /info/ava

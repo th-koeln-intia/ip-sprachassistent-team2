@@ -4,6 +4,7 @@ layout: page
 permalink: /features/lights/
 title: Lights
 hero_height: is-low
+subtitle: Let there be Light!
 ---
 
 ## Goals

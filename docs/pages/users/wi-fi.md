@@ -3,12 +3,12 @@
 layout: page
 permalink: /users/wi-fi/
 hero_height: is-low
+title: Connect by comitup
+subtitle: Connect you voice assistant to Wi-Fi.
 ---
 
-## Connect by comitup
-
-Comitup broadcasts a Wi-Fi Network, if the Raspberry Pi is not connected to one. We can use this to control the Pi and 
- connect it to our Wi-Fi.
+Comitup broadcasts a Wi-Fi Network, if the Raspberry Pi is not connected to one.  
+We can use this to control the Pi and connect it to our Wi-Fi.
 
 ### Connect to Raspberry Pi
 
