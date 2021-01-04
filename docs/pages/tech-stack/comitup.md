@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/comitup/
 title: Installing Comitup
+subtitle: Connect me to the world! 
 hero_height: is-low
 ---
 

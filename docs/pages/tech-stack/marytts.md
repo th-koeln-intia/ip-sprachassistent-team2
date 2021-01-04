@@ -64,7 +64,7 @@ Enable and start the service by typing:
 ## Use MaryTTS in Rhasspy
 
 For MaryTTS you need to have `OPENSSL_1_1_1` installed.  
-To see how to do this, look at our troubleshooting-section for [OpenSSL](openssl.md).  
+To see how to do this, look at our troubleshooting-section for [OpenSSL](../info/openssl.md).  
 
 ### Update your profile
 

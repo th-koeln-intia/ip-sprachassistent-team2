@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/rhasspy/
 title: Rhasspy
+subtitle: Brings technologies together
 hero_height: is-low
 ---
 

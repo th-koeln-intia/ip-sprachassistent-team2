@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/mycroft/
 title: Mycroft-Precise
+subtitle: Wake Word Engine
 hero_height: is-low
 ---
 

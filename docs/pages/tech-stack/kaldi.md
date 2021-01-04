@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/kaldi/
 title: Kaldi
+subtitle: Speech to Text
 hero_height: is-low
 ---
 

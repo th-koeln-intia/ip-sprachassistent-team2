@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/mqtt/
 title: MQTT
+subtitle: Communications between smart-devices
 hero_height: is-low
 ---
 

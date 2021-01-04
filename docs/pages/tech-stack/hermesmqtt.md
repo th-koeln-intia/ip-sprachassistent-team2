@@ -3,6 +3,7 @@
 layout: page
 permalink: /tech-stack/hermesmqtt/
 title: HermesMQTT
+subtitle: Dialogue management
 hero_height: is-low
 ---
 
