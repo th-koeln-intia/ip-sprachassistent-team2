@@ -7,9 +7,9 @@ subtitle: One Pi to rule them all
 hero_height: is-low
 ---
 
-## Why is nothing here???
+## Home Assistant
 
-Home Assistant is not yet implemented
+Home Assistant is a 
 
 ## What's next?
 
