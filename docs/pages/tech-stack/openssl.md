@@ -1,7 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /faq/openssl/
+permalink: /info/openssl/
 title: OPENSSL_1_1_1
 hero_height: is-low
 ---

@@ -12,21 +12,4 @@ items:
     call_to_action_name: Try it!
     call_to_action_link: /faq/setup/
 
-  - title: Rasa-NLU
-    icon: fa-comment
-    description: >
-      Intent recognition
-
-      Did not install correctly.
-    call_to_action_name: Read more!
-    call_to_action_link: /faq/rasa-nlu/
-
-  - title: Openssl
-    icon: fa-paper-plane
-    description: >
-      Text to Speech
-
-      is not supported under Rhasspy 2.5.5
-    call_to_action_name: Read more!
-    call_to_action_link: /faq/openssl/
 

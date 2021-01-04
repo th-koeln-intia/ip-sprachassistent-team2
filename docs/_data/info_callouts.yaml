@@ -1,6 +1,13 @@
 style: is-light
 height: is-medium
 items:
+  - title: Conclusion
+    icon: fa-flask
+    description: >
+      Our thoughts about this project
+    call_to_action_name: Read more!
+    call_to_action_link: /info/conclusion/
+
   - title: User Experience
     icon: fa-users
     description: >
@@ -15,12 +22,23 @@ items:
     call_to_action_name: Find out!
     call_to_action_link: /info/wake-word-engines/
 
-  - title: Conclusion
-    icon: fa-flask
+  - title: Openssl
+    icon: fa-paper-plane
     description: >
-      Our thoughts about this project
+      Text to Speech
+
+      is not supported under Rhasspy 2.5.5
     call_to_action_name: Read more!
-    call_to_action_link: /info/conclusion/
+    call_to_action_link: /info/openssl/
+
+  - title: Rasa-NLU
+    icon: fa-comment
+    description: >
+      Intent recognition
+
+      Did not install correctly.
+    call_to_action_name: Read more!
+    call_to_action_link: /info/rasa-nlu/
 
   - title: AVA
     icon: fa-mobile

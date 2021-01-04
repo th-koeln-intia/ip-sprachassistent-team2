@@ -1,7 +1,7 @@
 ---
 # This top area is to give jekyll information about the page.
 layout: page
-permalink: /faq/rasa-nlu/
+permalink: /info/rasa-nlu/
 title: Rasa-NLU
 hero_height: is-low
 ---
