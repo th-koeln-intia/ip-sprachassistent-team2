@@ -4,6 +4,7 @@ layout: page
 permalink: /features/current-time/
 title: Get the current time
 hero_height: is-low
+subtitle: Time you enjoy wasting, was not wasted.
 ---
 
 ## Goals

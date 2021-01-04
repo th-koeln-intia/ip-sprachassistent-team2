@@ -23,7 +23,7 @@ You can find the GUI at `http://<ip-of-your-voice-assistant>:1880/ui/`.
 ![z2m-gui](./../../assets/Node-Red/z2m-gui.png)   
 *`Zigbee2MQTT Admin Panel`-GUI*  
   
-![z2m-flow](./../../assets/Node-Red/z2m-flow.png)  
+![z2m-flow](./../../assets/Node-Red/z2m-flow.png)   
 *`Zigbee2MQTT Admin Panel`-flow*  
   
 

@@ -3,6 +3,7 @@
 layout: page
 permalink: /faq/setup/
 title: Setup
+subtitle: How to set up you voice assistant
 hero_height: is-low
 ---
 
