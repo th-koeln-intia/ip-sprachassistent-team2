@@ -1,0 +1,54 @@
+{
+    "dialogue": {
+        "system": "hermes"
+    },
+    "handle": {
+        "remote": {
+            "url": "http://192.168.2.139:69420/endpoint"
+        }
+    },
+    "intent": {
+        "system": "fuzzywuzzy"
+    },
+    "microphone": {
+        "arecord": {
+            "device": "sysdefault:CARD=seeed4micvoicec"
+        },
+        "system": "arecord"
+    },
+    "mqtt": {
+        "enabled": "true",
+        "host": "127.0.0.1"
+    },
+    "sounds": {
+        "aplay": {
+            "device": "sysdefault:CARD=Headphones"
+        },
+        "system": "aplay"
+    },
+    "speech_to_text": {
+        "kaldi": {
+            "custom_words": "kaldi/custom_words.txt",
+            "graph": "kaldi/graph",
+            "kaldi_dir": "~/kaldi",
+            "mix_weight": "0",
+            "unknown_words": "kaldi/unknown_words.txt"
+        },
+        "system": "kaldi"
+    },
+    "text_to_speech": {
+        "marytts": {
+            "locale": "de",
+            "voice": "bits3-hsmm"
+        },
+        "system": "marytts"
+    },
+    "wake": {
+        "precise": {
+            "model": "heimdall.pb",
+            "sensitivity": "0.17",
+            "trigger_level": "3"
+        },
+        "system": "precise"
+    }
+}
