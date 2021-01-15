@@ -30,7 +30,8 @@ hero_height: is-low
 
 ### Download image
 
-[image]
+You can download a complete image for our voice assistant [here](https://th-koeln.sciebo.de/s/7lWlUbdv5jQO77I/download).  
+We used the [Win32DiskImager](https://win32-disk-imager.de.uptodown.com/windows) to write it to an empty SD-Card.  
 
 ### Write the image on a SD-Card
 
